@@ -18,13 +18,13 @@ import (
 
 type SpiderCfg struct {
 	Spider struct {
-		UrlListFile     string
-		OutputDirectory string
-		MaxDepth        int
-		CrawlInterval   int
-		CrawlTimeout    int
-		TargetUrl       string
-		ThreadCount     int
+		UrlListFile     *string
+		OutputDirectory *string
+		MaxDepth        *int
+		CrawlInterval   *int
+		CrawlTimeout    *int
+		TargetUrl       *string
+		ThreadCount     *int
 	}
 }
 
@@ -53,6 +53,33 @@ func InitConf(confFile string) (*SpiderCfg, error) {
 	return &cfg, nil
 }
 
+// check conf
+func CheckConf(s *SpiderCfg) error {
+	c := s.Spider
+	if c.UrlListFile == nil {
+		return fmt.Errorf("Spider conf item: UrlListFile is not configured")
+	}
+	if c.OutputDirectory == nil {
+		return fmt.Errorf("Spider conf item: OutputDirectory is not configured")
+	}
+	if c.MaxDepth == nil {
+		return fmt.Errorf("Spider conf item: MaxDepth is not configured")
+	}
+	if c.CrawlInterval == nil {
+		return fmt.Errorf("Spider conf item: CrawlInterval is not configured")
+	}
+	if c.CrawlTimeout == nil {
+		return fmt.Errorf("Spider conf item: CrawlTimeout is not configured")
+	}
+	if c.TargetUrl == nil {
+		return fmt.Errorf("Spider conf item: TargetUrl is not configured")
+	}
+	if c.ThreadCount == nil {
+		return fmt.Errorf("Spider conf item: ThreadCount is not configured")
+	}
+	return nil
+}
+
 func main() {
 	l4g.LoadConfiguration(SPIDER_LOGCONF_XML)
 
@@ -76,9 +103,16 @@ func main() {
 	confFile := confPath + "/" + SPIDER_CONFIG_FILE
 	conf, err := InitConf(confFile)
 	if err != nil {
-		l4g.Error("rend spider config failed !")
+		l4g.Error("read spider config failed, err [%s]", err)
+		AbnormalExit()
+	}
+	// check conf
+	if err := CheckConf(conf); err != nil {
+		l4g.Error("check spider config failed, err [%s]", err)
 		AbnormalExit()
 	}
 
-	fmt.Printf("urllistfile: %s", conf.Spider.UrlListFile)
+	fmt.Printf("urllistfile: %s", *conf.Spider.UrlListFile)
+
+	time.Sleep(time.Second)
 }

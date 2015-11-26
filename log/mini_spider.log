@@ -1,2 +1,2 @@
-[2015/11/26 08:56:36 EST] [EROR] (main.InitConf:50) read config err [open ../confspider.conf: no such file or directory]
-[2015/11/26 08:56:36 EST] [EROR] (main.main:79) rend spider config failed !
+[2015/11/26 09:46:27 EST] [EROR] (main.InitConf:50) read config err [../conf/spider.conf:3:1: illegal character U+0031 '1']
+[2015/11/26 09:46:27 EST] [EROR] (main.main:106) read spider config failed, err [../conf/spider.conf:3:1: illegal character U+0031 '1']
