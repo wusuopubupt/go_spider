@@ -9,7 +9,7 @@
     <tag>file</tag>
     <type>file</type>
     <level>WARNING</level>
-    <property name="filename">mini_spider.log</property>
+    <property name="filename">../log/mini_spider.log</property>
     <!--
        %T - Time (15:04:05 MST)
        %t - Time (15:04)
@@ -31,7 +31,7 @@
       <tag>wffile</tag><!-- tag名不能重复！-->
     <type>file</type>
     <level>WARNING</level>
-    <property name="filename">mini_spider.wf.log</property>
+    <property name="filename">../log/mini_spider.wf.log</property>
     <!--
        %T - Time (15:04:05 MST)
        %t - Time (15:04)

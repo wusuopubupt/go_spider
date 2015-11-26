@@ -28,6 +28,11 @@ type SpiderCfg struct {
 	}
 }
 
+var (
+	SPIDER_CONFIG_FILE = "spider.conf"
+	SPIDER_LOGCONF_XML = "../conf/logconf.xml"
+)
+
 // abnormal exit
 func AbnormalExit() {
 	// http://stackoverflow.com/questions/14252766/abnormal-behavior-of-log4go
@@ -49,7 +54,7 @@ func InitConf(confFile string) (*SpiderCfg, error) {
 }
 
 func main() {
-	l4g.LoadConfiguration("logconf.xml")
+	l4g.LoadConfiguration(SPIDER_LOGCONF_XML)
 
 	// refer : http://www.01happy.com/golang-command-line-arguments/
 	// 方法一： flag.StringVar(),传入指针，直接给confPath赋值
@@ -68,7 +73,8 @@ func main() {
 
 	l4g.Info("Hi, dash's %s is running...\n", "go_mini_spider")
 
-	conf, err := InitConf(confPath + "/spider.conf")
+	confFile := confPath + "/" + SPIDER_CONFIG_FILE
+	conf, err := InitConf(confFile)
 	if err != nil {
 		l4g.Error("rend spider config failed !")
 		AbnormalExit()

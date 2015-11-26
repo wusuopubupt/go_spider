@@ -1,0 +1,2 @@
+[2015/11/26 08:56:36 EST] [EROR] (main.InitConf:50) read config err [open ../confspider.conf: no such file or directory]
+[2015/11/26 08:56:36 EST] [EROR] (main.main:79) rend spider config failed !
