@@ -1,13 +1,52 @@
 package main
 
 import (
-	// log4go install: http://wuzhuti.cn/2411.html
-	l4g "code.google.com/p/log4go"
 	"flag"
 	"fmt"
-	utils "github.com/wusuopubupt/go_spider/utils"
+	"os"
 	"time"
 )
+
+import (
+	"code.google.com/p/gcfg"
+	l4g "code.google.com/p/log4go"
+)
+
+import (
+	utils "github.com/wusuopubupt/go_spider/utils"
+)
+
+type SpiderCfg struct {
+	Spider struct {
+		UrlListFile     string
+		OutputDirectory string
+		MaxDepth        int
+		CrawlInterval   int
+		CrawlTimeout    int
+		TargetUrl       string
+		ThreadCount     int
+	}
+}
+
+// abnormal exit
+func AbnormalExit() {
+	// http://stackoverflow.com/questions/14252766/abnormal-behavior-of-log4go
+	// adding a time.Sleep(time.Second) to the end of the code snippeet will cause the log content flush
+	time.Sleep(time.Second)
+	os.Exit(1)
+}
+
+func InitConf(confFile string) (*SpiderCfg, error) {
+	l4g.Info("config file: %s", confFile)
+	var cfg SpiderCfg
+	err := gcfg.ReadFileInto(&cfg, confFile)
+
+	if err != nil {
+		l4g.Error("read config err [%s]", err)
+		return nil, err
+	}
+	return &cfg, nil
+}
 
 func main() {
 	l4g.LoadConfiguration("logconf.xml")
@@ -23,18 +62,17 @@ func main() {
 
 	flag.Parse()
 
-	fmt.Println("Hi, dash's go_mini_spider is running...")
-	l4g.Info("Hi, dash's %s is running...", "go_mini_spider")
-	l4g.Error("Unable to open file: %s", "xxx")
-	// And now we're ready!
-	l4g.Finest("This will only go to those of you really cool UDP kids!  If you change enabled=true.")
-	l4g.Debug("Oh no!  %d + %d = %d!", 2, 2, 2+2)
-	l4g.Info("About that time, eh chaps?")
 	if printVer {
 		utils.PrintVersion()
 	}
 
-	// http://stackoverflow.com/questions/14252766/abnormal-behavior-of-log4go
-	// adding a time.Sleep(time.Second) to the end of the code snippeet will cause the log content flush
-	time.Sleep(time.Second)
+	l4g.Info("Hi, dash's %s is running...\n", "go_mini_spider")
+
+	conf, err := InitConf(confPath + "/spider.conf")
+	if err != nil {
+		l4g.Error("rend spider config failed !")
+		AbnormalExit()
+	}
+
+	fmt.Printf("urllistfile: %s", conf.Spider.UrlListFile)
 }

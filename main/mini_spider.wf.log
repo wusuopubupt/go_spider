@@ -1,1 +1,13 @@
-[2015/11/25 10:29:57 EST] [EROR] (main.main:28) Unable to open file: xxx
+[2015/11/25 10:40:08 EST] [EROR] (main.main:29) Unable to open file: xxx
+[2015/11/25 10:40:34 EST] [EROR] (main.main:29) Unable to open file: xxx
+[2015/11/25 10:47:53 EST] [EROR] (main.main:29) Unable to open file: xxx
+[2015/11/26 08:26:11 EST] [EROR] (main.main:74) rend spider config failed !
+[2015/11/26 08:26:23 EST] [EROR] (main.main:74) rend spider config failed !
+[2015/11/26 08:27:50 EST] [EROR] (main.main:76) rend spider config failed !
+[2015/11/26 08:28:27 EST] [EROR] (main.main:76) rend spider config failed !
+[2015/11/26 08:30:27 EST] [EROR] (main.main:76) rend spider config failed !
+[2015/11/26 08:30:53 EST] [EROR] (main.main:71) rend spider config failed !
+[2015/11/26 08:32:10 EST] [EROR] (main.main:72) rend spider config failed !
+[2015/11/26 08:32:18 EST] [EROR] (main.main:72) rend spider config failed !
+[2015/11/26 08:35:02 EST] [EROR] (main.InitConf:45) read config err [invalid variable: section "spider" subsection "" variable "crawlInterval"]
+[2015/11/26 08:35:02 EST] [EROR] (main.main:73) rend spider config failed !

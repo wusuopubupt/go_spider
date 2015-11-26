@@ -1,8 +1,14 @@
 <logging>
   <filter enabled="true">
+    <tag>stdout</tag><!-- tag名不能重复！-->
+    <type>console</type>
+    <!-- level is (:?FINEST|FINE|DEBUG|TRACE|INFO|WARNING|ERROR) -->
+    <level>DEBUG</level>
+  </filter>
+  <filter enabled="true">
     <tag>file</tag>
     <type>file</type>
-    <level>FINE</level>
+    <level>WARNING</level>
     <property name="filename">mini_spider.log</property>
     <!--
        %T - Time (15:04:05 MST)
@@ -22,7 +28,7 @@
     <property name="daily">true</property> <!-- Automatically rotates when a log message is written after midnight -->
   </filter>
   <filter enabled="true">
-    <tag>file</tag>
+      <tag>wffile</tag><!-- tag名不能重复！-->
     <type>file</type>
     <level>WARNING</level>
     <property name="filename">mini_spider.wf.log</property>
