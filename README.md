@@ -1,6 +1,6 @@
 # go_spider 
 
-*Created by Dash Wang, 2015-11-25*
+*A golang spider created by Dash Wang, 2015-11-25*
 
 目录说明(`cd $GOPATH/src/github.com/wusuopubupt/go_spider && tree`)：
 
