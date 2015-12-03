@@ -1,4 +1,5 @@
 /* spider.go - 爬虫主程序 */
+
 /*
 modification history
 --------------------
@@ -29,8 +30,8 @@ import (
 )
 
 import (
-	conf "github.com/wusuopubupt/go_spider/src/conf"
-	downloader "github.com/wusuopubupt/go_spider/src/downloader"
+	"github.com/wusuopubupt/go_spider/src/conf"
+	"github.com/wusuopubupt/go_spider/src/downloader"
 )
 
 // 任务队列最大长度
@@ -55,6 +56,7 @@ type Spider struct {
 	visitedUrl    map[string]bool
 	wg            sync.WaitGroup
 	stop          chan bool
+	lock          sync.Mutex
 }
 
 /*
@@ -124,7 +126,7 @@ func (s *Spider) parseHtml(b io.Reader, job Job) []string {
 			u, _ := url.Parse(job.url)
 			// 相对路径
 			if !hasProto {
-				link = u.Scheme + "://" + u.Host + "/"+ link
+				link = u.Scheme + "://" + u.Host + "/" + link
 			}
 			// 检查url是否为需要存储的目标网页url格式
 			if s.checkUrlRegexp(link) {
@@ -182,7 +184,7 @@ CRAWL:
 			l4g.Info("spider stop...")
 			break CRAWL
 		case job := <-s.jobs:
-	        l4g.Info("goroutine#%d parsing url:%s, depth:%d",id, job.url, job.depth)
+			l4g.Info("goroutine#%d parsing url:%s, depth:%d", id, job.url, job.depth)
 			s.work(job)
 			// 抓取间隔控制
 			time.Sleep(time.Duration(s.crawlInterval) * time.Second)
@@ -198,6 +200,8 @@ CRAWL:
 *
  */
 func (s *Spider) work(job Job) {
+	s.lock.Lock()
+	defer s.lock.Unlock()
 	defer s.wg.Done()
 	// 检查是否访问过
 	if s.visitedUrl[job.url] {
