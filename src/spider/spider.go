@@ -75,6 +75,7 @@ func (s *Spider) getJob() (job Job) {
 * PARAMS : - job
  */
 func (s *Spider) addJob(job Job) {
+	s.wg.Add(1)
 	s.jobs <- job
 }
 
@@ -227,7 +228,6 @@ func (s *Spider) work(job Job) {
 	urls := s.parseHtml(resp.Body, job)
 	for _, url := range urls {
 		//新任务入公共队列
-		s.wg.Add(1)
 		s.addJob(Job{url, job.depth + 1})
 		l4g.Info("add job: %s, depth:%d", url, job.depth+1)
 	}
@@ -247,20 +247,18 @@ func (s *Spider) work(job Job) {
 func NewSpider(seedUrls []string, config conf.SpiderStruct, confpath string) *Spider {
 	s := new(Spider)
 	// 队列最多为100w个任务，否则阻塞
-	jobs := make(chan Job, MAX_JOBS)
+	s.jobs = make(chan Job, MAX_JOBS)
 	// 初始化任务队列
 	for _, url := range seedUrls {
 		l4g.Info("url: %s", url)
 		// waitgroup+1, 比自己用channel length或者timeout去判断更准确
-		s.wg.Add(1)
-		jobs <- Job{url, 0}
+		s.addJob(Job{url, 0})
 	}
 	s.outputDir = path.Join(confpath, config.OutputDirectory)
 	s.maxDepth = config.MaxDepth
 	s.crawlInterval = config.CrawlInterval
 	s.crawlTimeout = config.CrawlTimeout
 	s.targetUrl = regexp.MustCompile(config.TargetUrl)
-	s.jobs = jobs
 	s.visitedUrl = make(map[string]bool)
 	s.threadCount = config.ThreadCount
 
