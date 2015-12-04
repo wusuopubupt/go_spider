@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"net/http"
 	"os"
 	"time"
 )
@@ -78,6 +79,14 @@ func CheckConf(s *SpiderCfg) error {
 		return fmt.Errorf("Spider conf item: ThreadCount is not configured")
 	}
 	return nil
+}
+
+func crawl(url string, ch chan string, chFinished chan bool) {
+	resp, err := http.Get(url)
+
+	defer func() {
+		chFinished <- true
+	}()
 }
 
 func main() {

@@ -6,6 +6,7 @@ import (
 	"os"
 )
 
+// print version
 func PrintVersion() {
 	const version = "1.0.0"
 	fmt.Println("dash's go_mini_spider version", version)
