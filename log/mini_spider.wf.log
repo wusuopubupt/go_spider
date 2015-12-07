@@ -1,2 +1,22 @@
 [2015/11/26 09:46:27 EST] [EROR] (main.InitConf:50) read config err [../conf/spider.conf:3:1: illegal character U+0031 '1']
 [2015/11/26 09:46:27 EST] [EROR] (main.main:106) read spider config failed, err [../conf/spider.conf:3:1: illegal character U+0031 '1']
+[2015/12/05 04:18:10 EST] [EROR] (main.main:237) parse url json error:%!s(func() string=0x402260)
+[2015/12/05 04:19:23 EST] [EROR] (main.main:238) parse url json error:%!s(func() string=0x4023d0)
+[2015/12/05 04:22:05 EST] [EROR] (main.main:239) parse url json error:%!s(func() string=0x402400)
+[2015/12/05 04:23:10 EST] [EROR] (main.main:239) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/05 04:29:00 EST] [EROR] (main.main:239) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/05 04:29:57 EST] [EROR] (main.main:239) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/05 04:30:44 EST] [EROR] (main.main:239) parse url json err[invalid character 't' in literal true (expecting 'r')]
+[2015/12/05 04:38:05 EST] [EROR] (main.main:238) parse url json err[invalid character ']' looking for beginning of value]
+[2015/12/05 04:48:58 EST] [EROR] (main.main:239) parse url json err[invalid character ']' looking for beginning of value]
+[2015/12/06 21:32:26 EST] [EROR] (main.main:239) parse url json err[invalid character ']' looking for beginning of value]
+[2015/12/06 21:33:16 EST] [EROR] (main.main:239) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/06 21:39:40 EST] [EROR] (main.main:240) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/06 21:40:39 EST] [EROR] (main.main:241) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/06 21:48:56 EST] [EROR] (main.main:243) parse url json err[invalid character 'h' looking for beginning of value]
+[2015/12/06 22:08:49 EST] [EROR] (main.main:248) parse json err[invalid character 'h' looking for beginning of value]
+[2015/12/06 22:09:13 EST] [EROR] (main.main:248) parse json err[invalid character ']' looking for beginning of value]
+[2015/12/06 22:09:28 EST] [EROR] (main.main:248) parse json err[invalid character ']' looking for beginning of value]
+[2015/12/06 22:10:12 EST] [EROR] (main.main:249) parse json err[invalid character ']' looking for beginning of value]
+[2015/12/06 22:12:05 EST] [EROR] (main.main:249) parse json err[invalid character 'h' looking for beginning of value]
+[2015/12/06 22:15:28 EST] [EROR] (main.main:240) parse json err[invalid character ']' looking for beginning of value]

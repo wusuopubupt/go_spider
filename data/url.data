@@ -1,4 +1,4 @@
 [
-    http://www.baidu.com,
-    http://www.sina.com,
+    "http://www.baidu.com",
+    "http://www.sina.com"
 ]

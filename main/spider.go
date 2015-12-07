@@ -1,16 +1,20 @@
 package main
 
 import (
+	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
 import (
 	"code.google.com/p/gcfg"
 	l4g "code.google.com/p/log4go"
+	"golang.org/x/net/html"
 )
 
 import (
@@ -27,6 +31,10 @@ type SpiderCfg struct {
 		TargetUrl       *string
 		ThreadCount     *int
 	}
+}
+
+type Urls struct {
+	url []string
 }
 
 var (
@@ -81,12 +89,110 @@ func CheckConf(s *SpiderCfg) error {
 	return nil
 }
 
+// get href attribute from a Token
+func GetHref(t html.Token) (ok bool, href string) {
+	for _, a := range t.Attr {
+		if a.Key == "href" {
+			href = a.Val
+			ok = true
+		}
+		l4g.Debug("get href: %s", href)
+	}
+	// return默认返回ok, href
+	return
+}
+
+// Extract all http** links from a given webpage
 func crawl(url string, ch chan string, chFinished chan bool) {
 	resp, err := http.Get(url)
 
 	defer func() {
+		// Notify that we're done after this function
 		chFinished <- true
 	}()
+
+	if err != nil {
+		fmt.Println("ERROR: Failed to crawl \"" + url + "\"")
+		return
+	}
+
+	b := resp.Body
+	defer b.Close() // close Body when the function returns
+
+	z := html.NewTokenizer(b)
+
+	for {
+		tt := z.Next()
+
+		switch {
+		case tt == html.ErrorToken:
+			// End of the document, we're done
+			return
+		case tt == html.StartTagToken:
+			t := z.Token()
+
+			// Check if the token is an <a> tag
+			isAnchor := t.Data == "a"
+			if !isAnchor {
+				continue
+			}
+
+			// Extract the href value, if there is one
+			ok, url := GetHref(t)
+			if !ok {
+				continue
+			}
+
+			// Make sure the url begines in http**
+			hasProto := strings.Index(url, "http") == 0
+			if hasProto {
+				ch <- url
+			}
+		}
+	}
+}
+
+func main1() {
+	//创建映射(数组), key type:string, value type:bool
+	foundUrls := make(map[string]bool)
+	seedUrls := os.Args[1:]
+
+	// Channels
+	/*
+		c := make(chan bool) //创建一个无缓冲的bool型Channel
+		c <- x //向一个Channel发送一个值
+		<- c //从一个Channel中接收一个值
+		x = <- c //从Channel c接收一个值并将其存储到x中
+		x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
+	*/
+	chUrls := make(chan string)
+	chFinished := make(chan bool)
+
+	// Kick off the crawl process (concurrently)
+	for _, url := range seedUrls {
+		go crawl(url, chUrls, chFinished)
+	}
+
+	// Subscribe to both channels
+	for c := 0; c < len(seedUrls); {
+		// 监听 IO 操作
+		select {
+		case url := <-chUrls:
+			foundUrls[url] = true
+		case <-chFinished:
+			c++
+		}
+	}
+
+	// We're done! Print the results...
+
+	fmt.Println("\nFound", len(foundUrls), "unique urls:\n")
+
+	for url, _ := range foundUrls {
+		fmt.Println(" - " + url)
+	}
+
+	close(chUrls)
 }
 
 func main() {
@@ -121,7 +227,20 @@ func main() {
 		AbnormalExit()
 	}
 
-	fmt.Printf("urllistfile: %s", *conf.Spider.UrlListFile)
+	l4g.Debug("urllistfile: %s", *conf.Spider.UrlListFile)
+	// read and parse json
+	b, err := ioutil.ReadFile(*conf.Spider.UrlListFile)
+	if err != nil {
+		l4g.Error("readfile err[%s]", err)
+		AbnormalExit()
+	}
+	//json 到 []string
+	var urls []string
+	if err := json.Unmarshal(b, &urls); err != nil {
+		l4g.Error("parse json err[%s]", err)
+		AbnormalExit()
+	}
+	l4g.Debug("urls: %s", urls)
 
-	time.Sleep(time.Second)
+	time.Sleep(1 * time.Second)
 }
