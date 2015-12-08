@@ -20,3 +20,4 @@
 [2015/12/06 22:10:12 EST] [EROR] (main.main:249) parse json err[invalid character ']' looking for beginning of value]
 [2015/12/06 22:12:05 EST] [EROR] (main.main:249) parse json err[invalid character 'h' looking for beginning of value]
 [2015/12/06 22:15:28 EST] [EROR] (main.main:240) parse json err[invalid character ']' looking for beginning of value]
+[2015/12/06 22:48:20 EST] [EROR] (main.main:236) parse json err[invalid character '"' after array element]

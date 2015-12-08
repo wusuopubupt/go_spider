@@ -21,6 +21,7 @@ import (
 	utils "github.com/wusuopubupt/go_spider/utils"
 )
 
+// spider config
 type SpiderCfg struct {
 	Spider struct {
 		UrlListFile     *string
@@ -31,10 +32,6 @@ type SpiderCfg struct {
 		TargetUrl       *string
 		ThreadCount     *int
 	}
-}
-
-type Urls struct {
-	url []string
 }
 
 var (
@@ -50,6 +47,7 @@ func AbnormalExit() {
 	os.Exit(1)
 }
 
+// initialize config
 func InitConf(confFile string) (*SpiderCfg, error) {
 	l4g.Info("config file: %s", confFile)
 	var cfg SpiderCfg
@@ -98,7 +96,7 @@ func GetHref(t html.Token) (ok bool, href string) {
 		}
 		l4g.Debug("get href: %s", href)
 	}
-	// return默认返回ok, href
+	// 空的return默认返回ok, href
 	return
 }
 
@@ -110,9 +108,8 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 		// Notify that we're done after this function
 		chFinished <- true
 	}()
-
 	if err != nil {
-		fmt.Println("ERROR: Failed to crawl \"" + url + "\"")
+		l4g.Error("Failed to crawl %s, err[%s]", url, err)
 		return
 	}
 
@@ -123,26 +120,22 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 
 	for {
 		tt := z.Next()
-
 		switch {
 		case tt == html.ErrorToken:
 			// End of the document, we're done
 			return
 		case tt == html.StartTagToken:
 			t := z.Token()
-
 			// Check if the token is an <a> tag
 			isAnchor := t.Data == "a"
 			if !isAnchor {
 				continue
 			}
-
 			// Extract the href value, if there is one
 			ok, url := GetHref(t)
 			if !ok {
 				continue
 			}
-
 			// Make sure the url begines in http**
 			hasProto := strings.Index(url, "http") == 0
 			if hasProto {
@@ -152,11 +145,13 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 	}
 }
 
-func main1() {
-	//创建映射(数组), key type:string, value type:bool
-	foundUrls := make(map[string]bool)
-	seedUrls := os.Args[1:]
+/**
+ * @brief 爬取url
+ * @param seedUrls 种子urls数组
+ *
+ */
 
+func GetUrls(seedUrls []string) {
 	// Channels
 	/*
 		c := make(chan bool) //创建一个无缓冲的bool型Channel
@@ -167,6 +162,7 @@ func main1() {
 	*/
 	chUrls := make(chan string)
 	chFinished := make(chan bool)
+	foundUrls := make(map[string]bool)
 
 	// Kick off the crawl process (concurrently)
 	for _, url := range seedUrls {
@@ -186,10 +182,10 @@ func main1() {
 
 	// We're done! Print the results...
 
-	fmt.Println("\nFound", len(foundUrls), "unique urls:\n")
+	l4g.Info("Found %d unique urls", len(foundUrls))
 
 	for url, _ := range foundUrls {
-		fmt.Println(" - " + url)
+		l4g.Info(" - " + url)
 	}
 
 	close(chUrls)
@@ -234,13 +230,16 @@ func main() {
 		l4g.Error("readfile err[%s]", err)
 		AbnormalExit()
 	}
-	//json 到 []string
-	var urls []string
-	if err := json.Unmarshal(b, &urls); err != nil {
+	//json to []string
+	var seedUrls []string
+	if err := json.Unmarshal(b, &seedUrls); err != nil {
 		l4g.Error("parse json err[%s]", err)
 		AbnormalExit()
 	}
-	l4g.Debug("urls: %s", urls)
+	l4g.Debug("seedUrls: %s", seedUrls)
+
+	// get urls
+	GetUrls(seedUrls)
 
 	time.Sleep(1 * time.Second)
 }
