@@ -1,4 +1,4 @@
-package main
+package spider
 
 import (
 	"encoding/json"
@@ -17,13 +17,12 @@ import (
 
 import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
-	utils "github.com/wusuopubupt/go_spider/src/utils"
 )
 
-var (
-	SPIDER_CONFIG_FILE = "spider.conf"
-	SPIDER_LOGCONF_XML = "../../conf/logconf.xml"
-)
+type Spider struct {
+	config   conf.SpiderCfg
+	maxDepth config.maxDepth
+}
 
 // abnormal exit
 func AbnormalExit() {
@@ -92,9 +91,9 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 }
 
 /**
- * @brief 爬取url
- * @param seedUrls 种子urls数组
- *
+* @brief 爬取url
+* @param seedUrls 种子urls数组
+*
  */
 
 func GetUrls(seedUrls []string) {
@@ -136,50 +135,72 @@ func GetUrls(seedUrls []string) {
 	close(chUrls)
 }
 
-func main() {
-	l4g.LoadConfiguration(SPIDER_LOGCONF_XML)
+// Crawler struct
+type Spider struct {
+	outputDir     string
+	crawlInterval int
+	crawlTimeout  int
+	targetUrl     string
+}
 
-	// refer : http://www.01happy.com/golang-command-line-arguments/
-	// 方法一： flag.StringVar(),传入指针，直接给confPath赋值
-	var confPath string
-	var printVer bool
-	flag.StringVar(&confPath, "c", "../../conf", "config file path")
-	flag.BoolVar(&printVer, "v", false, "print version")
-	// 方法二：flag.String()，把函数调用的返回值赋值给logPath
-	//logPath := flag.String("l", "../log", "log file path")
+// one job
+type Job struct {
+	url   string
+	depth int
+}
 
-	flag.Parse()
+// job queue
+type JobQueue struct {
+	url   chan string
+	depth chan int
+}
 
-	if printVer {
-		utils.PrintVersion()
+// get job from jobQueue
+func (s *Spider) getJob(jobs *JobQueue) (job *Job) {
+	url := <-jobs.url
+	depth := <-jobs.depth
+	return Job{url, depth}
+}
+
+// add job to jobQueue
+func (s *Spider) addJob(jobs *JobQueue, job *Job) {
+	jobs.url <- job.url
+	jobs.depth <- job.depth
+}
+
+// crawl url
+// which do current job and add new jobs to job queue
+func (s *Spider) crawl(jobs *JobQueue) {
+
+	// 抓取间隔控制
+	time.Sleep(time.Duration(c.crawlInterval) * time.Second)
+}
+
+// new spider
+func NewSpider(config conf.SpiderCfg) *Spider {
+	s := new(Spider)
+	s.spider = spider
+	s.outDir = config.OutputDirectory
+	s.crawlInterval = config.CrawlInterval
+	s.crawlTimeout = config.CrawlTimeout
+
+	return s
+}
+
+// 开启threandCount个spider goroutine,等待通道中的任务到达
+func Start(seedUrl []string, spidercfg conf.SpiderCfg) {
+	// 初始化任务队列
+	jobs := new(JobQueue)
+	for _, url := range seedUrls {
+		jobs.url <- url
+		jobs.depth <- 0
 	}
-
-	l4g.Info("Hi, dash's %s is running...\n", "go_mini_spider")
-
-	confFile := confPath + "/" + SPIDER_CONFIG_FILE
-	conf, err := conf.InitConf(confFile)
-	if err != nil {
-		l4g.Error("read spider config failed, err [%s]", err)
-		AbnormalExit()
+	// 一个while(1)的循环，直到channel通知任务结束
+	for {
+		// 创建threadCount个工作goroutine
+		for i := 0; i < spidercfg.ThreadCount; i++ {
+			s := NewSpider(spidercfg)
+			go s.crawl(jobs)
+		}
 	}
-
-	l4g.Debug("urllistfile: %s", *conf.Spider.UrlListFile)
-	// read and parse json,相对路径
-	b, err := ioutil.ReadFile(confPath + "/" + *conf.Spider.UrlListFile)
-	if err != nil {
-		l4g.Error("readfile err[%s]", err)
-		AbnormalExit()
-	}
-	//json to []string
-	var seedUrls []string
-	if err := json.Unmarshal(b, &seedUrls); err != nil {
-		l4g.Error("parse json err[%s]", err)
-		AbnormalExit()
-	}
-	l4g.Debug("seedUrls: %s", seedUrls)
-
-	// get urls
-	GetUrls(seedUrls)
-
-	time.Sleep(1 * time.Second)
 }
