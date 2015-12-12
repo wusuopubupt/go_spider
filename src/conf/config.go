@@ -20,6 +20,7 @@ type SpiderStruct struct {
 	ThreadCount     int
 }
 
+// 嵌套结构体分开声明，用起来更灵活
 type SpiderCfg struct {
 	Spider SpiderStruct
 }

@@ -25,7 +25,7 @@ func AbnormalExit() {
 }
 
 // get href attribute from a Token
-func GetHref(t html.Token) (ok bool, href string) {
+func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 	for _, a := range t.Attr {
 		if a.Key == "href" {
 			href = a.Val
@@ -38,15 +38,18 @@ func GetHref(t html.Token) (ok bool, href string) {
 }
 
 // Extract all http** links from a given webpage
-func crawl(url string, ch chan string, chFinished chan bool) {
-	resp, err := http.Get(url)
+// which do current job and add new jobs to job queue
+func (s *Spider) crawl(jobs JobQueue, chFinished chan bool) {
+	job := s.getJob(jobs)
+	l4g.Info("get job: %s", job.url)
+	resp, err := http.Get(job.url)
 
+	// Notify that we're done after this function
 	defer func() {
-		// Notify that we're done after this function
 		chFinished <- true
 	}()
 	if err != nil {
-		l4g.Error("Failed to crawl %s, err[%s]", url, err)
+		l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
 		return
 	}
 
@@ -69,62 +72,21 @@ func crawl(url string, ch chan string, chFinished chan bool) {
 				continue
 			}
 			// Extract the href value, if there is one
-			ok, url := GetHref(t)
+			ok, url := s.getHref(t)
 			if !ok {
 				continue
 			}
 			// Make sure the url begines in http**
 			hasProto := strings.Index(url, "http") == 0
 			if hasProto {
-				ch <- url
+				jobs.url <- url
+				jobs.depth <- job.depth + 1
+				l4g.Info("add job: %s", url)
 			}
 		}
 	}
-}
-
-/**
-* @brief 爬取url
-* @param seedUrls 种子urls数组
-*
- */
-
-func GetUrls(seedUrls []string) {
-	// Channels
-	/*
-		c := make(chan bool) //创建一个无缓冲的bool型Channel
-		c <- x //向一个Channel发送一个值
-		<- c //从一个Channel中接收一个值
-		x = <- c //从Channel c接收一个值并将其存储到x中
-		x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
-	*/
-	chUrls := make(chan string)
-	chFinished := make(chan bool)
-	foundUrls := make(map[string]bool)
-
-	// Kick off the crawl process (concurrently)
-	for _, url := range seedUrls {
-		go crawl(url, chUrls, chFinished)
-	}
-
-	// Subscribe to both channels
-	for c := 0; c < len(seedUrls); {
-		// 监听 IO 操作
-		select {
-		case url := <-chUrls:
-			foundUrls[url] = true
-		case <-chFinished:
-			c++
-		}
-	}
-
-	l4g.Info("Found %d unique urls", len(foundUrls))
-	for url, _ := range foundUrls {
-		l4g.Info(" - " + url)
-	}
-	// close channel
-	//chUrls <- "www.baidu.com"
-	//url := <-chUrls
-	close(chUrls)
+	// 抓取间隔控制
+	time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 }
 
 // Crawler struct
@@ -147,26 +109,26 @@ type JobQueue struct {
 	depth chan int
 }
 
+// Channels
+/*
+c := make(chan bool) //创建一个无缓冲的bool型Channel
+c <- x //向一个Channel发送一个值
+<- c //从一个Channel中接收一个值
+x = <- c //从Channel c接收一个值并将其存储到x中
+x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
+*/
+
 // get job from jobQueue
-func (s *Spider) getJob(jobs *JobQueue) (job *Job) {
-	job = new(Job)
+func (s *Spider) getJob(jobs JobQueue) (job Job) {
 	job.url = <-jobs.url
 	job.depth = <-jobs.depth
 	return job
 }
 
 // add job to jobQueue
-func (s *Spider) addJob(jobs *JobQueue, job *Job) {
+func (s *Spider) addJob(jobs JobQueue, job Job) {
 	jobs.url <- job.url
 	jobs.depth <- job.depth
-}
-
-// crawl url
-// which do current job and add new jobs to job queue
-func (s *Spider) crawl(jobs *JobQueue) {
-
-	// 抓取间隔控制
-	time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 }
 
 // new spider
@@ -182,18 +144,32 @@ func newSpider(config conf.SpiderStruct) *Spider {
 
 // 开启threandCount个spider goroutine,等待通道中的任务到达
 func Start(seedUrls []string, config conf.SpiderStruct) {
-	// 初始化任务队列
-	jobs := new(JobQueue)
-	for _, url := range seedUrls {
-		jobs.url <- url
-		jobs.depth <- 0
+	var jobs JobQueue
+	var spiders []*Spider
+	chFinished := make(chan bool)
+	// 创建threadCount个工作goroutine
+	for i := 0; i < config.ThreadCount; i++ {
+		s := newSpider(config)
+		spiders = append(spiders, s)
+		l4g.Info("created new spider #%d", i)
+		//go s.crawl(jobs, chFinished)
 	}
 	// 一个while(1)的循环，直到channel通知任务结束
 	for {
-		// 创建threadCount个工作goroutine
-		for i := 0; i < config.ThreadCount; i++ {
-			s := newSpider(config)
-			go s.crawl(jobs)
+		for i, s := range spiders {
+			l4g.Info("spider #%d is running", i)
+			go s.crawl(jobs, chFinished)
+		}
+		// 初始化任务队列
+		for _, url := range seedUrls {
+			l4g.Info("url: %s", url)
+			jobs.url <- url
+			jobs.depth <- 0
+		}
+		for done := 0; done < config.ThreadCount; {
+			// 通知主goroutine任务结束
+			<-chFinished
+			done++
 		}
 	}
 }
