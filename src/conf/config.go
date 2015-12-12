@@ -9,21 +9,23 @@ import (
 	l4g "code.google.com/p/log4go"
 )
 
-// spider config
+// spider config,和../../conf/spider.conf一一对应
+type SpiderStruct struct {
+	UrlListFile     string
+	OutputDirectory string
+	MaxDepth        int
+	CrawlInterval   int
+	CrawlTimeout    int
+	TargetUrl       string
+	ThreadCount     int
+}
+
 type SpiderCfg struct {
-	Spider struct {
-		UrlListFile     *string
-		OutputDirectory *string
-		MaxDepth        *int
-		CrawlInterval   *int
-		CrawlTimeout    *int
-		TargetUrl       *string
-		ThreadCount     *int
-	}
+	Spider SpiderStruct
 }
 
 // initialize config
-func InitConf(confFile string) (*SpiderCfg, error) {
+func InitConf(confFile string) (SpiderStruct, error) {
 	l4g.Info("config file: %s", confFile)
 	var cfg SpiderCfg
 
@@ -31,40 +33,40 @@ func InitConf(confFile string) (*SpiderCfg, error) {
 	err := gcfg.ReadFileInto(&cfg, confFile)
 	if err != nil {
 		l4g.Error("read config err [%s]", err)
-		return nil, err
+		return cfg.Spider, nil
 	}
 
 	// check conf
 	if err = checkConf(&cfg); err != nil {
 		l4g.Error("read config err [%s]", err)
-		return nil, err
+		return cfg.Spider, nil
 	}
 
-	return &cfg, nil
+	return cfg.Spider, nil
 }
 
 // check conf
-func checkConf(s *SpiderCfg) error {
-	c := s.Spider
-	if c.UrlListFile == nil {
+func checkConf(cfg *SpiderCfg) error {
+	s := cfg.Spider
+	if s.UrlListFile == "" {
 		return fmt.Errorf("Spider conf item: UrlListFile is not configured")
 	}
-	if c.OutputDirectory == nil {
+	if s.OutputDirectory == "" {
 		return fmt.Errorf("Spider conf item: OutputDirectory is not configured")
 	}
-	if *c.MaxDepth < 0 {
+	if s.MaxDepth < 0 {
 		return fmt.Errorf("Spider conf item: MaxDepth should be greater than 0")
 	}
-	if c.CrawlInterval == nil {
+	if s.CrawlInterval == 0 {
 		return fmt.Errorf("Spider conf item: CrawlInterval is not configured")
 	}
-	if c.CrawlTimeout == nil {
+	if s.CrawlTimeout == 0 {
 		return fmt.Errorf("Spider conf item: CrawlTimeout is not configured")
 	}
-	if c.TargetUrl == nil {
+	if s.TargetUrl == "" {
 		return fmt.Errorf("Spider conf item: TargetUrl is not configured")
 	}
-	if c.ThreadCount == nil {
+	if s.ThreadCount == 0 {
 		return fmt.Errorf("Spider conf item: ThreadCount is not configured")
 	}
 	return nil

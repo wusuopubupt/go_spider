@@ -149,10 +149,9 @@ type JobQueue struct {
 
 // get job from jobQueue
 func (s *Spider) getJob(jobs *JobQueue) (job *Job) {
-	job = new(Job)
-	job.url = <-jobs.url
-	job.depth = <-jobs.depth
-	return job
+	url := <-jobs.url
+	depth := <-jobs.depth
+	return Job{url, depth}
 }
 
 // add job to jobQueue
@@ -166,22 +165,22 @@ func (s *Spider) addJob(jobs *JobQueue, job *Job) {
 func (s *Spider) crawl(jobs *JobQueue) {
 
 	// 抓取间隔控制
-	time.Sleep(time.Duration(s.crawlInterval) * time.Second)
+	time.Sleep(time.Duration(c.crawlInterval) * time.Second)
 }
 
 // new spider
-func newSpider(config conf.SpiderStruct) *Spider {
+func NewSpider(config conf.SpiderCfg) *Spider {
 	s := new(Spider)
-	s.outputDir = config.OutputDirectory
+	s.spider = spider
+	s.outDir = config.OutputDirectory
 	s.crawlInterval = config.CrawlInterval
 	s.crawlTimeout = config.CrawlTimeout
-	s.targetUrl = config.TargetUrl
 
 	return s
 }
 
 // 开启threandCount个spider goroutine,等待通道中的任务到达
-func Start(seedUrls []string, config conf.SpiderStruct) {
+func Start(seedUrl []string, spidercfg conf.SpiderCfg) {
 	// 初始化任务队列
 	jobs := new(JobQueue)
 	for _, url := range seedUrls {
@@ -191,8 +190,8 @@ func Start(seedUrls []string, config conf.SpiderStruct) {
 	// 一个while(1)的循环，直到channel通知任务结束
 	for {
 		// 创建threadCount个工作goroutine
-		for i := 0; i < config.ThreadCount; i++ {
-			s := newSpider(config)
+		for i := 0; i < spidercfg.ThreadCount; i++ {
+			s := NewSpider(spidercfg)
 			go s.crawl(jobs)
 		}
 	}

@@ -23,3 +23,7 @@
 [2015/12/06 22:48:20 EST] [EROR] (main.main:236) parse json err[invalid character '"' after array element]
 [2015/12/10 10:48:14 EST] [EROR] (main.main:170) readfile err[open ../data/url.data: no such file or directory]
 [2015/12/10 10:49:54 EST] [EROR] (main.main:170) readfile err[open ../data/url.data: no such file or directory]
+[2015/12/12 14:53:52 EST] [EROR] (github.com/wusuopubupt/go_spider/src/conf.InitConf:31) read config err [invalid section: section "spider"]
+[2015/12/12 14:53:52 EST] [EROR] (main.main:163) read spider config failed, err [invalid section: section "spider"]
+[2015/12/12 14:55:32 EST] [EROR] (github.com/wusuopubupt/go_spider/src/conf.InitConf:31) read config err [invalid section: section "spider"]
+[2015/12/12 14:55:32 EST] [EROR] (main.main:163) read spider config failed, err [invalid section: section "spider"]

@@ -1,6 +1,9 @@
-package spider
+package main
 
 import (
+	"encoding/json"
+	"flag"
+	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
@@ -14,6 +17,13 @@ import (
 
 import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
+	spider "github.com/wusuopubupt/go_spider/src/spider"
+	utils "github.com/wusuopubupt/go_spider/src/utils"
+)
+
+var (
+	SPIDER_CONFIG_FILE = "spider.conf"
+	SPIDER_LOGCONF_XML = "../../conf/logconf.xml"
 )
 
 // abnormal exit
@@ -127,73 +137,52 @@ func GetUrls(seedUrls []string) {
 	close(chUrls)
 }
 
-// Crawler struct
-type Spider struct {
-	outputDir     string
-	crawlInterval int
-	crawlTimeout  int
-	targetUrl     string
-}
+func main() {
+	l4g.LoadConfiguration(SPIDER_LOGCONF_XML)
 
-// one job
-type Job struct {
-	url   string
-	depth int
-}
+	// refer : http://www.01happy.com/golang-command-line-arguments/
+	// 方法一： flag.StringVar(),传入指针，直接给confPath赋值
+	var confPath string
+	var printVer bool
+	flag.StringVar(&confPath, "c", "../../conf", "config file path")
+	flag.BoolVar(&printVer, "v", false, "print version")
+	// 方法二：flag.String()，把函数调用的返回值赋值给logPath
+	//logPath := flag.String("l", "../log", "log file path")
 
-// job queue
-type JobQueue struct {
-	url   chan string
-	depth chan int
-}
+	flag.Parse()
 
-// get job from jobQueue
-func (s *Spider) getJob(jobs *JobQueue) (job *Job) {
-	job = new(Job)
-	job.url = <-jobs.url
-	job.depth = <-jobs.depth
-	return job
-}
-
-// add job to jobQueue
-func (s *Spider) addJob(jobs *JobQueue, job *Job) {
-	jobs.url <- job.url
-	jobs.depth <- job.depth
-}
-
-// crawl url
-// which do current job and add new jobs to job queue
-func (s *Spider) crawl(jobs *JobQueue) {
-
-	// 抓取间隔控制
-	time.Sleep(time.Duration(s.crawlInterval) * time.Second)
-}
-
-// new spider
-func newSpider(config conf.SpiderStruct) *Spider {
-	s := new(Spider)
-	s.outputDir = config.OutputDirectory
-	s.crawlInterval = config.CrawlInterval
-	s.crawlTimeout = config.CrawlTimeout
-	s.targetUrl = config.TargetUrl
-
-	return s
-}
-
-// 开启threandCount个spider goroutine,等待通道中的任务到达
-func Start(seedUrls []string, config conf.SpiderStruct) {
-	// 初始化任务队列
-	jobs := new(JobQueue)
-	for _, url := range seedUrls {
-		jobs.url <- url
-		jobs.depth <- 0
+	if printVer {
+		utils.PrintVersion()
 	}
-	// 一个while(1)的循环，直到channel通知任务结束
-	for {
-		// 创建threadCount个工作goroutine
-		for i := 0; i < config.ThreadCount; i++ {
-			s := newSpider(config)
-			go s.crawl(jobs)
-		}
+
+	l4g.Info("Hi, dash's %s is running...\n", "go_mini_spider")
+
+	confFile := confPath + "/" + SPIDER_CONFIG_FILE
+	conf, err := conf.InitConf(confFile)
+	if err != nil {
+		l4g.Error("read spider config failed, err [%s]", err)
+		AbnormalExit()
 	}
+
+	var seedUrls []string
+	// read and parse json,相对路径
+	b, err := ioutil.ReadFile(confPath + "/" + conf.UrlListFile)
+	if err != nil {
+		l4g.Error("readfile err[%s]", err)
+		AbnormalExit()
+	}
+	//json to []string
+	if err := json.Unmarshal(b, &seedUrls); err != nil {
+		l4g.Error("parse json err[%s]", err)
+		AbnormalExit()
+	}
+	l4g.Debug("seedUrls: %s", seedUrls)
+
+	// start miniSpider
+	spider.Start(seedUrls, conf)
+
+	// get urls
+	//GetUrls(seedUrls)
+
+	time.Sleep(1 * time.Second)
 }
