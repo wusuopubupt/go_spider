@@ -71,7 +71,7 @@ func main() {
 		l4g.Error("parse json err[%s]", err)
 		AbnormalExit()
 	}
-	seedUrls = []string{"www.baidu.com", "www.sina.com.cn"}
+	//seedUrls = []string{"http://www.baidu.com", "http://www.sina.com.cn"}
 	l4g.Debug("seedUrls: %s", seedUrls)
 
 	// start miniSpider
