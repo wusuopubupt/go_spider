@@ -4,7 +4,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"os"
 	"strings"
 	"time"
 )
@@ -22,6 +21,7 @@ import (
 type Spider struct {
 	// 多个goroutine共享的属性
 	outputDir     string
+	maxDepth      int
 	crawlInterval int
 	crawlTimeout  int
 	targetUrl     string
@@ -39,14 +39,6 @@ type Job struct {
 type JobQueue struct {
 	url   chan string
 	depth chan int
-}
-
-// abnormal exit
-func AbnormalExit() {
-	// http://stackoverflow.com/questions/14252766/abnormal-behavior-of-log4go
-	// adding a time.Sleep(time.Second) to the end of the code snippeet will cause the log content flush
-	time.Sleep(time.Second)
-	os.Exit(1)
 }
 
 // get href attribute from a Token
@@ -84,7 +76,7 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 			hasProto := strings.Index(link, "http") == 0
 			u, _ := url.Parse(link)
 			realUrl := u.Scheme + "://" + u.Host + u.Path
-			if !s.visitedUrl[realUrl] && hasProto {
+			if !s.visitedUrl[realUrl] && hasProto && job.depth < s.maxDepth {
 				s.jobs.url <- realUrl
 				s.jobs.depth <- job.depth + 1
 				l4g.Info("add job: %s, depth:%d", realUrl, job.depth+1)
@@ -99,24 +91,42 @@ func (s *Spider) crawl(chFinished chan bool) {
 	defer func() {
 		chFinished <- true
 	}()
+	timeout := make(chan bool, 1)
+	go func() {
+		time.Sleep(time.Second * 3)
+		timeout <- true
+	}()
+CRAWL:
 	for {
-		job := s.getJob()
-		l4g.Info("get job url:%s, depth:%d", job.url, job.depth)
-		// 检查是否访问过
-		if s.visitedUrl[job.url] {
-			l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
-			continue
+		var job Job
+		select {
+		case <-timeout:
+			l4g.Info("get job timeout!")
+			break CRAWL
+		//case job := s.getJob():
+		case job.url = <-s.jobs.url:
+			job.depth = <-s.jobs.depth
+			l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs.url))
+			// 检查是否访问过
+			if s.visitedUrl[job.url] {
+				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
+				continue
+			}
+			if job.depth > s.maxDepth {
+				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
+				continue
+			}
+			s.visitedUrl[job.url] = true
+			resp, err := http.Get(job.url)
+			if err != nil {
+				l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
+				return
+			}
+			defer resp.Body.Close()
+			s.parseHtml(resp.Body, job)
+			// 抓取间隔控制
+			time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 		}
-		s.visitedUrl[job.url] = true
-		resp, err := http.Get(job.url)
-		if err != nil {
-			l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
-			return
-		}
-		defer resp.Body.Close()
-		s.parseHtml(resp.Body, job)
-		// 抓取间隔控制
-		time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 	}
 }
 
@@ -138,14 +148,15 @@ func (s *Spider) getJob() (job Job) {
 
 // add job to jobQueue
 func (s *Spider) addJob(jobs JobQueue, job Job) {
-	jobs.url <- job.url
-	jobs.depth <- job.depth
+	s.jobs.url <- job.url
+	s.jobs.depth <- job.depth
 }
 
 // new spider
 func newSpider(config conf.SpiderStruct, jobs JobQueue) *Spider {
 	s := new(Spider)
 	s.outputDir = config.OutputDirectory
+	s.maxDepth = config.MaxDepth
 	s.crawlInterval = config.CrawlInterval
 	s.crawlTimeout = config.CrawlTimeout
 	s.targetUrl = config.TargetUrl
@@ -158,6 +169,7 @@ func newSpider(config conf.SpiderStruct, jobs JobQueue) *Spider {
 func Start(seedUrls []string, config conf.SpiderStruct) {
 	//var spiders []*Spider
 	var jobs JobQueue
+	// 队列最多为100w个任务，否则阻塞
 	jobs.url = make(chan string, 1000000)
 	jobs.depth = make(chan int, 1000000)
 	chFinished := make(chan bool)
@@ -178,7 +190,7 @@ func Start(seedUrls []string, config conf.SpiderStruct) {
 		for done := 0; done < config.ThreadCount; {
 			// 通知主goroutine任务结束
 			<-chFinished
-			l4g.Info("finiched one !")
+			l4g.Info("finiched #%d!", done)
 			done++
 		}
 		break
