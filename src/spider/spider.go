@@ -1,7 +1,9 @@
 package spider
 
 import (
+	"io"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 	"time"
@@ -15,6 +17,29 @@ import (
 import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
 )
+
+// Crawler struct
+type Spider struct {
+	// 多个goroutine共享的属性
+	outputDir     string
+	crawlInterval int
+	crawlTimeout  int
+	targetUrl     string
+	jobs          JobQueue
+	visitedUrl    map[string]bool
+}
+
+// one job
+type Job struct {
+	url   string
+	depth int
+}
+
+// job queue
+type JobQueue struct {
+	url   chan string
+	depth chan int
+}
 
 // abnormal exit
 func AbnormalExit() {
@@ -31,84 +56,68 @@ func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 			href = a.Val
 			ok = true
 		}
-		l4g.Debug("get href: %s", href)
+		//l4g.Debug("get href: %s", href)
 	}
 	// 空的return默认返回ok, href
 	return
 }
 
-// Extract all http** links from a given webpage
-// which do current job and add new jobs to job queue
-func (s *Spider) crawl(jobs JobQueue, chFinished chan bool) {
+// parse html
+func (s *Spider) parseHtml(b io.Reader, job Job) {
+	z := html.NewTokenizer(b)
+	for {
+		tokenType := z.Next()
+		switch {
+		case tokenType == html.ErrorToken:
+			l4g.Debug("end of page: %s,\tstart to get next job", job.url)
+			return
+		case tokenType == html.StartTagToken:
+			token := z.Token()
+			if !(token.Data == "a") {
+				continue
+			}
+			ok, link := s.getHref(token)
+			if !ok {
+				continue
+			}
+			// Make sure the url begines in http**
+			hasProto := strings.Index(link, "http") == 0
+			u, _ := url.Parse(link)
+			realUrl := u.Scheme + "://" + u.Host + u.Path
+			if !s.visitedUrl[realUrl] && hasProto {
+				s.jobs.url <- realUrl
+				s.jobs.depth <- job.depth + 1
+				l4g.Info("add job: %s, depth:%d", realUrl, job.depth+1)
+			}
+		}
+	}
+}
+
+// crawl
+func (s *Spider) crawl(chFinished chan bool) {
 	// Notify that we're done after this function
 	defer func() {
 		chFinished <- true
 	}()
 	for {
-		job := s.getJob(jobs)
+		job := s.getJob()
 		l4g.Info("get job url:%s, depth:%d", job.url, job.depth)
+		// 检查是否访问过
+		if s.visitedUrl[job.url] {
+			l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
+			continue
+		}
+		s.visitedUrl[job.url] = true
 		resp, err := http.Get(job.url)
-
 		if err != nil {
 			l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
 			return
 		}
-
-		b := resp.Body
-		defer b.Close() // close Body when the function returns
-
-		z := html.NewTokenizer(b)
-
-		for {
-			tt := z.Next()
-			switch {
-			case tt == html.ErrorToken:
-				// End of the document, we're done
-				return
-			case tt == html.StartTagToken:
-				t := z.Token()
-				// Check if the token is an <a> tag
-				isAnchor := t.Data == "a"
-				if !isAnchor {
-					continue
-				}
-				// Extract the href value, if there is one
-				ok, url := s.getHref(t)
-				if !ok {
-					continue
-				}
-				// Make sure the url begines in http**
-				hasProto := strings.Index(url, "http") == 0
-				if hasProto {
-					jobs.url <- url
-					jobs.depth <- job.depth + 1
-					l4g.Info("add job: %s", url)
-				}
-			}
-		}
+		defer resp.Body.Close()
+		s.parseHtml(resp.Body, job)
 		// 抓取间隔控制
 		time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 	}
-}
-
-// Crawler struct
-type Spider struct {
-	outputDir     string
-	crawlInterval int
-	crawlTimeout  int
-	targetUrl     string
-}
-
-// one job
-type Job struct {
-	url   string
-	depth int
-}
-
-// job queue
-type JobQueue struct {
-	url   chan string
-	depth chan int
 }
 
 // Channels
@@ -121,9 +130,9 @@ x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据
 */
 
 // get job from jobQueue
-func (s *Spider) getJob(jobs JobQueue) (job Job) {
-	job.url = <-jobs.url
-	job.depth = <-jobs.depth
+func (s *Spider) getJob() (job Job) {
+	job.url = <-s.jobs.url
+	job.depth = <-s.jobs.depth
 	return job
 }
 
@@ -134,45 +143,44 @@ func (s *Spider) addJob(jobs JobQueue, job Job) {
 }
 
 // new spider
-func newSpider(config conf.SpiderStruct) *Spider {
+func newSpider(config conf.SpiderStruct, jobs JobQueue) *Spider {
 	s := new(Spider)
 	s.outputDir = config.OutputDirectory
 	s.crawlInterval = config.CrawlInterval
 	s.crawlTimeout = config.CrawlTimeout
 	s.targetUrl = config.TargetUrl
+	s.jobs = jobs
+	s.visitedUrl = make(map[string]bool)
 
 	return s
 }
 
-// 开启threandCount个spider goroutine,等待通道中的任务到达
 func Start(seedUrls []string, config conf.SpiderStruct) {
-	var spiders []*Spider
+	//var spiders []*Spider
 	var jobs JobQueue
-	jobs.url = make(chan string, 100)
-	jobs.depth = make(chan int, 100)
+	jobs.url = make(chan string, 1000000)
+	jobs.depth = make(chan int, 1000000)
 	chFinished := make(chan bool)
-	// 创建threadCount个工作goroutine
-	for i := 0; i < config.ThreadCount; i++ {
-		s := newSpider(config)
-		spiders = append(spiders, s)
-		l4g.Info("created new spider #%d", i)
+	// 初始化任务队列
+	for _, url := range seedUrls {
+		l4g.Info("url: %s", url)
+		jobs.url <- url
+		jobs.depth <- 0
 	}
 	// 一个while(1)的循环，直到channel通知任务结束
 	for {
-		// 初始化任务队列
-		for _, url := range seedUrls {
-			l4g.Info("url: %s", url)
-			jobs.url <- url
-			jobs.depth <- 0
-		}
-		for i, s := range spiders {
+		s := newSpider(config, jobs)
+		// 开启threandCount个spider.crawl goroutine,等待通道中的任务到达
+		for i := 0; i < config.ThreadCount; i++ {
 			l4g.Info("spider #%d is running", i)
-			go s.crawl(jobs, chFinished)
+			go s.crawl(chFinished)
 		}
 		for done := 0; done < config.ThreadCount; {
 			// 通知主goroutine任务结束
 			<-chFinished
+			l4g.Info("finiched one !")
 			done++
 		}
+		break
 	}
 }
