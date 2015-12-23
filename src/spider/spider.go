@@ -1,3 +1,8 @@
+/**
+ * @author : wusuopubupt
+ * @date   : 2015-11-15
+ * @brief  : 爬虫实现
+ */
 package spider
 
 import (
@@ -17,44 +22,58 @@ import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
 )
 
-// Crawler struct
-type Spider struct {
-	// 多个goroutine共享的属性
-	outputDir     string
-	maxDepth      int
-	crawlInterval int
-	crawlTimeout  int
-	targetUrl     string
-	jobs          JobQueue
-	visitedUrl    map[string]bool
-}
-
-// one job
+// 任务结构
 type Job struct {
 	url   string
 	depth int
 }
 
-// job queue
-type JobQueue struct {
-	url   chan string
-	depth chan int
+// 爬虫结构
+type Spider struct {
+	// 多个goroutine共享的属性+任务队列
+	outputDir     string
+	maxDepth      int
+	crawlInterval int
+	crawlTimeout  int
+	targetUrl     string
+	jobs          chan Job
+	visitedUrl    map[string]bool
 }
 
-// get href attribute from a Token
+// Channels简单操作
+/**************************************************
+
+c := make(chan bool) //创建一个无缓冲的bool型Channel
+c <- x //向一个Channel发送一个值
+<- c //从一个Channel中接收一个值
+x = <- c //从Channel c接收一个值并将其存储到x中
+x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
+
+***************************************************/
+
+// 从队列取出任务
+func (s *Spider) getJob() (job Job) {
+	return <-s.jobs
+}
+
+// 新任务入队列
+func (s *Spider) addJob(job Job) {
+	s.jobs <- job
+}
+
+// 提取url
 func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 	for _, a := range t.Attr {
 		if a.Key == "href" {
 			href = a.Val
 			ok = true
 		}
-		//l4g.Debug("get href: %s", href)
 	}
-	// 空的return默认返回ok, href
 	return
 }
 
-// parse html
+// 解析html
+// 以后针对不同的爬取任务，设定不同的parse方法
 func (s *Spider) parseHtml(b io.Reader, job Job) {
 	z := html.NewTokenizer(b)
 	for {
@@ -72,25 +91,25 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 			if !ok {
 				continue
 			}
-			// Make sure the url begines in http**
 			hasProto := strings.Index(link, "http") == 0
 			u, _ := url.Parse(link)
 			realUrl := u.Scheme + "://" + u.Host + u.Path
 			if !s.visitedUrl[realUrl] && hasProto && job.depth < s.maxDepth {
-				s.jobs.url <- realUrl
-				s.jobs.depth <- job.depth + 1
+				// 新任务入公共队列
+				s.addJob(Job{realUrl, job.depth + 1})
 				l4g.Info("add job: %s, depth:%d", realUrl, job.depth+1)
 			}
 		}
 	}
 }
 
-// crawl
+// 爬取和解析(getJob & addJob)
 func (s *Spider) crawl(chFinished chan bool) {
-	// Notify that we're done after this function
+	// 通知主goroutine，当前goroutine已无任务可做
 	defer func() {
 		chFinished <- true
 	}()
+	// 等待队列中任务到达的超时时间，3秒
 	timeout := make(chan bool, 1)
 	go func() {
 		time.Sleep(time.Second * 3)
@@ -103,10 +122,8 @@ CRAWL:
 		case <-timeout:
 			l4g.Info("get job timeout!")
 			break CRAWL
-		//case job := s.getJob():
-		case job.url = <-s.jobs.url:
-			job.depth = <-s.jobs.depth
-			l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs.url))
+		case job = <-s.jobs:
+			l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs))
 			// 检查是否访问过
 			if s.visitedUrl[job.url] {
 				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
@@ -116,6 +133,9 @@ CRAWL:
 				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
 				continue
 			}
+			/////////////////////////////////////
+			///  网络请求和解析单独设计package实现
+			/////////////////////////////////////
 			s.visitedUrl[job.url] = true
 			resp, err := http.Get(job.url)
 			if err != nil {
@@ -123,37 +143,19 @@ CRAWL:
 				return
 			}
 			defer resp.Body.Close()
+			/////////////////////////////////////
+			// 以后针对不同的爬取任务，设定不同的parse方法
 			s.parseHtml(resp.Body, job)
+			/////////////////////////////////////
+			/////////////////////////////////////
 			// 抓取间隔控制
 			time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 		}
 	}
 }
 
-// Channels
-/*
-c := make(chan bool) //创建一个无缓冲的bool型Channel
-c <- x //向一个Channel发送一个值
-<- c //从一个Channel中接收一个值
-x = <- c //从Channel c接收一个值并将其存储到x中
-x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
-*/
-
-// get job from jobQueue
-func (s *Spider) getJob() (job Job) {
-	job.url = <-s.jobs.url
-	job.depth = <-s.jobs.depth
-	return job
-}
-
-// add job to jobQueue
-func (s *Spider) addJob(jobs JobQueue, job Job) {
-	s.jobs.url <- job.url
-	s.jobs.depth <- job.depth
-}
-
-// new spider
-func newSpider(config conf.SpiderStruct, jobs JobQueue) *Spider {
+// 初始化爬虫
+func newSpider(config conf.SpiderStruct, jobs chan Job) *Spider {
 	s := new(Spider)
 	s.outputDir = config.OutputDirectory
 	s.maxDepth = config.MaxDepth
@@ -166,20 +168,18 @@ func newSpider(config conf.SpiderStruct, jobs JobQueue) *Spider {
 	return s
 }
 
+// 启动爬虫
 func Start(seedUrls []string, config conf.SpiderStruct) {
-	//var spiders []*Spider
-	var jobs JobQueue
 	// 队列最多为100w个任务，否则阻塞
-	jobs.url = make(chan string, 1000000)
-	jobs.depth = make(chan int, 1000000)
+	jobs := make(chan Job, 1000000)
 	chFinished := make(chan bool)
 	// 初始化任务队列
 	for _, url := range seedUrls {
 		l4g.Info("url: %s", url)
-		jobs.url <- url
-		jobs.depth <- 0
+		jobs <- Job{url, 0}
 	}
 	// 一个while(1)的循环，直到channel通知任务结束
+WORKING:
 	for {
 		s := newSpider(config, jobs)
 		// 开启threandCount个spider.crawl goroutine,等待通道中的任务到达
@@ -188,11 +188,11 @@ func Start(seedUrls []string, config conf.SpiderStruct) {
 			go s.crawl(chFinished)
 		}
 		for done := 0; done < config.ThreadCount; {
-			// 通知主goroutine任务结束
+			// 阻塞,等待通知主goroutine任务结束
 			<-chFinished
 			l4g.Info("finiched #%d!", done)
 			done++
 		}
-		break
+		break WORKING
 	}
 }
