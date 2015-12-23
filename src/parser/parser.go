@@ -1,67 +1,20 @@
 /**
  * @author : wusuopubupt
  * @date   : 2015-11-15
- * @brief  : 爬虫实现
+ * @brief  : 网页解析器
  */
-package spider
+package parser
 
 import (
-	"io"
-	"net/http"
 	"net/url"
 	"strings"
-	"time"
 )
 
 import (
 	l4g "code.google.com/p/log4go"
-	"golang.org/x/net/html"
 )
 
-import (
-	conf "github.com/wusuopubupt/go_spider/src/conf"
-)
-
-// 任务结构
-type Job struct {
-	url   string
-	depth int
-}
-
-// 爬虫结构
-type Spider struct {
-	// 多个goroutine共享的属性+任务队列
-	outputDir     string
-	maxDepth      int
-	crawlInterval int
-	crawlTimeout  int
-	targetUrl     string
-	jobs          chan Job
-	visitedUrl    map[string]bool
-}
-
-// Channels简单操作
-/**************************************************
-
-c := make(chan bool) //创建一个无缓冲的bool型Channel
-c <- x //向一个Channel发送一个值
-<- c //从一个Channel中接收一个值
-x = <- c //从Channel c接收一个值并将其存储到x中
-x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
-
-***************************************************/
-
-// 从队列取出任务
-func (s *Spider) getJob() (job Job) {
-	return <-s.jobs
-}
-
-// 新任务入队列
-func (s *Spider) addJob(job Job) {
-	s.jobs <- job
-}
-
-// 提取url
+// 提取url,注意相对路径
 func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 	for _, a := range t.Attr {
 		if a.Key == "href" {
@@ -92,15 +45,15 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 				continue
 			}
 			hasProto := strings.Index(link, "http") == 0
-			u, _ := url.Parse(job.url)
-			// 相对路径
 			if !hasProto {
-				link = u.Scheme + "://" + u.Host + "/" + link
+				link = url + "/" + link
 			}
-			if !s.visitedUrl[link] && job.depth < s.maxDepth {
+			u, _ := url.Parse(link)
+			realUrl := u.Scheme + "://" + u.Host + u.Path
+			if !s.visitedUrl[realUrl] && hasProto && job.depth < s.maxDepth {
 				// 新任务入公共队列
-				s.addJob(Job{link, job.depth + 1})
-				l4g.Info("add job: %s, depth:%d", link, job.depth+1)
+				s.addJob(Job{realUrl, job.depth + 1})
+				l4g.Info("add job: %s, depth:%d", realUrl, job.depth+1)
 			}
 		}
 	}
@@ -112,10 +65,10 @@ func (s *Spider) crawl(chFinished chan bool) {
 	defer func() {
 		chFinished <- true
 	}()
-	// 等待队列中任务到达的超时时间，1秒
+	// 等待队列中任务到达的超时时间，3秒
 	timeout := make(chan bool, 1)
 	go func() {
-		time.Sleep(time.Second * 1)
+		time.Sleep(time.Second * 3)
 		timeout <- true
 	}()
 CRAWL:
