@@ -7,8 +7,12 @@ package spider
 
 import (
 	"io"
+	"io/ioutil"
 	"net/http"
 	"net/url"
+	"os"
+	"path"
+	"regexp"
 	"strings"
 	"time"
 )
@@ -97,6 +101,11 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 			if !hasProto {
 				link = u.Scheme + "://" + u.Host + "/" + link
 			}
+			// 检查url是否为需要存储的目标网页url格式
+			if s.checkUrlRegex(link) {
+				// 保存为文件
+				s.save(link)
+			}
 			if !s.visitedUrl[link] && job.depth < s.maxDepth {
 				// 新任务入公共队列
 				s.addJob(Job{link, job.depth + 1})
@@ -104,6 +113,32 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 			}
 		}
 	}
+}
+
+// 保存网页内容
+func (s *Spider) save(targetUrl string) bool {
+	res, err := http.Get(targetUrl)
+	defer res.Body.Close()
+	content, err := ioutil.ReadAll(res.Body)
+	if err != nil {
+		l4g.Error("read url content%s, err:%s", targetUrl, err)
+		return false
+	}
+	filename := s.outputDir + "/" + url.QueryEscape(targetUrl)
+	f, err := os.Create(filename)
+	if err != nil {
+		l4g.Error("create file %s, err:%s", filename, err)
+		return false
+	}
+	defer f.Close()
+	f.Write(content)
+	return true
+}
+
+// 检查url是否为需要存储的目标网页url格式
+func (s *Spider) checkUrlRegex(url string) bool {
+	r, _ := regexp.Compile(s.targetUrl)
+	return r.MatchString(url)
 }
 
 // 爬取和解析(getJob & addJob)
@@ -158,9 +193,9 @@ CRAWL:
 }
 
 // 初始化爬虫
-func newSpider(config conf.SpiderStruct, jobs chan Job) *Spider {
+func newSpider(config conf.SpiderStruct, jobs chan Job, confpath string) *Spider {
 	s := new(Spider)
-	s.outputDir = config.OutputDirectory
+	s.outputDir = path.Join(confpath, config.OutputDirectory)
 	s.maxDepth = config.MaxDepth
 	s.crawlInterval = config.CrawlInterval
 	s.crawlTimeout = config.CrawlTimeout
@@ -172,7 +207,7 @@ func newSpider(config conf.SpiderStruct, jobs chan Job) *Spider {
 }
 
 // 启动爬虫
-func Start(seedUrls []string, config conf.SpiderStruct) {
+func Start(seedUrls []string, config conf.SpiderStruct, confpath string) {
 	// 队列最多为100w个任务，否则阻塞
 	jobs := make(chan Job, 1000000)
 	chFinished := make(chan bool)
@@ -184,7 +219,7 @@ func Start(seedUrls []string, config conf.SpiderStruct) {
 	// 一个while(1)的循环，直到channel通知任务结束
 WORKING:
 	for {
-		s := newSpider(config, jobs)
+		s := newSpider(config, jobs, confpath)
 		// 开启threandCount个spider.crawl goroutine,等待通道中的任务到达
 		for i := 0; i < config.ThreadCount; i++ {
 			l4g.Info("spider #%d is running", i)

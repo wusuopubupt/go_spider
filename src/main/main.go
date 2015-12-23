@@ -75,7 +75,7 @@ func main() {
 	l4g.Debug("seedUrls: %s", seedUrls)
 
 	// start miniSpider
-	spider.Start(seedUrls, conf)
+	spider.Start(seedUrls, conf, confPath)
 
 	time.Sleep(1 * time.Second)
 }
