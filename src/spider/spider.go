@@ -1,8 +1,13 @@
-/**
- * @author : wusuopubupt
- * @date   : 2015-11-15
- * @brief  : 爬虫实现
- */
+/* spider.go - 爬虫主程序 */
+/*
+modification history
+--------------------
+2015-11-25, by wusuopubupt, create
+*/
+/*
+DESCRIPTION
+爬虫实现，页面请求和解析
+*/
 package spider
 
 import (
@@ -26,7 +31,7 @@ import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
 )
 
-// 任务结构
+// 单个任务结构
 type Job struct {
 	url   string
 	depth int
@@ -44,28 +49,34 @@ type Spider struct {
 	visitedUrl    map[string]bool
 }
 
-// Channels简单操作
-/**************************************************
-
-c := make(chan bool) //创建一个无缓冲的bool型Channel
-c <- x //向一个Channel发送一个值
-<- c //从一个Channel中接收一个值
-x = <- c //从Channel c接收一个值并将其存储到x中
-x, ok = <- c //从Channel接收一个值，如果channel关闭了或没有数据，那么ok将被置为false
-
-***************************************************/
-
-// 从队列取出任务
+/*
+* getJob - 从队列取出任务
+*
+* RETURNS:
+* 	-job
+ */
 func (s *Spider) getJob() (job Job) {
 	return <-s.jobs
 }
 
-// 新任务入队列
+/*
+* addJob - 新任务入队列
+*
+* PARAMS : - job
+ */
 func (s *Spider) addJob(job Job) {
 	s.jobs <- job
 }
 
-// 提取url
+/*
+* getHref - 提取url
+*
+* PARAMS:
+*   - t : html token
+*
+* RETURNS:
+*   - ok, href
+ */
 func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 	for _, a := range t.Attr {
 		if a.Key == "href" {
@@ -76,8 +87,14 @@ func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 	return
 }
 
-// 解析html
-// 以后针对不同的爬取任务，设定不同的parse方法
+/*
+* parseHtml - 解析html,以后针对不同的爬取任务，设定不同的parse方法
+
+* PARAMS:
+*   - b 	: html response body
+*   - job	: current job
+*
+ */
 func (s *Spider) parseHtml(b io.Reader, job Job) {
 	z := html.NewTokenizer(b)
 	for {
@@ -102,7 +119,7 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 				link = u.Scheme + "://" + u.Host + "/" + link
 			}
 			// 检查url是否为需要存储的目标网页url格式
-			if s.checkUrlRegex(link) {
+			if s.checkUrlRegexp(link) {
 				// 保存为文件
 				s.save(link)
 			}
@@ -115,7 +132,17 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 	}
 }
 
-// 保存网页内容
+/*
+* save - 保存网页内容
+*
+* PARAMS:
+*   - targetUrl : 目标网址
+*
+* RETURNS:
+*   - true, if succeed
+*   - false, if failed
+*
+ */
 func (s *Spider) save(targetUrl string) bool {
 	res, err := http.Get(targetUrl)
 	defer res.Body.Close()
@@ -135,13 +162,30 @@ func (s *Spider) save(targetUrl string) bool {
 	return true
 }
 
-// 检查url是否为需要存储的目标网页url格式
-func (s *Spider) checkUrlRegex(url string) bool {
+/*
+* checkUrlRegexp -  检查url是否为需要存储的目标网页url格式
+*
+* PARAMS:
+*   - url
+*
+* RETURNS:
+*   - true, if match
+*   - false, if done't match
+*
+ */
+func (s *Spider) checkUrlRegexp(url string) bool {
+	// 改造成MustCompile
 	r, _ := regexp.Compile(s.targetUrl)
 	return r.MatchString(url)
 }
 
-// 爬取和解析(getJob & addJob)
+/*
+* crawl  - 爬取和解析(getJob & addJob)
+*
+* PARAMS:
+*   - chFinished : 当前goroutine完成时向chFinished信道发送消息,通知主goroutine
+*
+ */
 func (s *Spider) crawl(chFinished chan bool) {
 	// 通知主goroutine，当前goroutine已无任务可做
 	defer func() {
@@ -192,7 +236,17 @@ CRAWL:
 	}
 }
 
-// 初始化爬虫
+/*
+* newSpider - 初始化爬虫
+*
+* PARAMS:
+*   - config   : 爬虫配置文件
+*   - jobs     : 任务队列
+*   - confpath : 配置文件路径
+*
+* RETURNS:
+*	*Spider 爬虫对象
+ */
 func newSpider(config conf.SpiderStruct, jobs chan Job, confpath string) *Spider {
 	s := new(Spider)
 	s.outputDir = path.Join(confpath, config.OutputDirectory)
@@ -206,7 +260,16 @@ func newSpider(config conf.SpiderStruct, jobs chan Job, confpath string) *Spider
 	return s
 }
 
-// 启动爬虫
+/*
+* Start - 启动爬虫
+*
+* PARAMS:
+*   - seedUrls : 种子url切片
+*   - config   : 爬虫配置文件
+*   - confpath : 配置文件路径
+*
+* RETURNS:
+ */
 func Start(seedUrls []string, config conf.SpiderStruct, confpath string) {
 	// 队列最多为100w个任务，否则阻塞
 	jobs := make(chan Job, 1000000)

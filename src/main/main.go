@@ -1,3 +1,13 @@
+/* main.go 爬虫入口程序*/
+/*
+modification history
+--------------------
+2015-11-25, by wusuopubupt, create
+*/
+/*
+DESCRIPTION
+网页定向抓取爬虫,利用Golang的channel和goroutine实现并发
+*/
 package main
 
 import (
@@ -18,36 +28,37 @@ import (
 	utils "github.com/wusuopubupt/go_spider/src/utils"
 )
 
+// 默认配置文件
 var (
 	SPIDER_CONFIG_FILE = "spider.conf"
 	SPIDER_LOGCONF_XML = "../../conf/logconf.xml"
 )
 
-// abnormal exit
-func AbnormalExit() {
-	// http://stackoverflow.com/questions/14252766/abnormal-behavior-of-log4go
-	// adding a time.Sleep(time.Second) to the end of the code snippeet will cause the log content flush
+// l4g的bug,需要sleep一会再让主goroutine退出,log才能flush到文件
+// http://stackoverflow.com/questions/14252766/abnormal-behavior-of-log4go
+func SlowExit() {
 	time.Sleep(time.Second)
 	os.Exit(1)
 }
 
 // 爬虫主程序
 func main() {
+	// l4g的配置文件
 	l4g.LoadConfiguration(SPIDER_LOGCONF_XML)
 
 	// refer : http://www.01happy.com/golang-command-line-arguments/
-	// 方法一： flag.StringVar(),传入指针，直接给confPath赋值
 	var confPath string
+	var logPath string
 	var printVer bool
 	flag.StringVar(&confPath, "c", "../../conf", "config file path")
 	flag.BoolVar(&printVer, "v", false, "print version")
-	// 方法二：flag.String()，把函数调用的返回值赋值给logPath
-	//logPath := flag.String("l", "../log", "log file path")
+	flag.StringVar(&logPath, "l", "../../log", "log file path")
 
 	flag.Parse()
 
 	if printVer {
 		utils.PrintVersion()
+		os.Exit(0)
 	}
 
 	l4g.Info("Hi, dash's %s is running...\n", "go_mini_spider")
@@ -56,7 +67,7 @@ func main() {
 	conf, err := conf.InitConf(confFile)
 	if err != nil {
 		l4g.Error("read spider config failed, err [%s]", err)
-		AbnormalExit()
+		SlowExit()
 	}
 
 	var seedUrls []string
@@ -64,15 +75,13 @@ func main() {
 	b, err := ioutil.ReadFile(confPath + "/" + conf.UrlListFile)
 	if err != nil {
 		l4g.Error("readfile err[%s]", err)
-		AbnormalExit()
+		SlowExit()
 	}
 	//json to []string
 	if err := json.Unmarshal(b, &seedUrls); err != nil {
 		l4g.Error("parse json err[%s]", err)
-		AbnormalExit()
+		SlowExit()
 	}
-	//seedUrls = []string{"http://www.baidu.com", "http://www.sina.com.cn"}
-	l4g.Debug("seedUrls: %s", seedUrls)
 
 	// start miniSpider
 	spider.Start(seedUrls, conf, confPath)
