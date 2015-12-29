@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Keywords" content="F1,赛车,F1新闻,赛车新闻,F1微博,F1 twitter,F1 facebook,赛车微博" />
+<meta http-equiv="Description" content="虎扑新声每日报道F1赛车相关最热门新闻，真实还原现场，努力搜寻最新最全的F1赛车热门事件" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="赛车滚动新闻_虎扑赛车新声" />
+<title>赛车滚动新闻_虎扑赛车新声</title>
+<meta name="apple-itunes-app" content="app-id=906632439" />
+<link rel="shortcut icon" href="http://b3.hoopchina.com.cn/common/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://b3.hoopchina.com.cn/web/channel/voice/v1/css/common/common.css" />
+<script src="http://b3.hoopchina.com.cn/code/??jquery/jquery-1.8.js,seajs/seajs/seajs/2.1.1/sea.js,seajs/seajs/seajs-style/1.0.2/seajs-style.js"></script>
+<script src="http://b3.hoopchina.com.cn/web/module/dace/1.0.0/dace.js"></script> 
+<script src="http://b3.hoopchina.com.cn/web/channel/voice/v1/js/common/common.js"></script> 
+        <link rel="stylesheet" type="text/css" media="screen" href="http://b3.hoopchina.com.cn/??web/channel/voice/v1/css/common/voice.min.css,web/channel/voice/v1/css/common/card.min.css,web/channel/voice/v1/css/aggregation/newsList.min.css?v=196" />
+<!-- seajs config 配置 -->
+<script>
+
+seajs.config({
+    alias: {
+        'jquery': 'code/seajs/jquery/1.8.3/jquery',
+        'seajs-debug': 'code/seajs/seajs/seajs-debug/1.1.1/seajs-debug',
+        // 提示框
+        'warning': 'modules/tips/warning',
+        'shareAPI': 'modules/share/shareAPI'
+    },
+    paths: {
+        'code': 'http://b3.hoopchina.com.cn/code',
+            'modules': 'dist/modules'
+        },
+    map: [
+        function(uri) {
+            // 避免请求缓存
+            if (location.search.indexOf("seajs-debug") === -1) {
+                // [ /^(.*\/dist\/.*\.(?:css|js))(?:.*)$/i, '$1?t=2014041002']
+                uri += (uri.indexOf('?') === -1 ? '?' : '&') + 't=196';
+            }
+
+            return uri
+        }
+    ],
+    base: 'http://b3.hoopchina.com.cn/web/channel/voice/v1/js/'
+});
+</script>
+</head>
+<body>
+<!--包含页面公共头部信息-->
+<!-- topbar start -->
+<div class="hp-topbarNav">
+	<div class="hp-topbarNav-bd">
+		<div class="hp-quickNav">
+			<ul class="hp-quickNav-list">
+				<li class="mobileWeb">
+					<a href="http://m.hupu.com/" target="_blank"><i class="iconfont ico-mobile"></i>手机虎扑</a>
+				</li>
+				<li class="line">|</li>
+				<li>
+				    <a href="http://mobile.hupu.com/?_r=globalNav" target="_blank" style="color:#ad0007">虎扑体育客户端</a>
+				</li>
+				<li class="line">|</li>
+				<li class="hp-dropDownMenu topbar-followBlog">
+					<a class="hp-set" href="javascript:">关注虎扑<s class="hp-set-arrow"><s class="hp-set-arrow-bd"></s></s></a>
+					<div class="hp-drapDown topbar-followBlog-drapDown">
+						<a class="weibo" target="_blank" href="http://e.weibo.com/liangle4u" title="新浪"><i class="ico-weibo"></i>新浪</a>
+						<a class="weixin" target="_blank" href="http://voice.hupu.com/other/1581560.html" title="微信"><i class="ico-weixin"></i>微信</a>
+						<a class="instagram" target="_blank" href="http://voice.hupu.com/other/1634334.html" title="Instagram"><i class="ico-instagram"></i>Ins</a>
+						<a class="qqt" target="_blank" href="http://e.t.qq.com/the_real_hoopchina" title="腾讯"><i class="ico-qqt"></i>腾讯</a>
+						<a class="qzone" target="_blank" href="http://user.qzone.qq.com/1624355655" title="空间"><i class="ico-qzone"></i>空间</a>
+						<a class="renren" target="_blank" href="http://page.renren.com/699131720" title="人人"><i class="ico-renren"></i>人人</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="hp-topbar-loginInfo" id="J_topbar_loginInfo">	
+		</div>
+	</div>
+</div>
+<!-- topbar end -->
+<!-- header start -->
+<div class="hp-header">
+	<div class="hp-header-bd">
+        <!-- navChannel start -->
+		<div class="hp-nav-channel">
+			<ul class="hp-nba-channel-item">
+				<li class="first"><a href="http://www.hupu.com" target="_blank">首页</a></li>
+				<li class="line">|</li>
+				<li><a href="http://nba.hupu.com" target="_blank">NBA</a></li>
+				<li class="line">|</li>
+				<li><a href="http://cba.hupu.com" target="_blank">CBA</a></li>
+				<li class="line">|</li>
+				<li><a href="http://soccer.hupu.com" target="_blank">国际足球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://soccer.hupu.com/china" target="_blank">中国足球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://racing.hupu.com" target="_blank">赛车</a></li>
+				<li class="line">|</li>
+				<li><a href="http://tennis.hupu.com" target="_blank">网球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://zb.hupu.com" target="_blank">装备</a></li>
+				<li class="line">|</li>
+				<li><a href="http://www.shihuo.cn" target="_blank">识货</a></li>
+				<li class="line">|</li>
+				<li><a href="http://lecai.hupu.com" target="_blank">彩票</a></li>
+				<li class="line">|</li>
+				<li><a href="http://v.opahnet.com" target="_blank">视频</a></li>
+				<li class="line">|</li>
+				<li><a href="http://voice.hupu.com" target="_blank">新声</a></li>
+				<li class="line">|</li>
+				<li><a href="http://bbs.hupu.com" target="_blank">论坛</a></li>
+				<li class="line">|</li>
+				<li><a href="http://youxi.hupu.com" target="_blank">游戏</a></li>
+				<li class="line">|</li>
+				<li><a href="http://photo.hupu.com" target="_blank">图片</a></li>
+				<li class="line">|</li>
+				<li><a href="http://bbs.hupu.com/all-gambia" target="_blank">娱乐</a></li>
+				<li class="line">|</li>
+				<li><a href="http://run.hupu.com" target="_blank">跑步</a></li>
+				<li class="line">|</li>
+				<li><a href="http://edu.hupu.com" target="_blank">教育</a></li>
+				<li class="line">|</li>
+				<li class="hp-w1200-show"><a href="http://taiqiu.hupu.com" target="_blank">台球</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-w1200-show"><a href="http://ymq.hupu.com" target="_blank">羽毛球</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-w1200-show"><a href="http://xgame.hupu.com" target="_blank">Xgames</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-dropDownMenu nav-channel-more">
+                    <a href="javascript:void(0)" class="hp-set">更多<s class="hp-set-arrow"><s class="hp-set-arrow-bd"></s></s></a>
+                    <div class="hp-drapDown nav-channel-more-drapDown">
+					    <a href="http://www.nflchina.com/" target="_blank">NFL</a>
+						<a href="http://golf.hupu.com/" target="_blank">高尔夫</a>						 
+					    <a href="http://outdoor.hupu.com" target="_blank">户外</a>
+                    	<a href="http://xgame.hupu.com" target="_blank">xgames</a>
+                    	<a href="http://ymq.hupu.com" target="_blank">羽毛球</a>                    	 
+                    	<s class="arrow-top"><s class="arrowbd"></s></s>
+                    </div>
+                </li>
+			</ul>
+		</div>
+<!-- navChannel end -->
+        <!-- nav start -->
+        <div class="hp-nav">
+            <div class="hp-logo">
+                <a href="http://voice.hupu.com/" title="新声">
+                    <img alt="新声" src="http://b3.hoopchina.com.cn/images/logo2013/v1/hp_logo_voice.png">
+                </a>
+            </div>
+            <div class="hp-mainNav">
+                <div class="hp-mainNav-bd">
+    <ul class="hp-mainNav-item">
+        <li class="voice-my-dingyue-my"><a href="http://voice.hupu.com/my">我的订阅</a></li>
+        <li class="line voice-my-dingyue-my">|</li>
+        <li><a href="http://voice.hupu.com/hot">新声热榜</a></li>
+        <li class="line">|</li>
+        <li class="hp-dropDownMenu">
+            <a href="javascript:" class="hp-set">体育频道</a>
+            <div class="hp-drapDown">
+                <a href="http://voice.hupu.com/sports">综合体育</a>
+                <a href="http://voice.hupu.com/nba">NBA</a>
+                <a href="http://voice.hupu.com/cba">中国篮球</a>
+                <a href="http://voice.hupu.com/soccer">国际足球</a>
+                <a href="http://voice.hupu.com/china">中国足球</a>
+                <a href="http://voice.hupu.com/f1">赛车</a>
+                <a href="http://voice.hupu.com/tennis">网球</a>
+                <a href="http://voice.hupu.com/zb">装备</a>
+                <a href="http://voice.hupu.com/wcba">WCBA</a>
+            </div>
+        </li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/f1/newslist">赛车新闻</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/f1/topic/more">赛车专题</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/f1/trends">赛车动态</a></li>
+    </ul>
+</div>
+                <div class="hp-search J_hp_search">
+                    <span class="iconfont ico-search"></span>
+                    <input type="text" placeholder="搜索新声" class="input-search" />
+                </div>
+                <i class="hp-roundPoint-br-tl"></i>
+				<i class="hp-roundPoint-br-tr"></i>
+				<i class="hp-roundPoint-br-bl"></i>
+				<i class="hp-roundPoint-br-br"></i>
+            </div>
+        </div>
+        <!-- nav end -->
+	</div>
+</div>
+<!-- header end -->    
+<!-- navPath start -->
+<!-- navPath end -->
+<div class="hp-wrap">
+	<!-- main start -->
+	<div class="voice-main">
+                <div class="title">
+                    <h2>赛车新闻</h2>
+                    <a target="_blank" class="btn-subscribeRss" href="http://voice.hupu.com/generated/voice/news_f1.xml">
+                        订阅RSS
+                        <i class="ico-rss"></i>
+                    </a>
+                </div>
+		<div class="news-list">
+                    <ul>
+                                   
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987437.html"  target="_blank">阿莱士：Kimi能帮助维特尔夺冠</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        前法拉利车手、大奖赛冠军让-阿莱士认为，Kimi能够帮助维特尔赢得世界冠军。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987437.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987437.html" title="2015-12-28 22:54">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/raikkonen-can-help-vettel-win-championship-alesi-665081/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987437.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15083619.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987358.html"  target="_blank">布里尔重申：明年的赛车必然有进步</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        迈凯伦的车队总监埃里克-布里尔相信车队最糟糕的阶段已经过去了，本田对动力系统大改预期将在明年有重大性能提升，今年之所以提升不明显的原因是车队无法在赛季中对引擎进行大改动。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987358.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987358.html" title="2015-12-28 15:06">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/boullier-mclaren-honda-s-worst-pain-is-behind-664863/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987358.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15079323.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987349.html"  target="_blank">莲花F1车队售价——1英镑</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        这展示了其前东家是多么希望将车队脱手——只要付清欠款就行了。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987349.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987349.html" title="2015-12-28 14:21">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/renault-paid-just-1-to-buy-lotus-f1-team-664965/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987349.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15078927.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987284.html"  target="_blank">克莱尔-威廉姆斯：没有厂商活得也不错</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        威廉姆斯车队的新掌门克莱尔-威廉姆斯说“很难”为车队找到新的“厂商”合作了。目前威廉姆斯有第5大的预算，并且连续2个赛季赢得了车队第3名。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987284.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987284.html" title="2015-12-28 11:57">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122338">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987284.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15077412.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987280.html"  target="_blank">汉密尔顿：我不会为了胜利忽略车队指令</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        3届世界冠军汉密尔顿否认自己曾想通过不服从车队指令的做法赢得胜利。在墨西哥大奖赛上，汉密尔顿曾反对车队在安全车出动后招他回去换胎的举动。在巴西建议与罗斯伯格使用不同的策略，但被否决了。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987280.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987280.html" title="2015-12-28 11:38">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122316">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987280.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15077211.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987260.html"  target="_blank">丹尼斯：我依然全权掌管迈凯伦-本田车队</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        虽然迈凯伦在2015年遭遇了30多年来最糟糕的赛季，并且在2012年巴西大奖赛后再也没有获胜过，但罗恩-丹尼斯坚持他还是帮助迈凯伦拜托困境的最正确人选。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987260.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987260.html" title="2015-12-28 11:18">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122332">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987260.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15076993.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1987241.html"  target="_blank">2016持续研发？还是专注2017？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        威廉姆斯技术总监帕特-西蒙斯称2017赛季新规则的技术挑战尤胜2009年的技术改革，并且会在2016赛季考验车队的技术分配。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1987241.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1987241.html" title="2015-12-28 11:00">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122342">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1987241.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15076783.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1986130.html"  target="_blank">纽维：本田明年也许会超过我们</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        红牛技术主管阿德里安-纽维认为，本田在2016年可以取得非常大的进步，并且可以帮助迈凯轮压过红牛一头。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1986130.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1986130.html" title="2015-12-23 21:58">12月23日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/newey-sees-honda-as-a-threat-for-2016/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1986130.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15036435.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1986119.html"  target="_blank">萨宾驳斥舒米已经可以行走的报道</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        麦扣-舒马赫的经纪人萨宾驳斥了一篇称舒米已经可以走路的报道。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1986119.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1986119.html" title="2015-12-23 21:42">12月23日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/schumacher-walking-claims-slammed-by-manager-as-irresponsible/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1986119.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15036281.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1985375.html"  target="_blank">BBC终止F1转播协议，第四频道接手</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        BBC宣布终止了F1的转播合同，而第四频道拿过了接力棒。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1985375.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1985375.html" title="2015-12-21 22:18">12月21日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/bbc-terminates-f1-contract-channel-4-takes-over/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1985375.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15018339.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1984972.html"  target="_blank">哈基宁证实：儿子退出卡丁车转向足球</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        两届F1世界冠军米卡-哈基宁证实，他的儿子雨果-哈基宁决定退出卡丁车生涯，将重心转向足球。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1984972.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1984972.html" title="2015-12-20 21:00">12月20日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/mika-hakkinen-confirms-son-giving-up-on-karting/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1984972.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15008064.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1984449.html"  target="_blank">丹尼斯：阿隆索晒太阳时我在偷乐</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        巴西站阿隆索享着日光浴时，迈凯伦队内是什么感受？近期，迈凯伦主席兼总裁罗恩-丹尼斯给出了他的答案——暗暗发笑。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1984449.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1984449.html" title="2015-12-18 22:53">12月18日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122287">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1984449.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14989128.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1984247.html"  target="_blank">FE乌拉圭站，凌晨看什么？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        在紧锣密鼓的前两轮比赛之后，FE迎来了自己的第一个“长假”。现在一个多月过去了，我们的目光即将聚焦到本周六的电动方程式第三站-乌拉圭埃斯特角城站。布城站的紧张刺激以及状况百出使得这一个多月的休假对于车队和车手来说尤为重要。不然连续的背靠背作战，恐怕各支车队和各位车手估计都得喘不过气了。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1984247.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1984247.html" title="2015-12-18 11:25">12月18日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://f1.hupu.com">虎扑赛车</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1984247.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1984150.html"  target="_blank">倍耐力公布巴林&amp;中国站轮胎配方</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        在下赛季的巴林、中国大奖赛上，倍耐力将带来中性胎、软胎、超软胎这三款配方的轮胎。与揭幕战相同。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1984150.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1984150.html" title="2015-12-18 07:25">12月18日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122282">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1984150.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14978945.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1984042.html"  target="_blank">哈基宁：看迈凯伦看得我好痛苦</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        米卡-哈基宁感慨，看着老东家迈凯伦2015赛季如此挣扎于赛车性能和可靠性，怎一个“痛苦”了得。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1984042.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1984042.html" title="2015-12-17 21:20">12月17日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122273">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1984042.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14976534.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1984003.html"  target="_blank">格罗斯让：去哈斯是一场大冒险</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        罗曼-格罗斯让承认自己下赛季离开路特斯加盟哈斯的这一举动是职业生涯的一次大冒险。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1984003.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1984003.html" title="2015-12-17 19:35">12月17日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122271">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1984003.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14975423.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1983633.html"  target="_blank">F1继续考虑激进计划：单赛季三台引擎？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        Motorsport获悉，F1车手单赛季被允许使用的引擎数量也许会减少到三台，作为厂商考虑缩减开支的激进计划之一。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1983633.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1983633.html" title="2015-12-16 22:56">12月16日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/f1-considering-three-engines-per-season-plan/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1983633.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            7                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14966903.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1983620.html"  target="_blank">阿斯顿-马丁推迟决定F1项目</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        Motorsport获悉，阿斯顿-马丁将F1计划的最终决定推迟到了1月份。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1983620.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1983620.html" title="2015-12-16 22:24">12月16日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/aston-martin-delays-f1-decision-until-january/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1983620.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14966488.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1983606.html"  target="_blank">马奇奥尼：维特尔比阿隆索更有法拉利精神</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        法拉利主席马奇奥尼日前在法拉利一年一度的圣诞节媒体会上大赞维特尔的第一个赛季，并且说德国人在一个赛季中展示的团队精神比阿隆索在五年内的都要更多。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1983606.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1983606.html" title="2015-12-16 22:09">12月16日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://en.f1i.com/news/37075-marchionne-takes-dig-at-alonso-in-vettel-praise.html">F1i</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1983606.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14966289.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1983600.html"  target="_blank">梅赛德斯澄清：法拉利不涉及间谍案</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        虽然近期被工程师Ben Hoyle案缠身，但梅赛德斯澄清，他们并没有怀疑法拉利取得了奔驰任何引擎技术方面的知识。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1983600.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1983600.html" title="2015-12-16 21:56">12月16日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/mercedes-ferrari-not-involved-in-new-spy-case/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1983600.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14966120.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1983209.html"  target="_blank">马奇奥尼：我们要为新赛季感到恐惧</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        法拉利主席马奇奥尼告诉他的F1团队，他们要为明年澳洲站可能拿不出一辆冠军车而感到害怕。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1983209.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1983209.html" title="2015-12-15 22:21">12月15日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/ferrari-says-staff-must-be-terrified-of-failure-next-year/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1983209.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14955843.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1982933.html"  target="_blank">倍耐力公布明年澳大利亚轮胎配方和强制方案</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        根据2016赛季开始的规则，每位车手必须节省下三款提名配方中最软配方的一套轮胎，供其在排位赛第三种使用。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1982933.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1982933.html" title="2015-12-15 10:40">12月15日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://racing.hupu.com">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1982933.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14948354.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1982818.html"  target="_blank">马奇奥尼：红牛在引擎风波中的作为令人不快</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        法拉利主席马奇奥尼说，红牛觉得自己有“权利”得到一台好引擎这事儿让他感到有点冒犯。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1982818.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1982818.html" title="2015-12-14 23:39">12月14日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122240">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1982818.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14946482.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1982816.html"  target="_blank">倍耐力数据：今年超车比去年少了20%</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        根据周一倍耐力披露的数据，2015赛季的超车减少了20%。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1982816.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1982816.html" title="2015-12-14 23:28">12月14日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/formula-1-overtaking-slumps-by-20-percent-in-2015/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1982816.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14946395.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1982811.html"  target="_blank">马奇奥尼：明年Kimi会度过非凡的一年</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        法拉利主席马奇奥尼认为，Kimi会在2016年为车队带来非凡的表现，此前他夸奖冰人扭转了颓势。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1982811.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1982811.html" title="2015-12-14 23:08">12月14日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/ferrari-boss-expects-phenomenal-raikkonen-in-2016/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1982811.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14946187.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1981847.html"  target="_blank">法官宣布，方吉奥为Espinoza生父</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        八月份F1五冠王方吉奥的遗体曾被挖出进行DNA亲子鉴定，现在结果出来了，77岁的Oscar Espinoza被正式认定为方吉奥的儿子。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1981847.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1981847.html" title="2015-12-11 22:24">12月11日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/dna-test-confirms-espinoza-as-fangio-s-son/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1981847.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14917010.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1981846.html"  target="_blank">阿隆索：F1过于关注保护小车队的利益</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        阿隆索认为F1的老板们把保护小车队看的太重要了，而F1这项运动的原则本来就是适者生存。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1981846.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1981846.html" title="2015-12-11 22:18">12月11日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122199">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1981846.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1981842.html"  target="_blank">伯尼：法拉利和奔驰可能会毁掉F1</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伯尼表示梅赛德斯和法拉利现今在赛道上和在规则过程中对F1的统治性地位可能会毁掉这项运动。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1981842.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1981842.html" title="2015-12-11 22:16">12月11日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/ecclestone-mercedes-and-ferrari-could-destroy-f1/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1981842.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1981670.html"  target="_blank">巴顿：我确实曾考虑过年底退役</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        巴顿坦言，经历了噩梦般的2015赛季后，他确实非常认真地考虑过退役的选项，拷问自己是否还愿意留在F1。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1981670.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1981670.html" title="2015-12-11 10:25">12月11日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.skysports.com/f1/news/24180/10086735/jenson-button-considered-quitting-f1-at-the-end-of-2015">天空体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1981670.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14910827.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1981101.html"  target="_blank">雷诺车手阵容 变数犹在？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        外界普遍认为，委内瑞拉车手马尔多纳多的席位将随雷诺的收购成功而变得岌岌可危。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1981101.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1981101.html" title="2015-12-09 21:03">12月9日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://en.f1i.com/news/36555-driver-lineup-to-remain-unchanged-at-lotus.html">F1i</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1981101.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14899419.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1980715.html"  target="_blank">伯尼：没有独立引擎，F1会被毁掉的</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        F1大佬伯尼认为，未来几年内引入独立引擎是至关重要的，可以防止这项运动被毁掉。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1980715.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1980715.html" title="2015-12-08 22:10">12月8日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/f1-will-be-destroyed-without-independent-engine-ecclestone/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1980715.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14891484.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1980705.html"  target="_blank">梅赛德斯起诉员工窃取敏感信息给法拉利</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        梅赛德斯对一位与法拉利有关联的工程师Benjamin Hoyle正式提起了法律诉讼，声称他试图将敏感数据透露给法拉利。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1980705.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1980705.html" title="2015-12-08 21:23">12月8日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/mercedes-in-data-theft-legal-action-against-ferrari-bound-engineer/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1980705.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14891039.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1980327.html"  target="_blank">缘尽人散，红牛与英菲尼迪正式分手</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        红牛官方宣布车队将于今年年底同其F1长期商业合作伙伴英菲尼迪解除关系。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1980327.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1980327.html" title="2015-12-07 21:54">12月7日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122156">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1980327.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14882923.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1980151.html"  target="_blank">小红牛：这是目前为止最好的一个赛季</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        小红牛领队弗兰兹-托斯特认为这是车队进入F1以来表现最为出色的一个赛季                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1980151.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1980151.html" title="2015-12-07 13:06">12月7日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/toro-rosso-hails-best-season-so-far-in-f1/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1980151.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14878391.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979971.html"  target="_blank">马石油誓同壳牌战斗到底！</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        奔驰的主赞助商兼核心技术合作伙伴马石油誓言将在2016赛季帮助梅赛德斯车队，在与法拉利及壳牌的竞争中奋战到底                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979971.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979971.html" title="2015-12-07 00:05">12月7日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122149">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979971.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14875308.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979851.html"  target="_blank">红牛：不排除2016年后继续与雷诺合作</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        红牛不排除2016年之后继续与雷诺进行合作，如果雷诺能在下赛季取得不错的进步的话。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979851.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979851.html" title="2015-12-06 13:26">12月6日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/red-bull-not-ruling-out-sticking-with-renault-beyond-2016/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979851.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14870205.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979848.html"  target="_blank">雷诺：可能需要三年才能重塑竞争力</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        雷诺CEO Carlos Ghosn预计，车队会需要三年的时间重塑竞争力。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979848.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979848.html" title="2015-12-06 13:14">12月6日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/renault-warns-it-will-take-three-years-to-deliver-661646/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979848.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14870093.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979843.html"  target="_blank">FIA年终颁奖典礼：维斯塔潘包揽三大奖</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        巴黎当地时间周五晚上，FIA年终颁奖典礼举行。汉密尔顿第三次拿到了他的车手总冠军奖杯，在历史榜上加入了杰克-布拉汉姆爵士、杰基-斯图尔特爵士、尼基-劳达、尼尔森-皮盖特以及儿时偶像阿尔顿-塞纳的行列。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979843.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979843.html" title="2015-12-06 12:53">12月6日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.fia.com/news/motor-sport-champions-2015-honoured-paris">FIA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979843.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14869858.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979836.html"  target="_blank">红牛证实：下赛季贴牌豪雅引擎</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        红牛车队在周五证实，下赛季他们将会使用Tag Heuer标牌的雷诺引擎。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979836.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979836.html" title="2015-12-06 12:28">12月6日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/red-bull-confirms-tag-heuer-engine-deal/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979836.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979122.html"  target="_blank">雷诺收购莲花，阔别5年重回F1！</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        雷诺终于结束了他们长达几个月的谈判，正式宣布收购路特斯车队，参战2016赛季。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979122.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979122.html" title="2015-12-04 09:13">12月4日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/renault-confirms-works-formula-1-return-in-2016/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979122.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14850876.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979023.html"  target="_blank">汉密尔顿回应警告：我们没有损害车队</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        汉密尔顿坚称，他与罗斯伯格之间的关系并没有损害梅赛德斯车队。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979023.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979023.html" title="2015-12-03 22:06">12月3日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/hamilton-tensions-are-not-hurting-mercedes/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979023.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14849337.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979016.html"  target="_blank">倍耐力公布轮胎自由选择机制</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        倍耐力对于明年轮胎自由选择机制具体怎么施行披露了更多的细节，FIA在周三已经将此提议通过了。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979016.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979016.html" title="2015-12-03 21:55">12月3日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/pirelli-explains-free-tyre-choice-system/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979016.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14849246.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979012.html"  target="_blank">迈凯轮发布酷炫F1概念车MP4-X</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        迈凯轮披露了一组超赞设计的未来F1概念车，相信会引领这项运动进入一个新的技术时代。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979012.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979012.html" title="2015-12-03 21:35">12月3日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/mclaren-reveals-f1-concept-car/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979012.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14849049.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979011.html"  target="_blank">FIA给绿灯，小红牛可以获得旧法拉利引擎</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        小红牛看起来距离获得2015版法拉利引擎更进一步了，FIA为车队使用前一年的引擎扫清了障碍。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979011.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979011.html" title="2015-12-03 21:19">12月3日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.formula1.com/content/fom-website/en/latest/headlines/2015/12/path-cleared-for-Toro-Rosso-Ferrari-engine-deal.html">F1官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979011.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14848906.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1979008.html"  target="_blank">红牛暗示Tag Heuer为标牌引擎？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        红牛证实，迈凯轮的长期赞助商Tag Heuer明年将会与车队合同——并且暗示他们甚至会给引擎标上这个牌子。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1979008.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1979008.html" title="2015-12-03 21:13">12月3日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/red-bull-confirms-tag-heuer-sponsor-deal/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1979008.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14848854.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1978855.html"  target="_blank">2016年21站F1赛历公布</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        明年赛历将达到史无前例的21站比赛。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1978855.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1978855.html" title="2015-12-03 11:51">12月3日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://racing.hupu.com">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1978855.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14844261.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1978645.html"  target="_blank">凹凸：印度力量与阿斯顿-马丁即将合体</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        印度力量就快要与阿斯顿-马丁达成协议，这家英国跑车制造商将在55年后重返F1。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1978645.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1978645.html" title="2015-12-02 22:01">12月2日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122096">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1978645.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14841151.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1978643.html"  target="_blank">沃尔夫警告：若内讧影响车队，就换人</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        梅赛德斯领队托托-沃尔夫表示，如果汉密尔顿和罗斯伯格之间的紧张关系伤害到车队的话，会考虑换掉其中一人。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1978643.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1978643.html" title="2015-12-02 21:48">12月2日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/wolff-driver-tension-may-force-line-up-change/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1978643.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14841042.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1978250.html"  target="_blank">汉密尔顿荣膺F1领队们心目中的第一</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        汽车运动在F1车队的领队中发起了一项2015赛季top10车手投票。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1978250.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1978250.html" title="2015-12-01 21:44">12月1日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122079">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1978250.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14832745.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1978248.html"  target="_blank">丹尼斯愿意让本田给索伯提供引擎？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        根据与迈凯轮亲近的线人透露，罗恩-丹尼斯把索伯看做未来本田的第二支客户车队。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1978248.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1978248.html" title="2015-12-01 21:35">12月1日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/dennis-targets-sauber-as-second-honda-team/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1978248.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14832642.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1978135.html"  target="_blank">2016倍耐力年历照发布画风巨变</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        2015 年 11 月 30 日，伦敦——2016 倍耐力年历今日在伦敦著名的圆屋剧场盛大发布， 来自全球的媒体、收藏家及嘉宾莅临见证。发布晚宴选在这座旧时的工业建筑，在上个世 纪 60 年代曾是名噪一时的摇滚圣殿。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1978135.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1978135.html" title="2015-12-01 14:39">12月1日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://f1.hupu.com">虎扑赛车</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1978135.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977892.html"  target="_blank">维特尔：梅赛德斯是可以被击败的</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        维特尔认为法拉利明年没理由不会瓦解梅赛德斯的统治级地位，他表示奔驰是可以被击败的。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977892.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977892.html" title="2015-11-30 23:24">11月30日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/vettel-adamant-mercedes-beatable-in-2016-660732/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977892.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14824964.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977891.html"  target="_blank">威廉姆斯：释放博塔斯的时机是正确的</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        关于博塔斯在阿布扎比正赛的维修区通道中与巴顿相撞导致前翼损坏，威廉姆斯认为释放的时机是正确的。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977891.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977891.html" title="2015-11-30 23:15">11月30日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.autosport.com/news/report.php/id/122062">汽车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977891.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14824886.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977890.html"  target="_blank">若雷诺真的退出，红牛的引擎也不受影响</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        红牛表示，即便雷诺真的要退出F1，他们使用未标牌的雷诺引擎也不受影响。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977890.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977890.html" title="2015-11-30 23:08">11月30日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/red-bull-engine-deal-not-at-risk-if-renault-pulls-out-660851/?s=1">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977890.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14824822.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977886.html"  target="_blank">法拉利总结：美妙的赛季，明年挑战更大</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        阿里瓦贝内：Kimi今天的比赛非常棒，这也是我期望他做的，而塞巴从15位发车一路以第四名冲线。这个成绩或多或少映衬出整个一年的缩影。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977886.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977886.html" title="2015-11-30 22:55">11月30日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://formula1.ferrari.com/en/">法拉利</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977886.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977583.html"  target="_blank">愤怒的阿隆索，矛头直指FIA</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        阿布扎比赛后的阿隆索很愤怒，其将矛头直指FIA。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977583.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977583.html" title="2015-11-30 01:42">11月30日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/angry-alonso-tells-fia-to-use-common-sense-after-penalty/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977583.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            6                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14816678.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977568.html"  target="_blank">维斯塔潘无视蓝旗被罚时20秒</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        赛后小维斯塔潘因为比赛中无视蓝旗被罚了赛后通过维修区的处罚——也就是加罚20秒。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977568.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977568.html" title="2015-11-30 00:13">11月30日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.motorsport.com/f1/news/verstappen-up-to-eight-penalty-points-after-blue-flags-incident-660725/">赛车运动</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977568.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14816465.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977550.html"  target="_blank">罗斯伯格三连胜，法拉利包揽三四</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        2015赛季在阿布扎比的夜幕中落下，罗斯伯格杆位起步并最终夺冠。汉密尔顿、kimi分列二、三。瓦特尔从15追至第4，再次上演出色逆袭。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977550.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977550.html" title="2015-11-29 23:16">11月29日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://racing.hupu.com">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977550.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977544.html"  target="_blank">Kimi：不理想的一年，但今天尽力了</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        Kimi在阿布扎比又登上了领奖台，为这个赛季收了一个好尾。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977544.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977544.html" title="2015-11-29 23:16">11月29日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://racing.hupu.com">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977544.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14816126.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/f1/1977542.html"  target="_blank">汉密尔顿：至少尝试了不同的策略</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        汉密尔顿在阿布扎比获得了第二名。比赛中尽管尝试了不同的策略，但终究没能击败队友夺取胜利。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/f1/1977542.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/f1/1977542.html" title="2015-11-29 23:14">11月29日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://racing.hupu.com">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/f1/1977542.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/14816104.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                              
+                                            </ul>
+		</div> 
+	    <!--<div class="voice-more-loading">
+    <i class="ico-loading"></i>
+    正在加载中...
+</div>
+-->
+<div class="voice-paging">
+                        <span class="on">1</span>
+    <a href="/f1/newslist/2.html">2</a>    <a href="/f1/newslist/3.html">3</a>    <a href="/f1/newslist/4.html">4</a>    <a class="page-btn-prev" href="/f1/newslist/2.html">下一页</a>    <!--<a href="#" class="page-btn-lastPage">最后一页</a>-->
+</div>
+	</div>
+	<!-- main end -->
+	<!-- sidebar start -->
+	<div class="voice-sidebar">
+		<!-- 今日热议 start -->
+                <div id="todayHot" class="todayHot">
+    <div class="voice-hd-A">
+        <h2>今日热议</h2>
+        <a href="javascript:void(0);" class="btn-change">换一换</a>
+    </div>
+    <div class="bd">
+                <div style="display: block;" class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="赛车运动" href="http://voice.hupu.com/f1/media/motorsport">
+                    	<img src="http://c1.hoopchina.com.cn/uploads/star/newuser/120928/168bb81eed8eeb04aa0f7b00a4b39ee931029bef.gif">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/f1/media/motorsport">
+                        赛车运动                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/f1/1987437.html">
+                        前法拉利车手、大奖赛冠军让-阿莱士认为，Kimi能够帮助维特尔赢得世界冠军。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/f1/1987437.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-28 22:54" class="time" target="_blank" href="http://voice.hupu.com/f1/1987437.html">
+                            23小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://www.motorsport.com/f1/news/raikkonen-can-help-vettel-win-championship-alesi-665081/?s=1">
+                                赛车运动                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/f1/1987437.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                1                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+            </div>
+</div>
+		<!-- 今日热议 end -->
+		<div class="mar_t15"></div>
+		<!-- 灵光一闪 start -->
+                		<!-- 灵光一闪 end -->
+		<div class="mar_t20"></div>
+        
+		<!--<div class="about_us">
+			<a target="_blank" href="http://e.weibo.com/1841109261" class="list weibo">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>@虎扑体育  欢迎关注</p>
+				</span>
+			</a>
+			<a target="_blank" href="http://voice.hupu.com/generated/voice/news_nba.xml" class="list rss">
+				<s></s><span class="txt">
+					<h4>RSS</h4>
+					<p>虎扑体育的RSS</p>
+				</span>
+			</a>
+			<a target="_blank" href="http://voice.hupu.com/nba/1349805.html" class="list weixin">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>扫描二维码或搜索</p>
+				</span>
+			</a>
+			<a target="_blank" href="mailto:wanghui@hupu.com" class="list abs">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>xinsheng@hupu.com</p>
+				</span>
+			</a>
+		</div>-->
+	</div>
+	<!-- sidebar end -->
+</div><!--页面脚步信息-->
+<div class="hp-footer">
+                    
+                    <div class="hp-copyright">
+                    Copyright by 虎扑JRs &amp;
+                    <a href="http://www.hupu.com/" target="_blank" title="体育">虎扑体育</a> -
+                    <a href="http://www.hupu.com/declare.html" target="_blank" rel="nofollow">网站声明</a> -
+                    <a href="http://mobile.hupu.com/" target="_blank">手机虎扑</a> -
+                    <a href="http://jobs.hupu.com/" target="_blank">在虎扑工作</a> -
+                    <a href="http://marketing.hupu.com/contact/" target="_blank">联系我们</a> -
+                    <a href="http://marketing.hupu.com/" target="_blank">广告服务</a> -
+                    <a href="http://www.hupu.com/sitemap.html" target="_blank" rel="nofollow">网站地图</a> -
+                    <a href="http://nba.hupu.com/" target="_blank" title="NBA">NBA</a> -
+                    <a href="http://cba.hupu.com/" target="_blank" title="CBA">CBA</a>  -
+                    <a href="http://soccer.hupu.com/" target="_blank" title="足球">足球</a> -
+                    <a href="http://soccer.hupu.com/china/" target="_blank" title="中超">中超</a> -
+                    <a href="http://nbl.hupu.com/" target="_blank" title="NBL">NBL</a>  -
+                    <a href="http://racing.hupu.com/" target="_blank" title="赛车">赛车</a> -
+                    </div>
+                    
+                </div>
+
+<script type="text/javascript">
+$(function(){
+    $(".voice-my-dingyue-my").remove();
+});
+</script>
+
+<script>
+HP.common.init({project:"f1"});
+</script>
+</body>
+</html>
+<!-- voice config 配置 -->
+<script>
+!function(HP){
+    var win = window,
+        util = HP.util;
+
+    win.HP = win.HP || {};
+    /**
+     * Voice 命名空间
+     */
+    var Voice = HP.Voice = {};
+
+    /**
+     * 接口地址
+     */ 
+    Voice.apiUrl = {
+                // （内容）支持，反对
+        support : 'http://voice.hupu.com/message_support_agaist',
+        // 话题
+        object : {
+            // 关注话题
+            follow : 'http://voice.hupu.com/api/userFollowObject',
+            // 获取话题信息
+            getObjectInfo : 'http://voice.hupu.com/api/get_object_info'
+        },
+        // 评论
+        comment: {
+            // 支持，反对
+            support : '/support_agaist',
+            // 回复评论
+            reply : '/stars/xhrreply'
+        },
+        // my接口地址
+        my: {
+            // people 更新用户信息
+            updatePeopleInfo: '/update_people_information',
+            // people页 加载更多
+            morePeopleMsg: 'http://voice.hupu.com/get_more_people_messages'
+        },
+        // 直播专题
+        liveTopic: {
+            moreMessages : '/index/getMoreLiveTopicMessages',
+            latestMessages : '/index/getLiveTopicMessages'
+        },
+        fixed: {
+        // 新版吐槽
+            feedback: '/index/feedback'
+        }
+    }
+
+    // 用户id
+    Voice.getUserId = 0;
+    // 用户名称
+    Voice.getUserName = '';
+    // 用户论坛等级
+    Voice.getUserLevel = '';
+
+    Voice.getUserExtra = false;
+    Voice.getUserExtra2 = eval('[]');
+
+    // 为1时是论坛全站封禁用户，0时非封禁用户
+    Voice.getUserBlackRoom = '';
+    // 新声频道的禁言信息
+    Voice.getUserBanned = '';
+    // 新声页面名
+    Voice.getPageName = 'newsList';
+    // 新声频道名
+    Voice.getProjectName = '';
+
+    Voice.isLogin = util.isLogin();
+    Voice.popLogin = function(){
+        commonLogin('hupu');
+    }
+
+}(HP);
+</script>
+
+<!-- seajs config 配置 -->
+<script>
+seajs.use('dist/modules/card/main');
+
+</script>
+
+    <script type="text/javascript" src="http://b3.hoopchina.com.cn/??code/handlebars/handlebars.js,web/channel/voice/v1/js/common/voice.js,web/channel/voice/v1/js/widget/2014/versionTucaoFixed/versionTucao.js,web/channel/voice/v1/js/modules/share/miniShare.js,web/channel/voice/v1/js/aggregation/newsList/index.js?v=196"></script>

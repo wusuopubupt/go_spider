@@ -1,0 +1,2604 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Keywords" content="NBA,虎扑NBA,CBA,WCBA,虎扑CBA,虎扑WCBA,NBA微博,WCBA微博,NBA twitter,NBA Facebook,CBA微博,篮球微博" />
+<meta http-equiv="Description" content="虎扑新声每日报道NBA、CBA、足球、赛车、网球、综合体育,WCBA等联赛最热门新闻，真实还原现场，努力搜寻最新最全的体育热门事件" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="CBA滚动新闻_虎扑CBA新声" />
+<title>CBA滚动新闻_虎扑CBA新声</title>
+<script type="text/javascript">
+var __daceDataNameOfChannel = 'cba';
+</script><meta name="apple-itunes-app" content="app-id=906632439" />
+<link rel="shortcut icon" href="http://b3.hoopchina.com.cn/common/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://b3.hoopchina.com.cn/web/channel/voice/v1/css/common/common.css" />
+<script src="http://b3.hoopchina.com.cn/code/??jquery/jquery-1.8.js,seajs/seajs/seajs/2.1.1/sea.js,seajs/seajs/seajs-style/1.0.2/seajs-style.js"></script>
+<script src="http://b3.hoopchina.com.cn/web/module/dace/1.0.0/dace.js"></script> 
+<script src="http://b3.hoopchina.com.cn/web/channel/voice/v1/js/common/common.js"></script> 
+        <link rel="stylesheet" type="text/css" media="screen" href="http://b3.hoopchina.com.cn/??web/channel/voice/v1/css/common/voice.min.css,web/channel/voice/v1/css/common/card.min.css,web/channel/voice/v1/css/aggregation/newsList.min.css?v=196" />
+<!-- seajs config 配置 -->
+<script>
+
+seajs.config({
+    alias: {
+        'jquery': 'code/seajs/jquery/1.8.3/jquery',
+        'seajs-debug': 'code/seajs/seajs/seajs-debug/1.1.1/seajs-debug',
+        // 提示框
+        'warning': 'modules/tips/warning',
+        'shareAPI': 'modules/share/shareAPI'
+    },
+    paths: {
+        'code': 'http://b3.hoopchina.com.cn/code',
+            'modules': 'dist/modules'
+        },
+    map: [
+        function(uri) {
+            // 避免请求缓存
+            if (location.search.indexOf("seajs-debug") === -1) {
+                // [ /^(.*\/dist\/.*\.(?:css|js))(?:.*)$/i, '$1?t=2014041002']
+                uri += (uri.indexOf('?') === -1 ? '?' : '&') + 't=196';
+            }
+
+            return uri
+        }
+    ],
+    base: 'http://b3.hoopchina.com.cn/web/channel/voice/v1/js/'
+});
+</script>
+</head>
+<body>
+<!--包含页面公共头部信息-->
+<!-- topbar start -->
+<div class="hp-topbarNav">
+	<div class="hp-topbarNav-bd">
+		<div class="hp-quickNav">
+			<ul class="hp-quickNav-list">
+				<li class="mobileWeb">
+					<a href="http://m.hupu.com/" target="_blank"><i class="iconfont ico-mobile"></i>手机虎扑</a>
+				</li>
+				<li class="line">|</li>
+				<li>
+				    <a href="http://mobile.hupu.com/?_r=globalNav" target="_blank" style="color:#ad0007">虎扑体育客户端</a>
+				</li>
+				<li class="line">|</li>
+				<li class="hp-dropDownMenu topbar-followBlog">
+					<a class="hp-set" href="javascript:">关注虎扑<s class="hp-set-arrow"><s class="hp-set-arrow-bd"></s></s></a>
+					<div class="hp-drapDown topbar-followBlog-drapDown">
+						<a class="weibo" target="_blank" href="http://e.weibo.com/liangle4u" title="新浪"><i class="ico-weibo"></i>新浪</a>
+						<a class="weixin" target="_blank" href="http://voice.hupu.com/other/1581560.html" title="微信"><i class="ico-weixin"></i>微信</a>
+						<a class="instagram" target="_blank" href="http://voice.hupu.com/other/1634334.html" title="Instagram"><i class="ico-instagram"></i>Ins</a>
+						<a class="qqt" target="_blank" href="http://e.t.qq.com/the_real_hoopchina" title="腾讯"><i class="ico-qqt"></i>腾讯</a>
+						<a class="qzone" target="_blank" href="http://user.qzone.qq.com/1624355655" title="空间"><i class="ico-qzone"></i>空间</a>
+						<a class="renren" target="_blank" href="http://page.renren.com/699131720" title="人人"><i class="ico-renren"></i>人人</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="hp-topbar-loginInfo" id="J_topbar_loginInfo">	
+		</div>
+	</div>
+</div>
+<!-- topbar end -->
+<!-- header start -->
+<div class="hp-header">
+	<div class="hp-header-bd">
+        <!-- navChannel start -->
+		<div class="hp-nav-channel">
+			<ul class="hp-nba-channel-item">
+				<li class="first"><a href="http://www.hupu.com" target="_blank">首页</a></li>
+				<li class="line">|</li>
+				<li><a href="http://nba.hupu.com" target="_blank">NBA</a></li>
+				<li class="line">|</li>
+				<li><a href="http://cba.hupu.com" target="_blank">CBA</a></li>
+				<li class="line">|</li>
+				<li><a href="http://soccer.hupu.com" target="_blank">国际足球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://soccer.hupu.com/china" target="_blank">中国足球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://racing.hupu.com" target="_blank">赛车</a></li>
+				<li class="line">|</li>
+				<li><a href="http://tennis.hupu.com" target="_blank">网球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://zb.hupu.com" target="_blank">装备</a></li>
+				<li class="line">|</li>
+				<li><a href="http://www.shihuo.cn" target="_blank">识货</a></li>
+				<li class="line">|</li>
+				<li><a href="http://lecai.hupu.com" target="_blank">彩票</a></li>
+				<li class="line">|</li>
+				<li><a href="http://v.opahnet.com" target="_blank">视频</a></li>
+				<li class="line">|</li>
+				<li><a href="http://voice.hupu.com" target="_blank">新声</a></li>
+				<li class="line">|</li>
+				<li><a href="http://bbs.hupu.com" target="_blank">论坛</a></li>
+				<li class="line">|</li>
+				<li><a href="http://youxi.hupu.com" target="_blank">游戏</a></li>
+				<li class="line">|</li>
+				<li><a href="http://photo.hupu.com" target="_blank">图片</a></li>
+				<li class="line">|</li>
+				<li><a href="http://bbs.hupu.com/all-gambia" target="_blank">娱乐</a></li>
+				<li class="line">|</li>
+				<li><a href="http://run.hupu.com" target="_blank">跑步</a></li>
+				<li class="line">|</li>
+				<li><a href="http://edu.hupu.com" target="_blank">教育</a></li>
+				<li class="line">|</li>
+				<li class="hp-w1200-show"><a href="http://taiqiu.hupu.com" target="_blank">台球</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-w1200-show"><a href="http://ymq.hupu.com" target="_blank">羽毛球</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-w1200-show"><a href="http://xgame.hupu.com" target="_blank">Xgames</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-dropDownMenu nav-channel-more">
+                    <a href="javascript:void(0)" class="hp-set">更多<s class="hp-set-arrow"><s class="hp-set-arrow-bd"></s></s></a>
+                    <div class="hp-drapDown nav-channel-more-drapDown">
+					    <a href="http://www.nflchina.com/" target="_blank">NFL</a>
+						<a href="http://golf.hupu.com/" target="_blank">高尔夫</a>						 
+					    <a href="http://outdoor.hupu.com" target="_blank">户外</a>
+                    	<a href="http://xgame.hupu.com" target="_blank">xgames</a>
+                    	<a href="http://ymq.hupu.com" target="_blank">羽毛球</a>                    	 
+                    	<s class="arrow-top"><s class="arrowbd"></s></s>
+                    </div>
+                </li>
+			</ul>
+		</div>
+<!-- navChannel end -->
+        <!-- cba顶通广告位 start -->
+        <div class="hp-w hp-header-banner">
+            <script type='text/cjs'>
+                !function(HP, C, $){
+                    GA_googleFillSlotWithSize("ca-pub-1024337685431355", "hc_rumors_banner_980x60", 980, 60);
+                }(HP, HP.common, jQuery);
+            </script>
+        </div>
+        <!-- cba顶通广告位 end -->
+        <!-- nav start -->
+        <div class="hp-nav">
+            <div class="hp-logo">
+                <a href="http://voice.hupu.com/" title="新声">
+                    <img alt="新声" src="http://b3.hoopchina.com.cn/images/logo2013/v1/hp_logo_voice.png">
+                </a>
+            </div>
+            <div class="hp-mainNav">
+                <div class="hp-mainNav-bd">
+    <ul class="hp-mainNav-item">
+        <li class="voice-my-dingyue-my"><a href="http://voice.hupu.com/my">我的订阅</a></li>
+        <li class="line voice-my-dingyue-my">|</li>
+        <li><a href="http://voice.hupu.com/hot">新声热榜</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/cba/newslist">中国篮球新闻</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/cba/topic/more">专题</a></li>
+        <li class="line">|</li>
+        <li class="hp-dropDownMenu">
+            <a href="javascript:" class="hp-set">CBA球队</a>
+            <div class="hp-drapDown">
+                <a href="http://voice.hupu.com/o/shanghai">上海</a>
+                <a href="http://voice.hupu.com/o/beijing">北京</a>
+                <a href="http://voice.hupu.com/o/guangdong">广东</a>
+                <a href="http://voice.hupu.com/o/xinjiang">新疆</a>
+                <a href="http://voice.hupu.com/o/jiangsu">江苏</a>
+                <a href="http://voice.hupu.com/o/liaoning">辽宁</a>
+                <a href="http://voice.hupu.com/o/shanxi">山西</a>
+                <a href="http://voice.hupu.com/o/guangsha">浙江</a>
+                <a href="http://voice.hupu.com/o/dongguan">东莞</a>
+            </div>
+        </li>
+    </ul>
+</div>
+                <div class="hp-search J_hp_search">
+                    <span class="iconfont ico-search"></span>
+                    <input type="text" placeholder="搜索新声" class="input-search" />
+                </div>
+                <i class="hp-roundPoint-br-tl"></i>
+				<i class="hp-roundPoint-br-tr"></i>
+				<i class="hp-roundPoint-br-bl"></i>
+				<i class="hp-roundPoint-br-br"></i>
+            </div>
+        </div>
+        <!-- nav end -->
+	</div>
+</div>
+<!-- header end -->    
+<!-- navPath start -->
+<!-- navPath end -->
+<div class="hp-wrap">
+	<!-- main start -->
+	<div class="voice-main">
+                <div class="title">
+                    <h2>CBA新闻</h2>
+                    <a target="_blank" class="btn-subscribeRss" href="http://voice.hupu.com/generated/voice/news_cba.xml">
+                        订阅RSS
+                        <i class="ico-rss"></i>
+                    </a>
+                </div>
+		<div class="news-list">
+                    <ul>
+                                   
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987788.html"  target="_blank">翟晓川为球队打气：连胜目标达成</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        截止常规赛第24轮，翟晓川场均得到14.7分5.9篮板1.1助攻。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987788.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987788.html" title="2015-12-29 22:15">17分钟前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://weibo.com/1950999631/DaHsRq7g6?from=page_1005051950999631_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment">微博</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987788.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15092710.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987777.html"  target="_blank">莫里斯38+15率北京取十连胜</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        王骁辉命中5记三分砍下17分，马布里14分4助攻，翟晓川8分7篮板。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987777.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987777.html" title="2015-12-29 21:23">1小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987777.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987776.html"  target="_blank">马克希尔：来CBA是为证明自己</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        本赛季在天津队，马克希尔场均得到20.6分11.7篮板1.3盖帽。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987776.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987776.html" title="2015-12-29 21:15">1小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://bhsb.tjbhnews.com/html/2015-12/29/node_1.htm">滨海时报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987776.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15092044.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987764.html"  target="_blank">张庆鹏生涯三分总数达到1000个</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        张庆鹏三分总数目前排名历史第四，距离李楠还差95个。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987764.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987764.html" title="2015-12-29 20:04">2小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987764.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            5                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15091341.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987753.html"  target="_blank">闵鹿蕾之子因伤告别北京青年队</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        虽然无法走上职业球员的道路，闵伟凡还是希望从事与篮球相关的工作。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987753.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987753.html" title="2015-12-29 19:36">2小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.sina.com.cn/cba/2015-12-29/doc-ifxmxxsp7256429.shtml">法制晚报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987753.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                1                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987753.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            10                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15091097.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987750.html"  target="_blank">凯萨尔：现在不能考虑连胜的问题</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        此前接受了手术治疗的小将徐煜峰也已经恢复了训练。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987750.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987750.html" title="2015-12-29 18:48">3小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cbachina.sports.sohu.com/20151229/n432940979.shtml">CBA官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987750.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15090707.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987745.html"  target="_blank">恐怖！常林的卧重量达135公斤</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        常林本赛季场均能够得到9.8分4.8篮板1.2助攻。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987745.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987745.html" title="2015-12-29 18:37">3小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://weibo.com/5058390938/DaFV703zj?from=page_1002065058390938_profile&amp;wvr=6&amp;mod=weibotime&amp;type=comment#_rnd1451385134918">微博</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987745.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                2                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987745.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            29                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15090625.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987728.html"  target="_blank">央视赛事收视率榜：CBA占四席</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        今晚，CCTV5将会直播佛山主场对阵北京的比赛。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987728.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987728.html" title="2015-12-29 17:32">5小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.ytsports.cn/">禹唐体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987728.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                1                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987728.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            14                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15090045.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987724.html"  target="_blank">朱彦西进入康复阶段，需休养半年</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        朱彦西自己介绍，大约三个月后可以下地走路。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987724.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987724.html" title="2015-12-29 17:09">5小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cbachina.sports.sohu.com/20151229/n432926372.shtml">CBA官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987724.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15089832.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987623.html"  target="_blank">新华社批西热力江：篮球需要理智</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        新华社希望西热力江可以尊重裁判。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987623.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987623.html" title="2015-12-29 13:49">8小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.xinhuanet.com/">新华网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987623.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                4                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987623.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            25                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15088010.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987594.html"  target="_blank">西热力江因骂裁判被追加停赛1场</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        两个T自动停赛1场，篮协又追加1场。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987594.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987594.html" title="2015-12-29 12:08">10小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">中国篮协</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987594.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                10                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987594.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            131                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15086857.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987593.html"  target="_blank">华裔中锋率队获日本高中联赛第四</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        他场均得到18.3分17篮板1.5封盖1.7抢断。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987593.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987593.html" title="2015-12-29 12:06">10小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987593.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                3                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987593.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            59                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987570.html"  target="_blank">崔万军：变阵后看到年轻球员潜力</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        小将王增杰上一场首发出战，并砍下15分5篮板。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987570.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987570.html" title="2015-12-29 10:57">11小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://digi.dnkb.com.cn/dnkb/html/2015-12/29/node_1.htm">东南快报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987570.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            6                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15086047.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987559.html"  target="_blank">八冠王易主？胡志强：未听此消息</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        广州市体育局副局长李志强此前曾表示明年会引进一支CBA球队。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987559.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987559.html" title="2015-12-29 10:33">11小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://epaper.dfdaily.com/dfzb/html/2015-12/29/content_1018307.htm">东方早报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987559.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            29                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15085762.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987556.html"  target="_blank">河南女篮：已打出信心冲击四连胜</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        河南女篮今晚将继续做客南京挑战江苏女篮。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987556.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987556.html" title="2015-12-29 10:24">12小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://zzrb.zynews.com/html/2015-12/29/node_3.htm">郑州日报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987556.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15085665.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987545.html"  target="_blank">19岁学生打球过猛，导致肺炸了</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        据医生讲解这种情况多出现在瘦高个男生身上。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987545.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987545.html" title="2015-12-29 10:05">12小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://qjwb.zjol.com.cn/html/2015-12/29/node_77.htm">钱江晚报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987545.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                5                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987545.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            134                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15085440.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987535.html"  target="_blank">方硕：争取十连胜是球队短期目标</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        北京男篮取得16胜7负的战绩排名联盟第6位。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987535.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987535.html" title="2015-12-29 09:36">12小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.morningpost.com.cn/">北京晨报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987535.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            11                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15085184.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987363.html"  target="_blank">老马母亲：谢谢北京球迷爱我儿子</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        梅布尔今年74岁，包括马布里在内，她养育了5个儿子和2个女儿。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987363.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987363.html" title="2015-12-28 15:20">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987363.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                5                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987363.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            47                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15079426.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987334.html"  target="_blank">同曦主帅表态会留用杰罗姆-乔丹</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        徐强曾表示如果杰罗姆-乔丹发挥不好就会换回利亚姆。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987334.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987334.html" title="2015-12-28 14:08">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.yangtse.com/">扬子晚报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987334.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15078812.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987254.html"  target="_blank">文艺青年兰多夫：弹钢琴跳霹雳舞</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        兰多夫的圣诞节愿望是明年能有女朋友陪伴。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987254.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987254.html" title="2015-12-28 11:15">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://epaper.timedg.com/">东莞日报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987254.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            15                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15076965.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987232.html"  target="_blank">WCBA全明星票选第4周：邵婷领衔</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        这是邵婷连续第三周当选了票王称号。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987232.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987232.html" title="2015-12-28 10:39">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cbachina.sports.sohu.com/20151228/n432725692.shtml?qq-pf-to=pcqq.group">CBA官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987232.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            4                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15076515.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987214.html"  target="_blank">李春江赛后发飙：感觉回到三年前</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        连续两场比赛广厦都让对手投进了高达20记三分球。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987214.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987214.html" title="2015-12-28 09:57">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://qjwb.zjol.com.cn/html/2015-12/28/node_77.htm">钱江晚报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987214.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                2                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987214.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            32                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15076074.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987211.html"  target="_blank">苏群：佛山队有可能变为广州队</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        苏群认为佛山提出迁址，是他们寻求政府支持的一种方式。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987211.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987211.html" title="2015-12-28 09:53">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://weibo.com/hoopchinacba/home?topnav=1&amp;wvr=6">微博</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987211.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                2                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987211.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            63                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15076029.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987202.html"  target="_blank">张松涛：打好客场，为明年开好头</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        连续的大比分取胜也让北京队替补球员获得了更多的锻炼机会。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987202.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987202.html" title="2015-12-28 09:35">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987202.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15075896.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987198.html"  target="_blank">张庆鹏：大家要保持赢球的感觉</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        昨晚张庆鹏三分球4投全中，高效砍下18分。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987198.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987198.html" title="2015-12-28 09:20">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987198.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15075802.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987196.html"  target="_blank">江苏外教：赛程紧导致体能出问题</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        格雷格-奥登表现不佳，全场仅得8分8篮板。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987196.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987196.html" title="2015-12-28 09:03">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987196.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15075692.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987192.html"  target="_blank">陈江华谈冲突：吉布森先拳击我</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        目前广东男篮已经陷入了三连败困境。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987192.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987192.html" title="2015-12-28 08:51">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://epaper.oeeee.com/ipaper/A/html/2015-12/28/content_26034.htm">南方都市报</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987192.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                8                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987192.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            89                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15075627.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987154.html"  target="_blank">北京主场球迷为马布里母亲庆生</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        全场球迷为斯蒂芬-马布里的妈妈高唱生日歌。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987154.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987154.html" title="2015-12-28 00:38">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cbachina.sports.sohu.com/20151227/n432721332.shtml">CBA官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987154.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                1                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987154.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            15                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15075080.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987153.html"  target="_blank">赵泰隆：我就是想在场上证明自己</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        赵泰隆昨晚手感爆棚，全场命中了8记三分球。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987153.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987153.html" title="2015-12-28 00:13">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987153.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074982.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987152.html"  target="_blank">国家队球员常规赛第23轮表现榜</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        赵泰隆三分12中8打出赛季最佳一战。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987152.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987152.html" title="2015-12-28 00:10">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987152.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074962.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987151.html"  target="_blank">第23轮本土最佳阵容：刘晓宇领衔</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        刘晓宇在对阵山西队比赛中砍下18分10篮板7助攻。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987151.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987151.html" title="2015-12-28 00:09">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987151.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            16                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074960.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987149.html"  target="_blank">崔万军：八一的年轻球员进步很快</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        崔万军表示球队的防守策略很成功。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987149.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987149.html" title="2015-12-27 23:59">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.163.com/15/1227/22/BBSJK95100052UUC.html#p=BBSE3DMB5GUP0005">网易体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987149.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074896.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987147.html"  target="_blank">许晋哲：落后时球队心态起了变化</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        许晋哲还表示球队本赛季三分球的问题处理的不好。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987147.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987147.html" title="2015-12-27 23:44">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987147.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074790.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987144.html"  target="_blank">巩晓彬：准备充分可能战胜任何队</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        身兼青岛总经理职务的巩晓彬还表示会给队员争取赢球奖金。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987144.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987144.html" title="2015-12-27 23:40">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.163.com/15/1227/23/BBSK6KAQ00052UUC.html">网易体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987144.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074742.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987139.html"  target="_blank">请外援？阿的江：我们要培养国手</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        阿的江表示八一男篮的年轻球员有着很好的未来。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987139.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987139.html" title="2015-12-27 23:31">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.163.com/15/1227/22/BBSJK95100052UUC.html#p=BBSE3DOP5GUP0005">网易体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987139.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                4                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987139.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            102                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074651.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987137.html"  target="_blank">刘鹏：上场溃败之后与球员有沟通</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        刘晓宇称球队今天的面貌焕然一新。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987137.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987137.html" title="2015-12-27 23:25">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987137.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074593.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987136.html"  target="_blank">杜锋：末节迫不得已才派出全华班</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        杜锋透露拜纳姆的伤还为好，而迪奥古与球队的磨合不行。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987136.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987136.html" title="2015-12-27 23:21">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.163.com/15/1227/23/BBSK1IFA00052UUC.html#p=BBSFKSJJ5GUP0005">网易体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987136.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                1                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987136.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            18                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074563.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987135.html"  target="_blank">同曦老板：继续赢球奖金就翻倍</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        同曦只要三连胜，赢球奖金就翻倍。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987135.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987135.html" title="2015-12-27 23:12">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987135.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074451.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987133.html"  target="_blank">哈里斯生涯篮板总数跻身历史第9</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        哈里斯本场比赛抢下11个篮板球，生涯篮板球总数达到3005个。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987133.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987133.html" title="2015-12-27 23:09">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987133.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074417.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987132.html"  target="_blank">孙悦谈客场之旅：那里有新鲜空气</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        接下来北京队将连续挑战广东的三支球队。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987132.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987132.html" title="2015-12-27 23:08">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987132.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                1                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987132.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            20                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074403.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987131.html"  target="_blank">徐强：我们在防守端未重蹈覆辙</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        同曦队本场很好的限制了对方的外援博比-布朗。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987131.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987131.html" title="2015-12-27 22:54">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cbachina.sports.sohu.com/20151227/n432722324.shtml">CBA官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987131.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074265.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987127.html"  target="_blank">翟晓川：九连胜助球队收获信心</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        自信心的增强后北京队在进攻端也打得更加流畅。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987127.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987127.html" title="2015-12-27 22:46">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.163.com/15/1227/22/BBSI9BAU00052UUC.html#p=BBS9L8AC5GUP0005">网易体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987127.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074179.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987124.html"  target="_blank">丁伟：球员在比赛中没能解放思想</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        丁伟表示球队是抱着学习的态度来打新疆队的。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987124.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987124.html" title="2015-12-27 22:42">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987124.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074132.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987120.html"  target="_blank">杨学增：全场大家都保持兴奋状态</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        四川队在第二节单节狂飙10记三分球，轰下50分。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987120.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987120.html" title="2015-12-27 22:33">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987120.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15074036.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987115.html"  target="_blank">青岛男篮时隔4年再次击败广东</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        青岛男篮上一次战胜广东队还需要追溯的2011年。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987115.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987115.html" title="2015-12-27 22:25">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987115.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            8                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15073936.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987113.html"  target="_blank">李春江：队员在防守端存侥幸心理</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        广厦队连续的三个客场比赛只赢下一场。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987113.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987113.html" title="2015-12-27 22:22">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987113.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            3                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15073890.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987111.html"  target="_blank">李秋平：上半场我们打得太随意</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        下半场新疆队在加快进攻节奏之后，一举将比分拉开。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987111.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987111.html" title="2015-12-27 22:09">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987111.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15073743.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987108.html"  target="_blank">闵鹿蕾：本土球员让老马安心休息</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        北京男篮目前已经取得9连胜，接下来将前往广东连续打三个客场比赛。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987108.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987108.html" title="2015-12-27 22:00">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987108.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            10                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15073639.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987107.html"  target="_blank">吉布森50分，青岛主场击退广东</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        本场比赛，拜纳姆没有出手，得分为零！                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987107.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987107.html" title="2015-12-27 21:46">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987107.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            11                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987105.html"  target="_blank">赵泰隆8记三分刷个人单场纪录</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        本赛季赵泰隆的场均三分球命中率达到了41.2％。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987105.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987105.html" title="2015-12-27 21:45">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987105.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            15                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15073493.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987104.html"  target="_blank">比斯利定胜负！山东1分险胜天津</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        最后时刻，比斯利先是两罚全中，随后又送出致命盖帽！                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987104.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987104.html" title="2015-12-27 21:43">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987104.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                1                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987104.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            13                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987103.html"  target="_blank">单节轰50分！四川主场屠广厦</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        四川第二节单节砍50分，最终37分屠杀广厦！                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987103.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987103.html" title="2015-12-27 21:37">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987103.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987102.html"  target="_blank">三外援合砍89分，同曦复仇深圳</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        从首节开始，同曦便一直占据领先。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987102.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987102.html" title="2015-12-27 21:37">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987102.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987101.html"  target="_blank">赵泰隆下三分雨！福建主场屠八一</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        本场比赛赵泰隆手感爆棚，三分球12投8中，轰下28分。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987101.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987101.html" title="2015-12-27 21:37">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987101.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987099.html"  target="_blank">周琦16分12板4帽，新疆力克浙江</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        全场比赛，新疆队一直占据着主动。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987099.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987099.html" title="2015-12-27 21:28">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987099.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987098.html"  target="_blank">北京22分大胜吉林，取9连胜</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        第二节，北京队便建立起巨大的领先优势。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987098.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987098.html" title="2015-12-27 21:26">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987098.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987097.html"  target="_blank">刘晓宇准三双，上海主场血洗山西</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        刘晓宇18分10篮板7助攻，富兰克林33分12篮板7助攻。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987097.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987097.html" title="2015-12-27 21:25">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987097.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15073262.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987096.html"  target="_blank">三外援合砍67分，北控轻取江苏</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        此役卡姆拉尼砍下20分7篮板13助攻。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987096.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987096.html" title="2015-12-27 21:21">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987096.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987093.html"  target="_blank">西热力江连吃技术犯规被罚出场</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        起因：西热力江被吹罚阻挡犯规。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987093.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987093.html" title="2015-12-27 20:44">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑CBA</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                    <a href="http://voice.hupu.com/cba/1987093.html" target="_blank" class="btn-brigth">
+                                                <i class="iconfont ico-brigth"></i>
+                                                3                                            </a>
+                                                                                <a href="http://voice.hupu.com/cba/1987093.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            57                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15072847.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/cba/1987080.html"  target="_blank">郭艾伦：伤口恢复很好不影响比赛</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        郭艾伦透露自己被砸的伤口已经拆线，完全恢复还需要段时间。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/cba/1987080.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/cba/1987080.html" title="2015-12-27 19:20">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://sports.163.com/15/1227/18/BBS506PH00052UUC.html#p=BBRVGT955GUP0005">网易体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/cba/1987080.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            2                                        </a>
+                                                                                <a href="http://bbs.hupu.com/15072099.html" target="_blank" class="btn-linkBbs">进入论坛 >
+                                            <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                            </s>
+                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                              
+                                            </ul>
+		</div> 
+	    <!--<div class="voice-more-loading">
+    <i class="ico-loading"></i>
+    正在加载中...
+</div>
+-->
+<div class="voice-paging">
+                        <span class="on">1</span>
+    <a href="/cba/newslist/2.html">2</a>    <a href="/cba/newslist/3.html">3</a>    <a href="/cba/newslist/4.html">4</a>    <a class="page-btn-prev" href="/cba/newslist/2.html">下一页</a>    <!--<a href="#" class="page-btn-lastPage">最后一页</a>-->
+</div>
+	</div>
+	<!-- main end -->
+	<!-- sidebar start -->
+	<div class="voice-sidebar">
+		<!-- 今日热议 start -->
+                <div id="todayHot" class="todayHot">
+    <div class="voice-hd-A">
+        <h2>今日热议</h2>
+        <a href="javascript:void(0);" class="btn-change">换一换</a>
+    </div>
+    <div class="bd">
+                <div style="display: block;" class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="中国篮协" href="http://voice.hupu.com/cba/media/CBA">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/120928/dbe2e1c06a2dbb77cd5c5b267d6d374c7a1bad78.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/cba/media/CBA">
+                        中国篮协                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/cba/1987594.html">
+                        两个T自动停赛1场，篮协又追加1场。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/cba/1987594.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-29 12:08" class="time" target="_blank" href="http://voice.hupu.com/cba/1987594.html">
+                            10小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://cba.hupu.com/">
+                                中国篮协                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/cba/1987594.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                131                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+                <div  class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="钱江晚报" href="http://voice.hupu.com/cba/media/zjol">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/121010/17572c9380e4dcd4b2e83d9a7559e46a7da81ac9.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/cba/media/zjol">
+                        钱江晚报                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/cba/1987545.html">
+                        据医生讲解这种情况多出现在瘦高个男生身上。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/cba/1987545.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-29 10:05" class="time" target="_blank" href="http://voice.hupu.com/cba/1987545.html">
+                            12小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://qjwb.zjol.com.cn/html/2015-12/29/node_77.htm">
+                                钱江晚报                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/cba/1987545.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                134                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+                <div  class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="新华网" href="http://voice.hupu.com/cba/media/xhw">
+                    	<img src="http://c1.hoopchina.com.cn/uploads/star/newuser/121024/788b1fa0e657746083309bf092815ce71b1b9bd6.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/cba/media/xhw">
+                        新华网                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/cba/1987623.html">
+                        新华社希望西热力江可以尊重裁判。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/cba/1987623.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-29 13:49" class="time" target="_blank" href="http://voice.hupu.com/cba/1987623.html">
+                            8小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://www.xinhuanet.com/">
+                                新华网                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/cba/1987623.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                25                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+                <div  class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="虎扑CBA" href="http://voice.hupu.com/cba/media/hupu">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/120928/f0ae75444ed08a317bfcb79093d179b5f8da6239.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/cba/media/hupu">
+                        虎扑CBA                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/cba/1987593.html">
+                        他场均得到18.3分17篮板1.5封盖1.7抢断。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/cba/1987593.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-29 12:06" class="time" target="_blank" href="http://voice.hupu.com/cba/1987593.html">
+                            10小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://cba.hupu.com/">
+                                虎扑CBA                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/cba/1987593.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                59                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+            </div>
+</div>
+		<!-- 今日热议 end -->
+		<div class="mar_t15"></div>
+		<!-- 灵光一闪 start -->
+                		<!-- 灵光一闪 end -->
+		<div class="mar_t20"></div>
+        
+		<!--<div class="about_us">
+			<a target="_blank" href="http://e.weibo.com/1841109261" class="list weibo">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>@虎扑体育  欢迎关注</p>
+				</span>
+			</a>
+			<a target="_blank" href="http://voice.hupu.com/generated/voice/news_nba.xml" class="list rss">
+				<s></s><span class="txt">
+					<h4>RSS</h4>
+					<p>虎扑体育的RSS</p>
+				</span>
+			</a>
+			<a target="_blank" href="http://voice.hupu.com/nba/1349805.html" class="list weixin">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>扫描二维码或搜索</p>
+				</span>
+			</a>
+			<a target="_blank" href="mailto:wanghui@hupu.com" class="list abs">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>xinsheng@hupu.com</p>
+				</span>
+			</a>
+		</div>-->
+	</div>
+	<!-- sidebar end -->
+</div><!--页面脚步信息-->
+<div class="hp-footer">
+                    
+                    <div class="hp-copyright">
+                    Copyright by 虎扑JRs &amp;
+                    <a href="http://www.hupu.com/" target="_blank" title="体育">虎扑体育</a> -
+                    <a href="http://www.hupu.com/declare.html" target="_blank" rel="nofollow">网站声明</a> -
+                    <a href="http://mobile.hupu.com/" target="_blank">手机虎扑</a> -
+                    <a href="http://jobs.hupu.com/" target="_blank">在虎扑工作</a> -
+                    <a href="http://marketing.hupu.com/contact/" target="_blank">联系我们</a> -
+                    <a href="http://marketing.hupu.com/" target="_blank">广告服务</a> -
+                    <a href="http://www.hupu.com/sitemap.html" target="_blank" rel="nofollow">网站地图</a> -
+                    <a href="http://nba.hupu.com/" target="_blank" title="NBA">NBA</a> -
+                    <a href="http://cba.hupu.com/" target="_blank" title="CBA">CBA</a>  -
+                    <a href="http://soccer.hupu.com/" target="_blank" title="足球">足球</a> -
+                    <a href="http://soccer.hupu.com/china/" target="_blank" title="中超">中超</a> -
+                    <a href="http://nbl.hupu.com/" target="_blank" title="NBL">NBL</a>  -
+                    <a href="http://racing.hupu.com/" target="_blank" title="赛车">赛车</a> -
+                    </div>
+                    
+                </div>
+
+<script type="text/javascript">
+$(function(){
+    $(".voice-my-dingyue-my").remove();
+});
+</script>
+
+<script>
+HP.common.init({project:"cba"});
+</script>
+</body>
+</html>
+<!-- voice config 配置 -->
+<script>
+!function(HP){
+    var win = window,
+        util = HP.util;
+
+    win.HP = win.HP || {};
+    /**
+     * Voice 命名空间
+     */
+    var Voice = HP.Voice = {};
+
+    /**
+     * 接口地址
+     */ 
+    Voice.apiUrl = {
+                // （内容）支持，反对
+        support : 'http://voice.hupu.com/message_support_agaist',
+        // 话题
+        object : {
+            // 关注话题
+            follow : 'http://voice.hupu.com/api/userFollowObject',
+            // 获取话题信息
+            getObjectInfo : 'http://voice.hupu.com/api/get_object_info'
+        },
+        // 评论
+        comment: {
+            // 支持，反对
+            support : '/support_agaist',
+            // 回复评论
+            reply : '/stars/xhrreply'
+        },
+        // my接口地址
+        my: {
+            // people 更新用户信息
+            updatePeopleInfo: '/update_people_information',
+            // people页 加载更多
+            morePeopleMsg: 'http://voice.hupu.com/get_more_people_messages'
+        },
+        // 直播专题
+        liveTopic: {
+            moreMessages : '/index/getMoreLiveTopicMessages',
+            latestMessages : '/index/getLiveTopicMessages'
+        },
+        fixed: {
+        // 新版吐槽
+            feedback: '/index/feedback'
+        }
+    }
+
+    // 用户id
+    Voice.getUserId = 0;
+    // 用户名称
+    Voice.getUserName = '';
+    // 用户论坛等级
+    Voice.getUserLevel = '';
+
+    Voice.getUserExtra = false;
+    Voice.getUserExtra2 = eval('[]');
+
+    // 为1时是论坛全站封禁用户，0时非封禁用户
+    Voice.getUserBlackRoom = '';
+    // 新声频道的禁言信息
+    Voice.getUserBanned = '';
+    // 新声页面名
+    Voice.getPageName = 'newsList';
+    // 新声频道名
+    Voice.getProjectName = '';
+
+    Voice.isLogin = util.isLogin();
+    Voice.popLogin = function(){
+        commonLogin('hupu');
+    }
+
+}(HP);
+</script>
+
+<!-- seajs config 配置 -->
+<script>
+seajs.use('dist/modules/card/main');
+
+</script>
+
+    <script type="text/javascript" src="http://b3.hoopchina.com.cn/??code/handlebars/handlebars.js,web/channel/voice/v1/js/common/voice.js,web/channel/voice/v1/js/widget/2014/versionTucaoFixed/versionTucao.js,web/channel/voice/v1/js/modules/share/miniShare.js,web/channel/voice/v1/js/aggregation/newsList/index.js?v=196"></script>
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'></script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-1024337685431355");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleUseIframeRendering();
+</script>
+<script type="text/javascript">
+(function(){
+var cjsscript = document.createElement('script');
+cjsscript.src = "http://b3.hoopchina.com.cn/common/lazyLoadAd.js";
+var cjssib = document.getElementsByTagName('script')[0];
+cjssib.parentNode.insertBefore(cjsscript, cjssib);
+})();
+</script>
+<!--PV检测代码-->
+<!--CNZZ统计 start-->
+<script>
+    var query = location.href.split('#');
+    if(query[1] == "next"){
+        _czc.push(['_trackEvent', '下一篇', '']);
+    }else if(query[1] == "pre"){
+        _czc.push(['_trackEvent', '上一篇', '']);
+    }
+</script>
+<!--CNZZ统计 end-->

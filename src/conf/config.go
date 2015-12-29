@@ -1,3 +1,13 @@
+/* config.go - 爬虫配置文件解析程序 */
+/*
+modification history
+--------------------
+2015-11-25, by wusuopubupt, create
+*/
+/*
+DESCRIPTION
+爬虫配置文件解析
+*/
 package conf
 
 import (
@@ -25,7 +35,16 @@ type SpiderCfg struct {
 	Spider SpiderStruct
 }
 
-// initialize config
+/*
+* InitConf - 初始化配置
+*
+* PARAMS:
+*   - confFile : 配置文件名(全路径)
+*
+* RETURNS:
+*   - (SpiderStruct ,nil), if succeed
+*   - (err,SpiderStruct) if failed
+ */
 func InitConf(confFile string) (SpiderStruct, error) {
 	l4g.Info("config file: %s", confFile)
 	var cfg SpiderCfg
@@ -34,19 +53,28 @@ func InitConf(confFile string) (SpiderStruct, error) {
 	err := gcfg.ReadFileInto(&cfg, confFile)
 	if err != nil {
 		l4g.Error("read config err [%s]", err)
-		return cfg.Spider, nil
+		return cfg.Spider, err
 	}
 
 	// check conf
 	if err = checkConf(&cfg); err != nil {
 		l4g.Error("read config err [%s]", err)
-		return cfg.Spider, nil
+		return cfg.Spider, err
 	}
 
 	return cfg.Spider, nil
 }
 
-// check conf
+/*
+* checkConf - 检查配置文件合法性
+*
+* PARAMS:
+*   - cfg: SpiderCfg结构指针
+*
+* RETURNS:
+*   - nil, if succeed
+*   - error, if failed
+ */
 func checkConf(cfg *SpiderCfg) error {
 	s := cfg.Spider
 	if s.UrlListFile == "" {

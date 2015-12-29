@@ -1,0 +1,2259 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Keywords" content="虎扑其他" />
+<meta http-equiv="Description" content="虎扑新声每日报道装备相关最热门新闻，真实还原现场，努力搜寻最新最全的装备热门事件" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="title" content="其他滚动新闻_虎扑其他新声" />
+<title>其他滚动新闻_虎扑其他新声</title>
+    <script id="watch_script" data-mid="7" src="http://b3.hoopchina.com.cn/js/watch/watch.js?v=1.0.0"></script>
+<script type="text/javascript">
+var __daceDataNameOfChannel = 'nba';
+</script><meta name="apple-itunes-app" content="app-id=906632439" />
+<link rel="shortcut icon" href="http://b3.hoopchina.com.cn/common/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://b3.hoopchina.com.cn/web/channel/voice/v1/css/common/common.css" />
+<script src="http://b3.hoopchina.com.cn/code/??jquery/jquery-1.8.js,seajs/seajs/seajs/2.1.1/sea.js,seajs/seajs/seajs-style/1.0.2/seajs-style.js"></script>
+<script src="http://b3.hoopchina.com.cn/web/module/dace/1.0.0/dace.js"></script> 
+<script src="http://b3.hoopchina.com.cn/web/channel/voice/v1/js/common/common.js"></script> 
+        <link rel="stylesheet" type="text/css" media="screen" href="http://b3.hoopchina.com.cn/??web/channel/voice/v1/css/common/voice.min.css,web/channel/voice/v1/css/common/card.min.css,web/channel/voice/v1/css/aggregation/newsList.min.css?v=196" />
+<!-- seajs config 配置 -->
+<script>
+
+seajs.config({
+    alias: {
+        'jquery': 'code/seajs/jquery/1.8.3/jquery',
+        'seajs-debug': 'code/seajs/seajs/seajs-debug/1.1.1/seajs-debug',
+        // 提示框
+        'warning': 'modules/tips/warning',
+        'shareAPI': 'modules/share/shareAPI'
+    },
+    paths: {
+        'code': 'http://b3.hoopchina.com.cn/code',
+            'modules': 'dist/modules'
+        },
+    map: [
+        function(uri) {
+            // 避免请求缓存
+            if (location.search.indexOf("seajs-debug") === -1) {
+                // [ /^(.*\/dist\/.*\.(?:css|js))(?:.*)$/i, '$1?t=2014041002']
+                uri += (uri.indexOf('?') === -1 ? '?' : '&') + 't=196';
+            }
+
+            return uri
+        }
+    ],
+    base: 'http://b3.hoopchina.com.cn/web/channel/voice/v1/js/'
+});
+</script>
+</head>
+<body>
+<!--包含页面公共头部信息-->
+<!-- topbar start -->
+<div class="hp-topbarNav">
+	<div class="hp-topbarNav-bd">
+		<div class="hp-quickNav">
+			<ul class="hp-quickNav-list">
+				<li class="mobileWeb">
+					<a href="http://m.hupu.com/" target="_blank"><i class="iconfont ico-mobile"></i>手机虎扑</a>
+				</li>
+				<li class="line">|</li>
+				<li>
+				    <a href="http://mobile.hupu.com/?_r=globalNav" target="_blank" style="color:#ad0007">虎扑体育客户端</a>
+				</li>
+				<li class="line">|</li>
+				<li class="hp-dropDownMenu topbar-followBlog">
+					<a class="hp-set" href="javascript:">关注虎扑<s class="hp-set-arrow"><s class="hp-set-arrow-bd"></s></s></a>
+					<div class="hp-drapDown topbar-followBlog-drapDown">
+						<a class="weibo" target="_blank" href="http://e.weibo.com/liangle4u" title="新浪"><i class="ico-weibo"></i>新浪</a>
+						<a class="weixin" target="_blank" href="http://voice.hupu.com/other/1581560.html" title="微信"><i class="ico-weixin"></i>微信</a>
+						<a class="instagram" target="_blank" href="http://voice.hupu.com/other/1634334.html" title="Instagram"><i class="ico-instagram"></i>Ins</a>
+						<a class="qqt" target="_blank" href="http://e.t.qq.com/the_real_hoopchina" title="腾讯"><i class="ico-qqt"></i>腾讯</a>
+						<a class="qzone" target="_blank" href="http://user.qzone.qq.com/1624355655" title="空间"><i class="ico-qzone"></i>空间</a>
+						<a class="renren" target="_blank" href="http://page.renren.com/699131720" title="人人"><i class="ico-renren"></i>人人</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="hp-topbar-loginInfo" id="J_topbar_loginInfo">	
+		</div>
+	</div>
+</div>
+<!-- topbar end -->
+<!-- header start -->
+<div class="hp-header">
+	<div class="hp-header-bd">
+        <!-- navChannel start -->
+		<div class="hp-nav-channel">
+			<ul class="hp-nba-channel-item">
+				<li class="first"><a href="http://www.hupu.com" target="_blank">首页</a></li>
+				<li class="line">|</li>
+				<li><a href="http://nba.hupu.com" target="_blank">NBA</a></li>
+				<li class="line">|</li>
+				<li><a href="http://cba.hupu.com" target="_blank">CBA</a></li>
+				<li class="line">|</li>
+				<li><a href="http://soccer.hupu.com" target="_blank">国际足球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://soccer.hupu.com/china" target="_blank">中国足球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://racing.hupu.com" target="_blank">赛车</a></li>
+				<li class="line">|</li>
+				<li><a href="http://tennis.hupu.com" target="_blank">网球</a></li>
+				<li class="line">|</li>
+				<li><a href="http://zb.hupu.com" target="_blank">装备</a></li>
+				<li class="line">|</li>
+				<li><a href="http://www.shihuo.cn" target="_blank">识货</a></li>
+				<li class="line">|</li>
+				<li><a href="http://lecai.hupu.com" target="_blank">彩票</a></li>
+				<li class="line">|</li>
+				<li><a href="http://v.opahnet.com" target="_blank">视频</a></li>
+				<li class="line">|</li>
+				<li><a href="http://voice.hupu.com" target="_blank">新声</a></li>
+				<li class="line">|</li>
+				<li><a href="http://bbs.hupu.com" target="_blank">论坛</a></li>
+				<li class="line">|</li>
+				<li><a href="http://youxi.hupu.com" target="_blank">游戏</a></li>
+				<li class="line">|</li>
+				<li><a href="http://photo.hupu.com" target="_blank">图片</a></li>
+				<li class="line">|</li>
+				<li><a href="http://bbs.hupu.com/all-gambia" target="_blank">娱乐</a></li>
+				<li class="line">|</li>
+				<li><a href="http://run.hupu.com" target="_blank">跑步</a></li>
+				<li class="line">|</li>
+				<li><a href="http://edu.hupu.com" target="_blank">教育</a></li>
+				<li class="line">|</li>
+				<li class="hp-w1200-show"><a href="http://taiqiu.hupu.com" target="_blank">台球</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-w1200-show"><a href="http://ymq.hupu.com" target="_blank">羽毛球</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-w1200-show"><a href="http://xgame.hupu.com" target="_blank">Xgames</a></li>
+				<li class="line hp-w1200-show">|</li>
+				<li class="hp-dropDownMenu nav-channel-more">
+                    <a href="javascript:void(0)" class="hp-set">更多<s class="hp-set-arrow"><s class="hp-set-arrow-bd"></s></s></a>
+                    <div class="hp-drapDown nav-channel-more-drapDown">
+					    <a href="http://www.nflchina.com/" target="_blank">NFL</a>
+						<a href="http://golf.hupu.com/" target="_blank">高尔夫</a>						 
+					    <a href="http://outdoor.hupu.com" target="_blank">户外</a>
+                    	<a href="http://xgame.hupu.com" target="_blank">xgames</a>
+                    	<a href="http://ymq.hupu.com" target="_blank">羽毛球</a>                    	 
+                    	<s class="arrow-top"><s class="arrowbd"></s></s>
+                    </div>
+                </li>
+			</ul>
+		</div>
+<!-- navChannel end -->
+        <!-- nba顶通广告位 start -->
+        <div class="hp-w hp-header-banner">
+            <script type='text/cjs'>
+                !function(HP, C, $){
+                    GA_googleFillSlotWithSize("ca-pub-1024337685431355", "voice_nbaindex_980x60_real", 980, 60);
+                }(HP, HP.common, jQuery);
+            </script>
+        </div>
+        <!-- nba顶通广告位 end -->
+        <!-- nav start -->
+        <div class="hp-nav">
+            <div class="hp-logo">
+                <a href="http://voice.hupu.com/" title="新声">
+                    <img alt="新声" src="http://b3.hoopchina.com.cn/images/logo2013/v1/hp_logo_voice.png">
+                </a>
+            </div>
+            <div class="hp-mainNav">
+                <div class="hp-mainNav-bd">
+    <ul class="hp-mainNav-item">
+        <li class="voice-my-dingyue-my"><a href="http://voice.hupu.com/my">我的订阅</a></li>
+        <li class="line voice-my-dingyue-my">|</li>
+        <li><a href="http://voice.hupu.com/hot">新声热榜</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/nba/newslist">NBA新闻</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/nba/topic/more">专题</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/o/rockets">火箭</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/o/lakers">湖人</a></li>
+        <li class="line">|</li>
+        <li><a href="http://voice.hupu.com/o/heat">热火</a></li>
+        <li class="line">|</li>
+        <li class="hp-dropDownMenu">
+            <a href="javascript:" class="hp-set">NBA球队</a>
+            <div class="hp-drapDown">
+                <a href="http://voice.hupu.com/o/celtics">凯尔特人</a>
+                <a href="http://voice.hupu.com/o/nets">篮网</a>
+                <a href="http://voice.hupu.com/o/knicks">尼克斯</a>
+                <a href="http://voice.hupu.com/o/mavericks">小牛</a>
+                <a href="http://voice.hupu.com/o/bulls">公牛</a>
+                <a href="http://voice.hupu.com/o/spurs">马刺</a>
+                <a href="http://voice.hupu.com/o/clippers">快船</a>
+                <a href="http://voice.hupu.com/o/thunder">雷霆</a>
+            </div>
+        </li>
+    </ul>
+</div>
+                <div class="hp-search J_hp_search">
+                    <span class="iconfont ico-search"></span>
+                    <input type="text" placeholder="搜索新声" class="input-search" />
+                </div>
+                <i class="hp-roundPoint-br-tl"></i>
+				<i class="hp-roundPoint-br-tr"></i>
+				<i class="hp-roundPoint-br-bl"></i>
+				<i class="hp-roundPoint-br-br"></i>
+            </div>
+        </div>
+        <!-- nav end -->
+	</div>
+</div>
+<!-- header end -->    
+<!-- navPath start -->
+<!-- navPath end -->
+<div class="hp-wrap">
+	<!-- main start -->
+	<div class="voice-main">
+                <div class="title">
+                    <h2>其他新闻</h2>
+                    <a target="_blank" class="btn-subscribeRss" href="">
+                        订阅RSS
+                        <i class="ico-rss"></i>
+                    </a>
+                </div>
+		<div class="news-list">
+                    <ul>
+                                   
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987718.html"  target="_blank">威斯布鲁克准三双助雷霆战胜掘金</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月28号法新社报道，北京时间2015年12月28号雷霆主场122-112击败掘金，威少砍下30分12助攻9篮板的准三双数据，杜兰特得到26分10助攻贡献赛季第8次两双。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987718.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987718.html" title="2015-12-29 16:22">6小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987718.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987713.html"  target="_blank">威斯布鲁克准三双助雷霆战胜掘金</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月28号法新社报道，北京时间2015年12月28号雷霆主场122-112击败掘金，威少砍下30分12助攻9篮板的准三双数据，杜兰特得到26分10助攻贡献赛季第8次两双。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987713.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987713.html" title="2015-12-29 16:14">6小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987713.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987761.html"  target="_blank">克洛普：赞扬洛夫伦和亨德森回归后的状态</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普高度赞扬了洛夫伦和亨德森回归后的状态。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987761.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987761.html" title="2015-12-29 12:34">9小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201523-boss-hails-returning-lovren-and-henderson">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987761.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987526.html"  target="_blank">NFL明星曼宁卷入禁药风暴</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月27日法新社报道，效力美式足球NFL丹佛野马队的明星四分卫裴顿-曼宁，曾使用可增强运动表现的禁药，包括人类生长激素等，但遭到曼寧强力否认。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987526.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987526.html" title="2015-12-29 08:57">13小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987526.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987525.html"  target="_blank">日央行称东京奥运将提振经济</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        东京当地时间2015年12月28日法新社报道，日本央行表示2020年东京奥运会会大大促进经济增长，预期日本2018年GDP有望在2014年基础上提振0.6个百分点。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987525.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987525.html" title="2015-12-29 08:56">13小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987525.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987475.html"  target="_blank">奥里吉、艾比、米尔纳伤情更新</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普确认，奥里吉将会错过利物浦对阵桑德兰的比赛，而艾比已经归队训练。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987475.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987475.html" title="2015-12-29 00:53">21小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201520-klopp-fitness-update-on-origi-ibe-and-milner">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987475.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987453.html"  target="_blank">梅西和巴萨在足球盛典斩获大奖</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        迪拜当地时间2015年12月27日法新社报道，在周日举行的迪拜足球颁奖中，巴萨和队内球星梅西分别获得最好球队和最好球员的大奖。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987453.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987453.html" title="2015-12-28 23:16">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987453.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987452.html"  target="_blank">伊朗因空气污染而推迟足球比赛</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        德黑兰当地时间2015年12月27日法新社报道，因为空气污染指数超过了可接受范围的两倍，周末在首都举行的伊朗俱乐部比赛被推迟。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987452.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987452.html" title="2015-12-28 23:15">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987452.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987447.html"  target="_blank">曼联对战切尔西范加尔深陷困境</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月28日法新社报道，曼联主帅范加尔最近深陷困境，曼联周一将在老特拉福德对战切尔西，荷兰人希丁克有望成为刽子手的角色，终结范加尔在曼联的执教生涯。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987447.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987447.html" title="2015-12-28 23:05">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987447.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987446.html"  target="_blank">曼联对战切尔西范加尔深陷困境</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月28日法新社报道，曼联主帅范加尔最近深陷困境，曼联周一将在老特拉福德对战切尔西，荷兰人希丁克有望成为刽子手的角色，终结范加尔在曼联的执教生涯。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987446.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987446.html" title="2015-12-28 23:04">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987446.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987445.html"  target="_blank">卡里克：范加尔依然受我们尊敬</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987445.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987445.html" title="2015-12-28 23:04">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987445.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987444.html"  target="_blank">足球：马尔蒂尼将担任蒙彼利埃的看守教练</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        蒙彼利埃当地时间2015年12月27日法新社报道--周日，蒙彼利埃的两名内部工作人员帕斯卡和布鲁诺-马提尼，他们直到本赛季结束都作为法甲的联合经理人。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987444.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987444.html" title="2015-12-28 23:03">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987444.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987443.html"  target="_blank">卡里克：范加尔依然受我们尊敬</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987443.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987443.html" title="2015-12-28 23:03">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987443.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987442.html"  target="_blank">NFL：猎鹰斩断黑豹的完美梦</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月27日法新社报道--星期天在亚特兰大结束了一场惊人的比赛，追求完美的“卡罗莱纳黑豹”以13-20输给猎鹰。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987442.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987442.html" title="2015-12-28 23:02">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987442.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987441.html"  target="_blank">卡里克：范加尔依然受我们尊敬</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987441.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987441.html" title="2015-12-28 23:01">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987441.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987440.html"  target="_blank">卡里克：范加尔依然受我们尊敬</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987440.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987440.html" title="2015-12-28 23:01">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987440.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987439.html"  target="_blank">卡里克：范加尔依然受我们尊敬</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987439.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987439.html" title="2015-12-28 23:00">23小时前</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987439.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987757.html"  target="_blank">克洛普：我们不会强迫斯图里奇上场</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        12月6日对阵纽卡斯尔的比赛中受伤的斯图里奇如今正在梅尔伍德加紧训练，以期尽早恢复。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987757.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987757.html" title="2015-12-28 20:43">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201513-boss-we-won-t-rush-sturridge-back-into-action">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987757.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987474.html"  target="_blank">本特克：和克洛普谈过之后我能更进步</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        本特克表示，他在和克洛普谈过之后感到非常自信，他认为在进攻线上他还能继续进步。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987474.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987474.html" title="2015-12-28 18:23">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201494-benteke-confident-klopp-chat-will-help-him-improve">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987474.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987380.html"  target="_blank">虎扑CBA微信公众号，邀您来关注</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        如果你爱CBA也爱中国篮球，请千万不要错过我们。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987380.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987380.html" title="2015-12-28 18:03">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987380.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            1                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987367.html"  target="_blank">交大|安泰机动会师决赛，谁能一战封王？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        交大|安泰机动会师决赛，谁能一战封王？                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987367.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987367.html" title="2015-12-28 15:51">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/other/newslist">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987367.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987366.html"  target="_blank">华政|6:1大胜法师，刑司晋级省内赛！</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        华政|6:1大胜法师，刑司夺冠晋级省内赛！                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987366.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987366.html" title="2015-12-28 15:47">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/other/newslist">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987366.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987364.html"  target="_blank">开拓者主场105-76大胜骑士</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月27号法新社报道，北京时间2015年12月27号进行的一场NBA常规赛较量当中，主场作战的波特兰开拓者以105-76大胜克里夫兰骑士结束5连败。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987364.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987364.html" title="2015-12-28 15:22">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987364.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987465.html"  target="_blank">克洛普评论胜局、本特克进球和奥里吉受伤</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普表示，自己很高兴能看到球队今天1-0胜出莱切斯特城。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987465.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987465.html" title="2015-12-28 13:34">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201460-klopp-on-deserved-win-benteke-goal-and-origi-injury">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987465.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987591.html"  target="_blank">教练宝助力湖北跆协年会，共筑行业盛景</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        教练宝助力湖北跆协年会，共筑行业盛景，教练宝APP斩获“2015优秀教学助手”殊荣！                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987591.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987591.html" title="2015-12-28 11:52">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.hupu.com">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987591.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987222.html"  target="_blank">塞尔吉延长布伦特福德租借合同</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        塞尔西延长了自己在布伦特福德租借合同。他将代表布伦特福德效力到赛季结束。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987222.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987222.html" title="2015-12-28 10:14">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/academy/201485-sergi-canos-extends-brentford-loan">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987222.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987182.html"  target="_blank">曼联不敌斯托克城范加尔可能辞职</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        斯托克城当地时间2015年12月26日法新社报道，曼联客场0:2不敌斯托克城，遭遇四连败。“下课”呼声甚高的曼联主帅范加尔在赛后暗示自己可能辞职。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987182.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987182.html" title="2015-12-28 08:15">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987182.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987180.html"  target="_blank">费德勒德约科维奇冲击亿元奖金</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        巴黎当地时间2015年12月26日法新社报道，2016赛季对德约科维奇和费德勒这两位天王级球员来说，就是冲击个人职业生涯总奖金1亿大关。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987180.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987180.html" title="2015-12-28 08:14">12月28日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987180.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987141.html"  target="_blank">NBA：快船队格里芬股四头肌受伤离场</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月27日法新社报道--NBA球队星期六报道说，洛杉矶快船队的前锋布雷克-格里芬左股部分撕裂，要缺少比赛至少两周。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987141.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987141.html" title="2015-12-27 23:35">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987141.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987473.html"  target="_blank">拉拉纳：克洛普的话激励了红军</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        拉拉纳表示，克洛普在赛前的训话激励了红军战胜莱切斯特城。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987473.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987473.html" title="2015-12-27 23:35">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201458-lallana-how-klopp-s-words-inspired-reds-result">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987473.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987140.html"  target="_blank">足球：阿里王子要求公布有关加西亚的报告</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        迪拜当地时间2015年12月27日法新社报道--国际足联候选人阿里王子在周日要求迈克尔加西亚公布涉嫌贿赂和腐败的报告，并继续调查2018年和2022年世界杯竞选过程。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987140.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987140.html" title="2015-12-27 23:34">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987140.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987130.html"  target="_blank">希丁克对科斯塔停赛表示遗憾</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月26日法新社报道，科斯塔在比赛中吃到了一场黄牌，因此他将缺席周一对曼联的比赛。切尔西主帅希丁克承认科斯塔的缺阵对球队来说影响很大。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987130.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987130.html" title="2015-12-27 22:51">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987130.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987129.html"  target="_blank">希丁克对科斯塔停赛表示遗憾</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月26日法新社报道，科斯塔在比赛中吃到了一场黄牌，因此他将缺席周一对曼联的比赛。切尔西主帅希丁克承认科斯塔的缺阵对球队来说影响很大。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987129.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987129.html" title="2015-12-27 22:51">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987129.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987128.html"  target="_blank">本特克破门利物浦胜莱斯特城</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        利物浦当地时间2015年12月26日法新社报道，本轮利物浦在主场一球小胜领头羊莱斯特城，赛后克洛普也谈到了这场比赛，他高度赞扬了球队的表现，球队重新回到了赢球的轨道。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987128.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987128.html" title="2015-12-27 22:48">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987128.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987125.html"  target="_blank">温格表示裁判的误判造就了球队前三个失球</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        南安普顿当地时间2015年12月27日法新社报道，温格表示裁判乔恩-莫斯在三个进球有错误判罚导致他的球队0-4惨败南安普顿，同时他坚持认为阿森纳的表现更值得关注。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987125.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987125.html" title="2015-12-27 22:43">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987125.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987118.html"  target="_blank">曼宁称指控他使用激素的报道是垃圾</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛杉矶当地时间2015年12月27日法新社报道，NFL五届最有价值球员佩顿-曼宁在周六回应了半岛电视台的一份关于印第安纳波利斯抗衰老医院给他提供了一种人类生长激素的纪录片，他表示这“就是垃圾”。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987118.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987118.html" title="2015-12-27 22:32">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987118.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987155.html"  target="_blank">洛夫伦：球队防守发挥了重要作用</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        洛夫伦相信，球队的防守在1-0战胜莱切斯特城的比赛中发挥了重要作用。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987155.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987155.html" title="2015-12-27 17:23">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201452-lovren-team-defensive-effort-crucial-to-victory">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987155.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987004.html"  target="_blank">国际垂直马拉松总决赛，巅峰对战广州塔</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        2015国际垂直马拉松系列赛广州塔总决赛暨世界高塔竞速亚太区大奖赛终于在12月26日完美收官.                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987004.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987004.html" title="2015-12-27 12:43">12月27日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://cba.hupu.com/">虎扑体育</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987004.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987055.html"  target="_blank">主帅：我们已经做好了比赛的准备</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普表示，利物浦已经做好了对阵莱切斯特城的准备。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987055.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987055.html" title="2015-12-26 21:32">12月26日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201400-boss-we-re-prepared-for-leicester-but-need-to-react">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987055.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1987048.html"  target="_blank">安菲尔德球场管理员43年工作后告别红军</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        为利物浦主场安菲尔德球场管理了43年球场草皮的球场管理员特里-福赛斯今天与球队告别。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1987048.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1987048.html" title="2015-12-26 17:23">12月26日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/announcements/201180-anfield-groundsman-says-farewell-after-43-years">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1987048.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986812.html"  target="_blank">克洛普：红军已准备好面对冬窗</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普坚称，红军不准备在冬窗大笔花钱，但已经准备好对应对伤病和离队做出“反应”。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986812.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986812.html" title="2015-12-26 13:13">12月26日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201345-klopp-reds-prepared-to-react-in-january-window">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986812.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986633.html"  target="_blank">本特克：我的2016年新年决心</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        新年即将到来，红军球员本特克特表达了自己在新一年的决心。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986633.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986633.html" title="2015-12-25 17:20">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201174-benteke-reveals-early-resolution-for-2016">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986633.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986614.html"  target="_blank">劳斯会参观昆尚传媒《昆仑决》将走进山西</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        12月25日，山西劳斯会与储和文化传媒有限公司一行在劳斯会会长郭荣林带领下，今日抵京考察参观《昆仑决》                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986614.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986614.html" title="2015-12-25 14:36">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986614.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986607.html"  target="_blank">如此暴力的跨界！从圣诞大战开始</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        12月25日魅族宣布联合腾讯体育推出“魅族三分时刻”活动，在腾讯体育视频直播的NBA视频中，每进一个三分球，魅族将送出相应的礼品，活动将从12月26日NBA圣诞大战开始。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986607.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986607.html" title="2015-12-25 14:28">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986607.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986610.html"  target="_blank">2015年微博体育白皮书发布</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        近日，微博体育联手微博数据中心发布了《2015年微博体育白皮书》，这也是微博公开发布的第一份体育白皮书。白皮书以社交媒体的角度，从竞技体育和运动健身两部分主题进行探讨，对内容、账号及用户进行分析，全面盘点了2015年微博体育的数据。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986610.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986610.html" title="2015-12-25 14:23">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/nba">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986610.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986636.html"  target="_blank">克洛普：我们的目标是让球迷脸上常带微笑</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普表示，他想让让利物浦在节礼日期间的主场气氛尽量热烈，用最饱满的状态对阵莱切斯特城。并称自己的目标是让球迷的脸上常带微笑。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986636.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986636.html" title="2015-12-25 12:23">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201366-klopp-our-job-is-to-put-a-smile-on-fans-faces">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986636.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986538.html"  target="_blank">交大|14分…你们真的不是在打篮球？</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        交大|14分…你们真的不是在打篮球？                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986538.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986538.html" title="2015-12-25 11:31">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/other/newslist">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986538.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986536.html"  target="_blank">签下国家体操队 海信备战奥运营销</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        12月24日，海信集团在南京国家体操队训练基地正式签约中国国家体操队，成为其官方合作伙伴，海信旗下的电视、冰箱、空调、洗衣机和手机等产品将陪伴中国体操队员征战2016年主要赛事，从而拉开海信2016年巴西奥运会品牌营销的序幕。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986536.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986536.html" title="2015-12-25 11:18">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com">虎扑新声</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986536.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986488.html"  target="_blank">温格：应该给范加尔更多的时间</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月23日法新社报道，荷兰人范加尔在经历了6轮不胜，帅位岌岌可危，在穆里尼奥被切尔西解雇后，由穆里尼奥替代范加尔的呼声日益高涨。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986488.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986488.html" title="2015-12-25 08:48">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986488.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986487.html"  target="_blank">拉涅利：莱斯特城要有阿甘精神</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月23日法新社报道， 莱斯特城主帅拉涅利将球队比作阿甘，希望能以电影里的精神激励全队。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986487.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986487.html" title="2015-12-25 08:46">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://voice.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986487.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986452.html"  target="_blank">拉德鲁成为阿贾克斯青训营球探部门主管</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        帕特里克·拉德鲁将从2016年1月1日1起担任阿贾克斯青训营球探部门主管，他与阿贾克斯签订了为期三年的合同。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986452.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986452.html" title="2015-12-25 00:34">12月25日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.ajax.nl/streams/de-toekomst/ladru-hoofd-jeugdscouting.htm">阿贾克斯官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986452.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986451.html"  target="_blank">阿贾克斯将卡尔松租借至鹿特丹斯巴达</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        阿贾克斯与荷乙俱乐部鹿特丹斯巴达就奥塔·卡尔松的租借事宜达成协议。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986451.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986451.html" title="2015-12-24 23:55">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.ajax.nl/streams/ajax-actueel/ajax-verhuurt-ottar-magnus-karlsson-aan-sparta.htm">阿贾克斯官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986451.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986445.html"  target="_blank">NBA：库里：我是世界上最好的球员</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        纽约当地时间2015年12月24日--2015年对于金州勇士队球星斯蒂芬-库里是收获之年，他在今年赢得总冠军和常规赛最有价值球员，詹姆斯更是在接受采访的时候称他是世界上最好的篮球运动员。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986445.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986445.html" title="2015-12-24 23:32">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986445.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986444.html"  target="_blank">据报道，美国投资者正在协商收购埃弗顿</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月23日法新社报道--今日出版的《泰晤士报》披露，一个美国财团已经就2亿镑收购埃弗顿初步与埃弗顿俱乐部达成意向。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986444.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986444.html" title="2015-12-24 23:30">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986444.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986434.html"  target="_blank">托尼从前税务顾问手中收回125万欧元</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        柏林当地时间2015年12月23日法新社报道，德国法院关于宗教税务案裁决，前意大利国脚卢卡-托尼从前任税务顾问手中收回超过100万欧元。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986434.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986434.html" title="2015-12-24 22:48">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986434.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986637.html"  target="_blank">伤情更新：两将将缺阵、两将将回归</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        克洛普确认，斯科特尔和米尔纳将不会在对阵莱切斯特城的比赛中出场，而洛夫伦和米尼奥莱将归队。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986637.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986637.html" title="2015-12-24 22:35">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://www.liverpoolfc.com/news/first-team/201346-skrtel-and-milner-to-miss-leicester-but-lovren-and-mignolet-to-return">利物浦官网</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986637.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986431.html"  target="_blank">斯派克-李携手NBA球星拍禁枪公益片</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        纽约当地时间2015年12月24日法新社报道，电影导演斯派克-李向NBA倡导一项建议，就是希望能依靠球星的力量来改变政府所未能做到的枪支问题。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986431.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986431.html" title="2015-12-24 22:27">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986431.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986429.html"  target="_blank">希丁克:切尔西球员该照照镜子</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        伦敦当地时间2015年12月23日法新社报道，希丁克出席了切尔西主场战沃特福德的新闻发布会，证实球队核心阿扎尔受伤，希丁克还疑似炮轰穆里尼奥治下的球员，称球员们必须该拿镜子照照自己了，挑明有些球员在葡萄牙人手下未尽全力。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986429.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986429.html" title="2015-12-24 22:18">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986429.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986428.html"  target="_blank">范加尔发布会愤怒回应下课传闻</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        曼彻斯特当地时间2015年12月23日法新社报道，曼联主帅范加尔目前处境困难，一场赛前的例行新闻发布会变成了范加尔对媒体的声讨会。这位荷兰名帅只回答了三个问题，不到５分钟就离席而去。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986428.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986428.html" title="2015-12-24 22:17">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986428.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="list-hd">
+                                    <h4>
+                                        <a href="http://voice.hupu.com/other/1986289.html"  target="_blank">猛龙主场103-99惊险战胜小牛</a>
+                                    </h4>
+                                </div>
+                                <div class="list-content">
+                                    <span class="J_share_title">
+                                        多伦多当地时间2015年12月23号法新社报道，北京时间2015年12月23号进行的一场NBA常规赛当中多伦多猛龙主场103-99险胜达拉斯小牛，德罗赞得到全场最高的28分。                                    </span>
+                                    <a class="btn-more" target="_blank" href="http://voice.hupu.com/other/1986289.html">阅读全文
+                                        <s class="set-arrow">
+                                            <i></i>
+                                            <span></span>
+                                        </s>
+                                    </a>                     
+                                </div>
+                                <div class="otherInfo">
+                                    <span class="other-left">
+                                        <a class="time" target="_blank" href="http://voice.hupu.com/other/1986289.html" title="2015-12-24 11:32">12月24日</a>
+                                        <span class="comeFrom">來自 <a target="_blank" href="http://afp.hupu.com/home">AFP</a></span>
+                                                                            </span>
+                                    <span class="other-right">
+                                                                                <a href="http://voice.hupu.com/other/1986289.html#tracingArticalComment" target="_blank" class="btn-comment">
+                                            <i class="iconfont ico-comment"></i>
+                                            0                                        </a>
+                                                                            </span>
+                                </div>
+                            </li>
+                              
+                                            </ul>
+		</div> 
+	    <!--<div class="voice-more-loading">
+    <i class="ico-loading"></i>
+    正在加载中...
+</div>
+-->
+<div class="voice-paging">
+                        <span class="on">1</span>
+    <a href="/other/newslist/2.html">2</a>    <a href="/other/newslist/3.html">3</a>    <a href="/other/newslist/4.html">4</a>    <a class="page-btn-prev" href="/other/newslist/2.html">下一页</a>    <!--<a href="#" class="page-btn-lastPage">最后一页</a>-->
+</div>
+	</div>
+	<!-- main end -->
+	<!-- sidebar start -->
+	<div class="voice-sidebar">
+		<!-- 今日热议 start -->
+                <div id="todayHot" class="todayHot">
+    <div class="voice-hd-A">
+        <h2>今日热议</h2>
+        <a href="javascript:void(0);" class="btn-change">换一换</a>
+    </div>
+    <div class="bd">
+                <div style="display: block;" class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="AFP" href="http://voice.hupu.com/other/media/afp">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/131226/4138fa8b2602ef6cec4436c2e49444697e66de96.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/other/media/afp">
+                        AFP                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/other/1987443.html">
+                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/other/1987443.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-28 23:03" class="time" target="_blank" href="http://voice.hupu.com/other/1987443.html">
+                            23小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://afp.hupu.com/">
+                                AFP                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/other/1987443.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                0                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+                <div  class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="AFP" href="http://voice.hupu.com/other/media/afp">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/131226/4138fa8b2602ef6cec4436c2e49444697e66de96.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/other/media/afp">
+                        AFP                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/other/1987441.html">
+                        曼彻斯特当地时间2015年12月27日法新社报道，战绩不佳，英超曼联队主教练范加尔身处下课的舆论漩涡。不过他得到了球员们的尊敬，副队长卡里克做出这一表态，并表示任何猜测都是对球队的一种不敬。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/other/1987441.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-28 23:01" class="time" target="_blank" href="http://voice.hupu.com/other/1987441.html">
+                            23小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://afp.hupu.com/">
+                                AFP                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/other/1987441.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                0                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+                <div  class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="AFP" href="http://voice.hupu.com/other/media/afp">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/131226/4138fa8b2602ef6cec4436c2e49444697e66de96.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/other/media/afp">
+                        AFP                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/other/1987442.html">
+                        洛杉矶当地时间2015年12月27日法新社报道--星期天在亚特兰大结束了一场惊人的比赛，追求完美的“卡罗莱纳黑豹”以13-20输给猎鹰。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/other/1987442.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-28 23:02" class="time" target="_blank" href="http://voice.hupu.com/other/1987442.html">
+                            23小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://afp.hupu.com/">
+                                AFP                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/other/1987442.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                0                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+                <div  class="list">
+            <dl>
+                <dd class="avatar">
+                    <a target="_blank" title="AFP" href="http://voice.hupu.com/other/media/afp">
+                    	<img src="http://c2.hoopchina.com.cn/uploads/star/newuser/131226/4138fa8b2602ef6cec4436c2e49444697e66de96.jpg">
+                    </a>
+                </dd>
+                <dt class="userName">
+                    <a target="_blank" href="http://voice.hupu.com/other/media/afp">
+                        AFP                    
+                    </a>                   
+                </dt>
+                <dd class="text">
+                    <a target="_blank" href="http://voice.hupu.com/other/1987453.html">
+                        迪拜当地时间2015年12月27日法新社报道，在周日举行的迪拜足球颁奖中，巴萨和队内球星梅西分别获得最好球队和最好球员的大奖。                   
+                    </a>
+                                        <a href="http://voice.hupu.com/other/1987453.html" target="_blank" class="ico-photo"></a>
+                                                        </dd>
+                <dd class="otherInfo">
+                    <span class="other-left">
+                        <a title="2015-12-28 23:16" class="time" target="_blank" href="http://voice.hupu.com/other/1987453.html">
+                            22小时前                       
+                        </a>
+                        <span class="comeFrom">来自
+                            <a target="_blank" href="http://afp.hupu.com/">
+                                AFP                               
+                                <i class="ico-twitter"></i>
+                            </a>
+                        </span>
+                    </span>
+                    <span class="other-right">
+                            <a class="commentText" target="_blank" href="http://voice.hupu.com/other/1987453.html#tracingArticalComment">
+                                <i class="iconfont ico-comment"></i>
+                                0                        
+                            </a>
+                    </span>
+                </dd>
+            </dl> 
+        </div>
+            </div>
+</div>
+		<!-- 今日热议 end -->
+		<div class="mar_t15"></div>
+		<!-- 灵光一闪 start -->
+                		<!-- 灵光一闪 end -->
+		<div class="mar_t20"></div>
+        
+		<!--<div class="about_us">
+			<a target="_blank" href="http://e.weibo.com/1841109261" class="list weibo">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>@虎扑体育  欢迎关注</p>
+				</span>
+			</a>
+			<a target="_blank" href="http://voice.hupu.com/generated/voice/news_nba.xml" class="list rss">
+				<s></s><span class="txt">
+					<h4>RSS</h4>
+					<p>虎扑体育的RSS</p>
+				</span>
+			</a>
+			<a target="_blank" href="http://voice.hupu.com/nba/1349805.html" class="list weixin">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>扫描二维码或搜索</p>
+				</span>
+			</a>
+			<a target="_blank" href="mailto:wanghui@hupu.com" class="list abs">
+				<s></s><span class="txt">
+					<h4>官方微博</h4>
+					<p>xinsheng@hupu.com</p>
+				</span>
+			</a>
+		</div>-->
+	</div>
+	<!-- sidebar end -->
+</div><!--页面脚步信息-->
+<div class="hp-footer">
+                    
+                    <div class="hp-copyright">
+                    Copyright by 虎扑JRs &amp;
+                    <a href="http://www.hupu.com/" target="_blank" title="体育">虎扑体育</a> -
+                    <a href="http://www.hupu.com/declare.html" target="_blank" rel="nofollow">网站声明</a> -
+                    <a href="http://mobile.hupu.com/" target="_blank">手机虎扑</a> -
+                    <a href="http://jobs.hupu.com/" target="_blank">在虎扑工作</a> -
+                    <a href="http://marketing.hupu.com/contact/" target="_blank">联系我们</a> -
+                    <a href="http://marketing.hupu.com/" target="_blank">广告服务</a> -
+                    <a href="http://www.hupu.com/sitemap.html" target="_blank" rel="nofollow">网站地图</a> -
+                    <a href="http://nba.hupu.com/" target="_blank" title="NBA">NBA</a> -
+                    <a href="http://cba.hupu.com/" target="_blank" title="CBA">CBA</a>  -
+                    <a href="http://soccer.hupu.com/" target="_blank" title="足球">足球</a> -
+                    <a href="http://soccer.hupu.com/china/" target="_blank" title="中超">中超</a> -
+                    <a href="http://nbl.hupu.com/" target="_blank" title="NBL">NBL</a>  -
+                    <a href="http://racing.hupu.com/" target="_blank" title="赛车">赛车</a> -
+                    </div>
+                    
+                </div>
+
+<script type="text/javascript">
+$(function(){
+    $(".voice-my-dingyue-my").remove();
+});
+</script>
+
+<script>
+HP.common.init({project:"nba"});
+</script>
+</body>
+</html>
+<!-- voice config 配置 -->
+<script>
+!function(HP){
+    var win = window,
+        util = HP.util;
+
+    win.HP = win.HP || {};
+    /**
+     * Voice 命名空间
+     */
+    var Voice = HP.Voice = {};
+
+    /**
+     * 接口地址
+     */ 
+    Voice.apiUrl = {
+                // （内容）支持，反对
+        support : 'http://voice.hupu.com/message_support_agaist',
+        // 话题
+        object : {
+            // 关注话题
+            follow : 'http://voice.hupu.com/api/userFollowObject',
+            // 获取话题信息
+            getObjectInfo : 'http://voice.hupu.com/api/get_object_info'
+        },
+        // 评论
+        comment: {
+            // 支持，反对
+            support : '/support_agaist',
+            // 回复评论
+            reply : '/stars/xhrreply'
+        },
+        // my接口地址
+        my: {
+            // people 更新用户信息
+            updatePeopleInfo: '/update_people_information',
+            // people页 加载更多
+            morePeopleMsg: 'http://voice.hupu.com/get_more_people_messages'
+        },
+        // 直播专题
+        liveTopic: {
+            moreMessages : '/index/getMoreLiveTopicMessages',
+            latestMessages : '/index/getLiveTopicMessages'
+        },
+        fixed: {
+        // 新版吐槽
+            feedback: '/index/feedback'
+        }
+    }
+
+    // 用户id
+    Voice.getUserId = 0;
+    // 用户名称
+    Voice.getUserName = '';
+    // 用户论坛等级
+    Voice.getUserLevel = '';
+
+    Voice.getUserExtra = false;
+    Voice.getUserExtra2 = eval('[]');
+
+    // 为1时是论坛全站封禁用户，0时非封禁用户
+    Voice.getUserBlackRoom = '';
+    // 新声频道的禁言信息
+    Voice.getUserBanned = '';
+    // 新声页面名
+    Voice.getPageName = 'newsList';
+    // 新声频道名
+    Voice.getProjectName = '';
+
+    Voice.isLogin = util.isLogin();
+    Voice.popLogin = function(){
+        commonLogin('hupu');
+    }
+
+}(HP);
+</script>
+
+<!-- seajs config 配置 -->
+<script>
+seajs.use('dist/modules/card/main');
+
+</script>
+
+    <script type="text/javascript" src="http://b3.hoopchina.com.cn/??code/handlebars/handlebars.js,web/channel/voice/v1/js/common/voice.js,web/channel/voice/v1/js/widget/2014/versionTucaoFixed/versionTucao.js,web/channel/voice/v1/js/modules/share/miniShare.js,web/channel/voice/v1/js/aggregation/newsList/index.js?v=196"></script>
+<script type='text/javascript' src='http://partner.googleadservices.com/gampad/google_service.js'></script>
+<script type='text/javascript'>
+GS_googleAddAdSenseService("ca-pub-1024337685431355");
+GS_googleEnableAllServices();
+</script>
+<script type='text/javascript'>
+GA_googleUseIframeRendering();
+</script>
+<script type="text/javascript">
+(function(){
+var cjsscript = document.createElement('script');
+cjsscript.src = "http://b3.hoopchina.com.cn/common/lazyLoadAd.js";
+var cjssib = document.getElementsByTagName('script')[0];
+cjssib.parentNode.insertBefore(cjsscript, cjssib);
+})();
+</script>
+<!--PV检测代码-->
+<!--CNZZ统计 start-->
+<script>
+    var query = location.href.split('#');
+    if(query[1] == "next"){
+        _czc.push(['_trackEvent', '下一篇', '']);
+    }else if(query[1] == "pre"){
+        _czc.push(['_trackEvent', '上一篇', '']);
+    }
+</script>
+<!--CNZZ统计 end-->

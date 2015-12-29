@@ -191,10 +191,10 @@ func (s *Spider) crawl(chFinished chan bool) {
 	defer func() {
 		chFinished <- true
 	}()
-	// 等待队列中任务到达的超时时间，1秒
 	timeout := make(chan bool, 1)
 	go func() {
-		time.Sleep(time.Second * 1)
+		// 等待队列中任务到达的超时时间，1秒
+		time.Sleep(time.Second * 3)
 		timeout <- true
 	}()
 CRAWL:
