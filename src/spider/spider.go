@@ -176,7 +176,7 @@ func (s *Spider) crawl(chFinished chan bool) {
 	timeout := make(chan bool, 1)
 	go func() {
 		// 等待队列中任务到达的超时时间，1秒
-		time.Sleep(time.Second * 3)
+		time.Sleep(time.Second * 10)
 		timeout <- true
 	}()
 CRAWL:
@@ -184,7 +184,7 @@ CRAWL:
 		var job Job
 		select {
 		case <-timeout:
-			l4g.Info("get job timeout!")
+			l4g.Info("get job timeout!, channel length:%d", len(s.jobs))
 			break CRAWL
 		case job = <-s.jobs:
 			l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs))
@@ -197,9 +197,6 @@ CRAWL:
 				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
 				continue
 			}
-			/////////////////////////////////////
-			///  网络请求和解析单独设计package实现
-			/////////////////////////////////////
 			s.visitedUrl[job.url] = true
 			resp, err := http.Get(job.url)
 			if err != nil {
@@ -207,11 +204,7 @@ CRAWL:
 				return
 			}
 			defer resp.Body.Close()
-			/////////////////////////////////////
-			// 以后针对不同的爬取任务，设定不同的parse方法
 			s.parseHtml(resp.Body, job)
-			/////////////////////////////////////
-			/////////////////////////////////////
 			// 抓取间隔控制
 			time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 		}
@@ -270,11 +263,17 @@ WORKING:
 			l4g.Info("spider #%d is running", i)
 			go s.crawl(chFinished)
 		}
+		// 定时查看任务队列长度
+		chTicker := time.NewTicker(time.Millisecond * 500).C
 		for done := 0; done < config.ThreadCount; {
+			select {
+			case <-chTicker:
+				l4g.Info("channel length:%d", len(s.jobs))
 			// 阻塞,等待通知主goroutine任务结束
-			<-chFinished
-			l4g.Info("finiched #%d!", done)
-			done++
+			case <-chFinished:
+				l4g.Info("finiched #%d!", done)
+				done++
+			}
 		}
 		break WORKING
 	}
