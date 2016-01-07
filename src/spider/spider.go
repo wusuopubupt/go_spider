@@ -12,10 +12,8 @@ package spider
 
 import (
 	"io"
-	"io/ioutil"
 	"net/http"
 	"net/url"
-	"os"
 	"path"
 	"regexp"
 	"strings"
@@ -29,6 +27,7 @@ import (
 
 import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
+	downloader "github.com/wusuopubupt/go_spider/src/downloader"
 )
 
 // 单个任务结构
@@ -44,7 +43,7 @@ type Spider struct {
 	maxDepth      int
 	crawlInterval int
 	crawlTimeout  int
-	targetUrl     string
+	targetUrl     *regexp.Regexp
 	jobs          chan Job
 	visitedUrl    map[string]bool
 }
@@ -144,22 +143,7 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 *
  */
 func (s *Spider) save(targetUrl string) bool {
-	res, err := http.Get(targetUrl)
-	defer res.Body.Close()
-	content, err := ioutil.ReadAll(res.Body)
-	if err != nil {
-		l4g.Error("read url content%s, err:%s", targetUrl, err)
-		return false
-	}
-	filename := s.outputDir + "/" + url.QueryEscape(targetUrl)
-	f, err := os.Create(filename)
-	if err != nil {
-		l4g.Error("create file %s, err:%s", filename, err)
-		return false
-	}
-	defer f.Close()
-	f.Write(content)
-	return true
+	return downloader.SaveAsFile(targetUrl, s.outputDir)
 }
 
 /*
@@ -174,9 +158,7 @@ func (s *Spider) save(targetUrl string) bool {
 *
  */
 func (s *Spider) checkUrlRegexp(url string) bool {
-	// 改造成MustCompile
-	r, _ := regexp.Compile(s.targetUrl)
-	return r.MatchString(url)
+	return s.targetUrl.MatchString(url)
 }
 
 /*
@@ -253,7 +235,7 @@ func newSpider(config conf.SpiderStruct, jobs chan Job, confpath string) *Spider
 	s.maxDepth = config.MaxDepth
 	s.crawlInterval = config.CrawlInterval
 	s.crawlTimeout = config.CrawlTimeout
-	s.targetUrl = config.TargetUrl
+	s.targetUrl = regexp.MustCompile(config.TargetUrl)
 	s.jobs = jobs
 	s.visitedUrl = make(map[string]bool)
 
