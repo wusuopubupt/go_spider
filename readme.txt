@@ -17,8 +17,9 @@
     ├── conf
     │   └── config.go
     ├── main
-    │   ├── main.go
-    │   └── server.go
+    │   └── main.go
+    ├── downloader
+    |   └── downloader.go
     ├── spider
     │   └── spider.go
     └── utils

@@ -99,12 +99,6 @@ func main() {
 	// 启动爬虫
 	spider := spider.NewSpider(seedUrls, conf, confPath)
 	spider.Start()
-
-	// 阻塞等待中断信号, 任务完成程序后主动发送中断 or CTRL+C, 如何处理？
-	//sigChan := make(chan os.Signal, 1)
-	//waitSignal(sigChan)
-	//spider.Stop()
-
 	// 等待任务完成
 	spider.Wait()
 
