@@ -15,6 +15,9 @@ import (
 	"flag"
 	"io/ioutil"
 	"os"
+	"os/signal"
+	"runtime"
+	"syscall"
 	"time"
 )
 
@@ -41,6 +44,12 @@ func SlowExit() {
 	os.Exit(1)
 }
 
+// 等待信号
+func waitSignal(sigChan chan os.Signal) {
+	signal.Notify(sigChan, syscall.SIGINT, syscall.SIGTERM)
+	<-sigChan
+}
+
 // 爬虫主程序
 func main() {
 	// l4g的配置文件
@@ -50,9 +59,10 @@ func main() {
 	var confPath string
 	var logPath string
 	var printVer bool
+
 	flag.StringVar(&confPath, "c", "../../conf", "config file path")
-	flag.BoolVar(&printVer, "v", false, "print version")
 	flag.StringVar(&logPath, "l", "../../log", "log file path")
+	flag.BoolVar(&printVer, "v", false, "print version")
 
 	flag.Parse()
 
@@ -83,8 +93,20 @@ func main() {
 		SlowExit()
 	}
 
-	// start miniSpider
-	spider.Start(seedUrls, conf, confPath)
+	//GOMAXPROCS设置
+	runtime.GOMAXPROCS(conf.ThreadCount)
+
+	// 启动爬虫
+	spider := spider.NewSpider(seedUrls, conf, confPath)
+	spider.Start()
+
+	// 阻塞等待中断信号, 任务完成程序后主动发送中断 or CTRL+C, 如何处理？
+	//sigChan := make(chan os.Signal, 1)
+	//waitSignal(sigChan)
+	//spider.Stop()
+
+	// 等待任务完成
+	spider.Wait()
 
 	time.Sleep(1 * time.Second)
 }

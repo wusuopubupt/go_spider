@@ -36,7 +36,14 @@ import (
  */
 func SaveAsFile(targetUrl string, outputDir string) bool {
 	res, err := http.Get(targetUrl)
+	if err != nil {
+		return false
+	}
 	defer res.Body.Close()
+	if res.StatusCode != 200 {
+		l4g.Error("bad status code: %d", res.StatusCode)
+		return false
+	}
 	content, err := ioutil.ReadAll(res.Body)
 	if err != nil {
 		l4g.Error("read url content%s, err:%s", targetUrl, err)

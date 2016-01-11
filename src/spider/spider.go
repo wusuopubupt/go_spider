@@ -3,6 +3,7 @@
 modification history
 --------------------
 2015-11-25, by wusuopubupt, create
+2016-01-11, by wusuopubupt, 修改同步方式为sync.waitGroup
 */
 /*
 DESCRIPTION
@@ -17,6 +18,7 @@ import (
 	"path"
 	"regexp"
 	"strings"
+	"sync"
 	"time"
 )
 
@@ -29,6 +31,9 @@ import (
 	conf "github.com/wusuopubupt/go_spider/src/conf"
 	downloader "github.com/wusuopubupt/go_spider/src/downloader"
 )
+
+// 任务队列最大长度
+var MAX_JOBS = 1000000
 
 // 单个任务结构
 type Job struct {
@@ -43,9 +48,12 @@ type Spider struct {
 	maxDepth      int
 	crawlInterval int
 	crawlTimeout  int
+	threadCount   int
 	targetUrl     *regexp.Regexp
 	jobs          chan Job
 	visitedUrl    map[string]bool
+	wg            sync.WaitGroup
+	stop          chan bool
 }
 
 /*
@@ -94,14 +102,15 @@ func (s *Spider) getHref(t html.Token) (ok bool, href string) {
 *   - job	: current job
 *
  */
-func (s *Spider) parseHtml(b io.Reader, job Job) {
+func (s *Spider) parseHtml(b io.Reader, job Job) []string {
+	var urls = make([]string, 0)
 	z := html.NewTokenizer(b)
 	for {
 		tokenType := z.Next()
 		switch {
 		case tokenType == html.ErrorToken:
-			l4g.Debug("end of page: %s,\tstart to get next job", job.url)
-			return
+			l4g.Debug("wg done...end of page: %s, channel len: %d", job.url, len(s.jobs))
+			return urls
 		case tokenType == html.StartTagToken:
 			token := z.Token()
 			if !(token.Data == "a") {
@@ -123,9 +132,7 @@ func (s *Spider) parseHtml(b io.Reader, job Job) {
 				s.save(link)
 			}
 			if !s.visitedUrl[link] && job.depth < s.maxDepth {
-				// 新任务入公共队列
-				s.addJob(Job{link, job.depth + 1})
-				l4g.Info("add job: %s, depth:%d", link, job.depth+1)
+				urls = append(urls, link)
 			}
 		}
 	}
@@ -164,47 +171,16 @@ func (s *Spider) checkUrlRegexp(url string) bool {
 /*
 * crawl  - 爬取和解析(getJob & addJob)
 *
-* PARAMS:
-*   - chFinished : 当前goroutine完成时向chFinished信道发送消息,通知主goroutine
-*
  */
-func (s *Spider) crawl(chFinished chan bool) {
-	// 通知主goroutine，当前goroutine已无任务可做
-	defer func() {
-		chFinished <- true
-	}()
-	timeout := make(chan bool, 1)
-	go func() {
-		// 等待队列中任务到达的超时时间，1秒
-		time.Sleep(time.Second * 10)
-		timeout <- true
-	}()
+func (s *Spider) crawl() {
 CRAWL:
 	for {
-		var job Job
 		select {
-		case <-timeout:
-			l4g.Info("get job timeout!, channel length:%d", len(s.jobs))
+		case <-s.stop:
+			l4g.Info("spider stop...")
 			break CRAWL
-		case job = <-s.jobs:
-			l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs))
-			// 检查是否访问过
-			if s.visitedUrl[job.url] {
-				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
-				continue
-			}
-			if job.depth > s.maxDepth {
-				l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
-				continue
-			}
-			s.visitedUrl[job.url] = true
-			resp, err := http.Get(job.url)
-			if err != nil {
-				l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
-				return
-			}
-			defer resp.Body.Close()
-			s.parseHtml(resp.Body, job)
+		case job := <-s.jobs:
+			s.work(job)
 			// 抓取间隔控制
 			time.Sleep(time.Duration(s.crawlInterval) * time.Second)
 		}
@@ -212,31 +188,45 @@ CRAWL:
 }
 
 /*
-* newSpider - 初始化爬虫
+* work - 处理单个任务
 *
 * PARAMS:
-*   - config   : 爬虫配置文件
-*   - jobs     : 任务队列
-*   - confpath : 配置文件路径
+*   - job : 一个待处理任务
 *
-* RETURNS:
-*	*Spider 爬虫对象
  */
-func newSpider(config conf.SpiderStruct, jobs chan Job, confpath string) *Spider {
-	s := new(Spider)
-	s.outputDir = path.Join(confpath, config.OutputDirectory)
-	s.maxDepth = config.MaxDepth
-	s.crawlInterval = config.CrawlInterval
-	s.crawlTimeout = config.CrawlTimeout
-	s.targetUrl = regexp.MustCompile(config.TargetUrl)
-	s.jobs = jobs
-	s.visitedUrl = make(map[string]bool)
-
-	return s
+func (s *Spider) work(job Job) {
+	defer s.wg.Done()
+	l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs))
+	// 检查是否访问过
+	if s.visitedUrl[job.url] {
+		l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
+		return
+	}
+	// 判断是否超出最大爬取深度
+	if job.depth > s.maxDepth {
+		l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
+		return
+	}
+	// 标记为访问过
+	s.visitedUrl[job.url] = true
+	resp, err := http.Get(job.url)
+	if err != nil {
+		l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
+		return
+	}
+	defer resp.Body.Close()
+	// 解析Html, 获取新的url并入任务队列
+	urls := s.parseHtml(resp.Body, job)
+	for _, url := range urls {
+		//新任务入公共队列
+		s.wg.Add(1)
+		s.addJob(Job{url, job.depth + 1})
+		l4g.Info("wg add...add job: %s, depth:%d", url, job.depth+1)
+	}
 }
 
 /*
-* Start - 启动爬虫
+* NewSpider - 初始化爬虫
 *
 * PARAMS:
 *   - seedUrls : 种子url切片
@@ -244,37 +234,66 @@ func newSpider(config conf.SpiderStruct, jobs chan Job, confpath string) *Spider
 *   - confpath : 配置文件路径
 *
 * RETURNS:
+*	*Spider 爬虫对象
  */
-func Start(seedUrls []string, config conf.SpiderStruct, confpath string) {
+func NewSpider(seedUrls []string, config conf.SpiderStruct, confpath string) *Spider {
+	s := new(Spider)
 	// 队列最多为100w个任务，否则阻塞
-	jobs := make(chan Job, 1000000)
-	chFinished := make(chan bool)
+	jobs := make(chan Job, MAX_JOBS)
 	// 初始化任务队列
 	for _, url := range seedUrls {
 		l4g.Info("url: %s", url)
+		// waitgroup+1, 比自己用channel length或者timeout去判断更准确
+		s.wg.Add(1)
 		jobs <- Job{url, 0}
 	}
-	// 一个while(1)的循环，直到channel通知任务结束
-WORKING:
-	for {
-		s := newSpider(config, jobs, confpath)
-		// 开启threandCount个spider.crawl goroutine,等待通道中的任务到达
-		for i := 0; i < config.ThreadCount; i++ {
-			l4g.Info("spider #%d is running", i)
-			go s.crawl(chFinished)
-		}
-		// 定时查看任务队列长度
-		chTicker := time.NewTicker(time.Millisecond * 500).C
-		for done := 0; done < config.ThreadCount; {
-			select {
-			case <-chTicker:
-				l4g.Info("channel length:%d", len(s.jobs))
-			// 阻塞,等待通知主goroutine任务结束
-			case <-chFinished:
-				l4g.Info("finiched #%d!", done)
-				done++
-			}
-		}
-		break WORKING
+	s.outputDir = path.Join(confpath, config.OutputDirectory)
+	s.maxDepth = config.MaxDepth
+	s.crawlInterval = config.CrawlInterval
+	s.crawlTimeout = config.CrawlTimeout
+	s.targetUrl = regexp.MustCompile(config.TargetUrl)
+	s.jobs = jobs
+	s.visitedUrl = make(map[string]bool)
+	s.threadCount = config.ThreadCount
+
+	return s
+}
+
+/*
+* Start - 启动爬虫
+*
+*
+* RETURNS:
+ */
+func (s *Spider) Start() {
+	for i := 0; i < s.threadCount; i++ {
+		l4g.Info("spider #%d is running", i)
+		go s.crawl()
+	}
+}
+
+/*
+* Wait - 等待所有goroutine完成任务
+*
+* PARAMS:
+*
+* RETURNS:
+ */
+func (s *Spider) Wait() {
+	s.wg.Wait()
+	l4g.Info("finiched !, channel len: %d!", len(s.jobs))
+}
+
+/*
+* Stop - 停止爬虫
+*
+* PARAMS:
+*
+* RETURNS:
+ */
+func (s *Spider) Stop() {
+	time.Sleep(time.Duration(s.crawlInterval) * time.Second)
+	for i := 0; i < s.threadCount; i++ {
+		s.stop <- true
 	}
 }
