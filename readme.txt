@@ -25,3 +25,5 @@
     └── utils
         └── utils.go
 
+运行：
+cd $HOME/work/src/github.com/wusuopubupt/go_spider/src/main && go run main.go
