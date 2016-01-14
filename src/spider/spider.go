@@ -4,6 +4,7 @@ modification history
 --------------------
 2015-11-25, by wusuopubupt, create
 2016-01-11, by wusuopubupt, 修改同步方式为sync.waitGroup
+2016-01-14, by wusuopubupt, 下载方法改为异步
 */
 /*
 DESCRIPTION
@@ -124,12 +125,12 @@ func (s *Spider) parseHtml(b io.Reader, job Job) []string {
 			u, _ := url.Parse(job.url)
 			// 相对路径
 			if !hasProto {
-				link = u.Scheme + "://" + u.Host + "/" + link
+				link = u.Scheme + "://" + u.Host + link
 			}
 			// 检查url是否为需要存储的目标网页url格式
 			if s.checkUrlRegexp(link) {
 				// 保存为文件
-				s.save(link)
+				go s.save(link)
 			}
 			if !s.visitedUrl[link] && job.depth < s.maxDepth {
 				urls = append(urls, link)
@@ -213,6 +214,8 @@ func (s *Spider) work(job Job) {
 	if err != nil {
 		l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
 		return
+	} else {
+		l4g.Info("http response:%s", resp)
 	}
 	defer resp.Body.Close()
 	// 解析Html, 获取新的url并入任务队列

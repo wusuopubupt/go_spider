@@ -95,7 +95,8 @@ func main() {
 	}
 
 	//GOMAXPROCS设置
-    runtime.GOMAXPROCS(runtime.NumCPU())
+	//runtime.GOMAXPROCS(runtime.NumCPU())
+	runtime.GOMAXPROCS(50)
 
 	// 启动爬虫
 	spider := spider.NewSpider(seedUrls, conf, confPath)

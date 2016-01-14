@@ -41,7 +41,7 @@ func SaveAsFile(targetUrl string, outputDir string) bool {
 	}
 	defer res.Body.Close()
 	if res.StatusCode != 200 {
-		l4g.Error("bad status code: %d", res.StatusCode)
+		l4g.Error("bad status code: %d, url:%s", res.StatusCode, targetUrl)
 		return false
 	}
 	content, err := ioutil.ReadAll(res.Body)

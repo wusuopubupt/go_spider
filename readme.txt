@@ -22,6 +22,7 @@
     |   └── downloader.go
     ├── spider
     │   └── spider.go
+    │   └── spider_test.go
     └── utils
         └── utils.go
 
