@@ -3,6 +3,7 @@
 modification history
 --------------------
 2015-11-25, by wusuopubupt, create
+2016-01-14, by wusuopubupt, modify GOMAXPROCS to NumCPU
 */
 /*
 DESCRIPTION
@@ -94,7 +95,7 @@ func main() {
 	}
 
 	//GOMAXPROCS设置
-	runtime.GOMAXPROCS(conf.ThreadCount)
+    runtime.GOMAXPROCS(runtime.NumCPU())
 
 	// 启动爬虫
 	spider := spider.NewSpider(seedUrls, conf, confPath)

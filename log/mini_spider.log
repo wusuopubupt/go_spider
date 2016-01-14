@@ -8,3 +8,9 @@
 [2016/01/11 08:12:40 EST] [EROR] (main.main:97) finished!
 [2016/01/11 09:00:39 EST] [EROR] (github.com/wusuopubupt/go_spider/src/spider.(*Spider).work:214) Failed to crawl http://www.nytimes.com/2016/01/11/sports/basketball/new-york-knicks-beat-milwaukee-bucks.html?ref=basketball&_r=0, err[Get http://www.nytimes.com/2016/01/11/sports/basketball/new-york-knicks-beat-milwaukee-bucks.html?ref=basketball&_r=5: stopped after 10 redirects]
 [2016/01/11 09:08:12 EST] [EROR] (github.com/wusuopubupt/go_spider/src/spider.(*Spider).work:214) Failed to crawl http://www.nytimes.com/2016/01/11/sports/basketball/new-york-knicks-beat-milwaukee-bucks.html?ref=basketball&_r=0, err[Get http://www.nytimes.com/2016/01/11/sports/basketball/new-york-knicks-beat-milwaukee-bucks.html?ref=basketball&_r=5: stopped after 10 redirects]
+[2016/01/14 15:09:25 CST] [EROR] (github.com/wusuopubupt/go_spider/src/downloader.SaveAsFile:44) bad status code: 404
+[2016/01/14 15:09:25 CST] [EROR] (github.com/wusuopubupt/go_spider/src/downloader.SaveAsFile:44) bad status code: 404
+[2016/01/14 15:09:25 CST] [EROR] (github.com/wusuopubupt/go_spider/src/downloader.SaveAsFile:44) bad status code: 404
+[2016/01/14 15:11:40 CST] [EROR] (github.com/wusuopubupt/go_spider/src/downloader.SaveAsFile:44) bad status code: 404
+[2016/01/14 15:11:40 CST] [EROR] (github.com/wusuopubupt/go_spider/src/downloader.SaveAsFile:44) bad status code: 404
+[2016/01/14 15:11:40 CST] [EROR] (github.com/wusuopubupt/go_spider/src/downloader.SaveAsFile:44) bad status code: 404

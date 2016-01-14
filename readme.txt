@@ -2,7 +2,7 @@
 
 目录说明(cd $HOME/work/src/github.com/wusuopubupt/go_spider && tree)：
 
-├── README.md
+├── readme.txt
 ├── conf(配置文件目录)
 │   ├── example.xml
 │   ├── logconf.xml
