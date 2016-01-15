@@ -110,7 +110,6 @@ func (s *Spider) parseHtml(b io.Reader, job Job) []string {
 		tokenType := z.Next()
 		switch {
 		case tokenType == html.ErrorToken:
-			l4g.Debug("wg done...end of page: %s, channel len: %d", job.url, len(s.jobs))
 			return urls
 		case tokenType == html.StartTagToken:
 			token := z.Token()
@@ -125,7 +124,7 @@ func (s *Spider) parseHtml(b io.Reader, job Job) []string {
 			u, _ := url.Parse(job.url)
 			// 相对路径
 			if !hasProto {
-				link = u.Scheme + "://" + u.Host + link
+				link = u.Scheme + "://" + u.Host + "/"+ link
 			}
 			// 检查url是否为需要存储的目标网页url格式
 			if s.checkUrlRegexp(link) {
@@ -172,8 +171,10 @@ func (s *Spider) checkUrlRegexp(url string) bool {
 /*
 * crawl  - 爬取和解析(getJob & addJob)
 *
+* PARAMS:
+*   - id
  */
-func (s *Spider) crawl() {
+func (s *Spider) crawl(id int) {
 CRAWL:
 	for {
 		select {
@@ -181,6 +182,7 @@ CRAWL:
 			l4g.Info("spider stop...")
 			break CRAWL
 		case job := <-s.jobs:
+	        l4g.Info("goroutine#%d parsing url:%s, depth:%d",id, job.url, job.depth)
 			s.work(job)
 			// 抓取间隔控制
 			time.Sleep(time.Duration(s.crawlInterval) * time.Second)
@@ -197,7 +199,6 @@ CRAWL:
  */
 func (s *Spider) work(job Job) {
 	defer s.wg.Done()
-	l4g.Info("get job url:%s, depth:%d, channel length:%d", job.url, job.depth, len(s.jobs))
 	// 检查是否访问过
 	if s.visitedUrl[job.url] {
 		l4g.Info("visted job,continue. url:%s, depth:%d", job.url, job.depth)
@@ -215,7 +216,7 @@ func (s *Spider) work(job Job) {
 		l4g.Error("Failed to crawl %s, err[%s]", job.url, err)
 		return
 	} else {
-		l4g.Info("http response:%s", resp)
+		//l4g.Info("http response:%s", resp)
 	}
 	defer resp.Body.Close()
 	// 解析Html, 获取新的url并入任务队列
@@ -224,7 +225,7 @@ func (s *Spider) work(job Job) {
 		//新任务入公共队列
 		s.wg.Add(1)
 		s.addJob(Job{url, job.depth + 1})
-		l4g.Info("wg add...add job: %s, depth:%d", url, job.depth+1)
+		l4g.Info("add job: %s, depth:%d", url, job.depth+1)
 	}
 }
 
@@ -271,7 +272,7 @@ func NewSpider(seedUrls []string, config conf.SpiderStruct, confpath string) *Sp
 func (s *Spider) Start() {
 	for i := 0; i < s.threadCount; i++ {
 		l4g.Info("spider #%d is running", i)
-		go s.crawl()
+		go s.crawl(i)
 	}
 }
 
