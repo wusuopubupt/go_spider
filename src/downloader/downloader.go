@@ -46,7 +46,7 @@ func SaveAsFile(targetUrl string, outputDir string) bool {
 	}
 	content, err := ioutil.ReadAll(res.Body)
 	if err != nil {
-		l4g.Error("read url content%s, err:%s", targetUrl, err)
+		l4g.Error("read url content %s, err:%s", targetUrl, err)
 		return false
 	}
 	filename := path.Join(outputDir, url.QueryEscape(targetUrl))
