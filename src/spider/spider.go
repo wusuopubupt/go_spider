@@ -6,6 +6,7 @@ modification history
 2015-11-25, by wusuopubupt, create
 2016-01-11, by wusuopubupt, 修改同步方式为sync.waitGroup
 2016-01-14, by wusuopubupt, 下载方法改为异步
+2016-08-24, by wusuopubupt, Spider结构增加锁，修复map data race的bug
 */
 /*
 DESCRIPTION
