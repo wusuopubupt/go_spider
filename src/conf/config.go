@@ -15,8 +15,8 @@ import (
 )
 
 import (
-	"code.google.com/p/gcfg"
-	l4g "code.google.com/p/log4go"
+	gcfg "gopkg.in/gcfg.v1"
+	l4g "github.com/alecthomas/log4go"
 )
 
 // spider config,和../../conf/spider.conf一一对应
