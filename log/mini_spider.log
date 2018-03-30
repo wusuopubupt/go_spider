@@ -43,5 +43,5 @@
 [01/15/16 16:27:57] [INFO] add job: http://pycm.baidu.com:8081/3/index.html, depth:3
 [01/15/16 16:27:57] [INFO] goroutine#6 parsing url:http://pycm.baidu.com:8081//page2_1.html, depth:3
 [01/15/16 16:27:57] [INFO] goroutine#7 parsing url:http://pycm.baidu.com:8081/3/index.html, depth:3
-[01/15/16 16:27:57] [EROR] bad status code: 404, url:http://pycm.baidu.com:8081/3/index.html
+[01/15/16 16:27:57] [EROR] bad status code: 404, url:http://pycm.baidu.com:8081/2/index.html
 [01/15/16 16:27:57] [INFO] finiched !, channel len: 0!
