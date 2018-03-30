@@ -1,6 +1,6 @@
 # go_spider by Dash Wang, 2015-11-25
 
-目录说明(cd $HOME/work/src/github.com/wusuopubupt/go_spider && tree)：
+目录说明(cd $GOPATH/src/github.com/wusuopubupt/go_spider && tree)：
 
 ├── readme.txt
 ├── conf(配置文件目录)
@@ -27,4 +27,4 @@
         └── utils.go
 
 运行：
-cd $HOME/work/src/github.com/wusuopubupt/go_spider/src/main && go run main.go
+cd $GOPATH/src/github.com/wusuopubupt/go_spider/src/main && go run main.go
