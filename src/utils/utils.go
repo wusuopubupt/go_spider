@@ -3,6 +3,7 @@
 modification history
 --------------------
 2015-11-25, by wusuopubupt, create
+2016-04-03, by wusuopubupt, update version to 1.0.1
 */
 /*
 DESCRIPTION
@@ -17,6 +18,6 @@ import (
 * PrintVersion - print spider's version
  */
 func PrintVersion() {
-	const version = "1.0.0"
+	const version = "1.0.1"
 	fmt.Println("go_spider version", version)
 }
