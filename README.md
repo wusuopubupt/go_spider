@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wusuopubupt/go_spider.svg?branch=master)](https://travis-ci.org/wusuopubupt/go_spider)
+
 # go_spider 
 
 *A golang spider created by Dash Wang, 2015-11-25*
